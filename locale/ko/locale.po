@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Korean <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/ko_KR/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "전문 검색 플러그인"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS/OMP/OPS 제출물을 위한 데이터베이스 기반 전문 인덱스를 제공하며, MySQL 및 PostgreSQL과 호환됩니다."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>원활한 통합을 위해 중단 없이 아래 지침을 따르세요:</strong></p><ol><li>플러그인을 활성화한 후, 모든 저널의 검색 인덱스를 재구성하거나 <code>php tools/rebuildSearchIndex.php --skip-standard-index</code>를 실행하세요 (이 플래그는 플러그인 데이터만 재구성되도록 보장합니다). 플러그인의 검색 인덱스를 이전 출판물의 데이터로 채우기 위함입니다. 새로운 출판물과 업데이트된 출판물은 자동으로 인덱싱됩니다.</li><li>인덱싱이 완료되면, 아래의 <strong>전문 검색을 활성화하고</strong> 검색 사용자 인터페이스가 제대로 작동하는지 확인하세요 (검색 상자에서 키워드를 검색하여 테스트할 수 있습니다).</li><li>모든 것이 제대로 작동한다면, 아래의 <strong>표준 인덱싱을 비활성화하고</strong> 또한 <strong>표준 검색 테이블을 정리</strong>하여 디스크 공간을 절약하고 업그레이드 속도를 향상시킬 수 있습니다.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "전문 검색 사용. 활성화되면 검색 인터페이스는 플러그인에 의해 제공됩니다"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "표준 인덱싱 비활성화. 활성화되면 애플리케이션은 표준 검색 엔진에 데이터 공급을 중단합니다 (플러그인이 처리합니다)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "검색 인덱스를 재구성할 컨텍스트를 선택하세요."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "검색 인덱스 재구성"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "선택된 컨텍스트에 대한 검색 인덱스 재구성이 성공적으로 완료되었습니다."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "표준 검색 테이블 정리"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "선택적으로 재구성 전에 표준 OJS/OMP/OPS 검색 테이블을 정리합니다. 이는 기본 검색 시스템에서 모든 기존 검색 데이터를 제거합니다."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "인덱스 재구성 전에 표준 검색 테이블 정리"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "검색 중 예기치 않은 오류가 발생했습니다"

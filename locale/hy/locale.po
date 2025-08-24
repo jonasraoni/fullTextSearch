@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/hy_AM/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hy\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Ամբողջական Տեքստի Որոնման Պլագին"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Տրամադրում է տվյալների բազայի վրա հիմնված ամբողջական տեքստի ինդեքս OJS/OMP/OPS ներկայացումների համար, համատեղելի MySQL և PostgreSQL-ի հետ:"
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Անխափան ինտեգրման համար, առանց ընդհատումների, հետևեք ստորև բերված հրահանգներին:</strong></p><ol><li>Պլագինը ակտիվացնելուց հետո, վերակառուցեք որոնման ինդեքսը բոլոր ամսագրերի համար, կամ աշխատեցրեք <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (դրոշը ապահովում է, որ միայն պլագինի տվյալները կվերակառուցվեն), պլագինի որոնման ինդեքսը հին հրատարակությունների տվյալներով լցնելու համար: Նոր և թարմացված հրատարակությունները ավտոմատ կայնդեքսվեն:</li><li>Երբ ինդեքսավորումն ավարտվի, <strong>ակտիվացրեք ամբողջական տեքստի որոնումը</strong> ստորև և ստուգեք, թե արդյոք որոնման օգտատիրոջ միջերեսը լավ է աշխատում (կարող եք փորձարկել այն՝ որոնման վանդակում բանալի բառ որոնելով):</li><li>Եթե ամեն ինչ լավ է աշխատում, կարող եք <strong>անջատել ստանդարտ ինդեքսավորումը</strong> ստորև և նաև <strong>մաքրել ստանդարտ որոնման աղյուսակները</strong>՝ սկավառակի տարածություն խնայելու և արդիացման արագությունը բարելավելու համար:</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Օգտագործեք ամբողջական տեքստի որոնում: Երբ ակտիվացված է, որոնման միջերեսը կաշխատի պլագինի միջոցով"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Անջատեք ստանդարտ ինդեքսավորումը: Երբ ակտիվացված է, հավելվածը կդադարի սնուցել տվյալներ ստանդարտ որոնման շարժիչին (պլագինը կանի դա)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Ընտրեք, թե որ համատեքստերը պետք է ունենան վերակառուցված որոնման ինդեքս:"
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Վերակառուցել Որոնման Ինդեքսը"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Որոնման ինդեքսի վերակառուցումը հաջողությամբ ավարտվեց ընտրված համատեքստերի համար:"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Մաքրել Ստանդարտ Որոնման Աղյուսակները"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Ըստ ցանկության մաքրեք ստանդարտ OJS/OMP/OPS որոնման աղյուսակները վերակառուցումից առաջ: Սա կհեռացնի բոլոր գոյություն ունեցող որոնման տվյալները ստանդարտ որոնման համակարգից:"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Մաքրել ստանդարտ որոնման աղյուսակները ինդեքսի վերակառուցումից առաջ"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Որոնման ընթացքում տեղի ունեցավ անսպասելի սխալ"

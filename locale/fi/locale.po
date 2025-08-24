@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/fi_FI/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Täystekstihaku-lisäosa"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Tarjoaa tietokantapohjaisen täysteksti-indeksin OJS/OMP/OPS-ehdotuksille, yhteensopiva MySQL:n ja PostgreSQL:n kanssa."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Saumattoman integraation saavuttamiseksi, ilman keskeytyksiä, noudata seuraavia ohjeita:</strong></p><ol><li>Lisäosan ottamisen käyttöön jälkeen, rakennetaan hakutoiminto uudelleen kaikille aikakauslehdille, tai suoritetaan <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (lippu varmistaa, että vain lisäosan tiedot rakennetaan uudelleen), täyttääksesi lisäosan hakutoiminnon vanhojen julkaisujen tiedoilla. Uudet ja päivitetyt julkaisut indeksoidaan automaattisesti.</li><li>Kun indeksointi on valmis, <strong>ota täystekstihaku käyttöön</strong> alla ja tarkista, toimiiko hakukäyttöliittymä hyvin (voit testata sitä hakemalla avainsanaa hakukentässä).</li><li>Jos kaikki toimii oikein, voit <strong>poistaa vakioindeksoinnin käytöstä</strong> alla ja myös <strong>tyhjentää vakiohakutaulukot</strong> säästääksesi levytilaa ja parantaaksesi päivitysnopeutta.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Käytä täystekstihakua. Kun käytössä, hakukäyttöliittymä toimii lisäosan avulla"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Poista vakioindeksointi käytöstä. Kun käytössä, sovellus lakkaa syöttämästä tietoja vakiohakumoottoriin (lisäosa hoitaa sen)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Valitse, mitkä kontekstit tarvitsevat hakunsa uudelleenrakennuksen."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Rakenna Hakutoiminto Uudelleen"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Hakutoiminnon uudelleenrakennus valmistui onnistuneesti valituille konteksteille."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Tyhjennä Vakiohakutaulukot"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Valinnainen: tyhjennä vakio OJS/OMP/OPS-hakutaulukot ennen uudelleenrakennusta. Tämä poistaa kaikki olemassa olevat hakutiedot vakiohakujärjestelmästä."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Tyhjennä vakiohakutaulukot ennen indeksin uudelleenrakennusta"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Hakuvaiheessa tapahtui odottamaton virhe"

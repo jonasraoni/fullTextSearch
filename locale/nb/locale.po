@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Norwegian (Bokmål) <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/nb_NO/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nb\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Fulltekstsøk Plugin"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Gir en databasebasert fulltekstindeks for OJS/OMP/OPS-innsendinger, kompatibel med MySQL og PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>For en sømløs integrasjon, uten avbrudd, følg instruksjonene nedenfor:</strong></p><ol><li>Etter at du har aktivert plugin-programmet, gjenoppbygg søkeindeksen for alle tidsskrifter, eller kjør <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (flagget sikrer at kun dataene for plugin-programmet vil bli gjenoppbygget), for å fylle plugin-programmets søkeindeks med data fra gamle publikasjoner. Nye og oppdaterte publikasjoner vil bli indeksert automatisk.</li><li>Når indekseringen er ferdig, <strong>aktiver fulltekstsøket</strong> nedenfor og sjekk om søkebrukergrensesnittet fungerer bra (du kan teste det ved å søke etter et nøkkelord i søkeboksen).</li><li>Hvis alt fungerer riktig, kan du <strong>deaktivere standardindekseringen</strong> nedenfor og også <strong>tømme standardsøketabellene</strong> for å spare diskplass og forbedre oppgraderingshastigheten.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Bruk fulltekstsøk. Når aktivert, vil søkegrensesnittet bli drevet av plugin-programmet"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Deaktiver standardindeksering. Når aktivert, vil applikasjonen slutte å mate data til standardsøkemotoren (plugin-programmet vil gjøre det)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Velg hvilke kontekster som skal ha søkeindeksen sin gjenoppbygget."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Gjenoppbygg Søkeindeks"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Gjenoppbygging av søkeindeksen ble fullført for de valgte kontekstene."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Tøm Standard Søketabeller"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Valgfritt tøm standard OJS/OMP/OPS-søketabeller før gjenoppbygging. Dette vil fjerne alle eksisterende søkedata fra standardsøkesystemet."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Tøm standard søketabeller før gjenoppbygging av indeks"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "En uventet feil oppstod under søket"

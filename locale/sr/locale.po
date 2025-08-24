@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Serbian (Cyrillic) <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/sr_RS@cyrillic/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Додатак за Претраживање Пуна Текста"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Пружа индекс пуна текста темељен на бази података за OJS/OMP/OPS пријаве, компатибилан с MySQL и PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>За беспрекидну интеграцију, без прекида, следите упутства у наставку:</strong></p><ol><li>Након омогућавања додатка, поновно изградите индекс претраживања за све часописе, или покрените <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (заставица осигурава да ће се поновно изградити само подаци за додатак), да бисте попунили индекс претраживања додатка подацима из старих публикација. Нове и ажуриране публикације ће се аутоматски индексирати.</li><li>Након што се индексирање заврши, <strong>омогућите претраживање пуна текста</strong> у наставку и проверите да ли корисничко сучеље претраживања ради добро (можете тестирати претраживањем кључне речи у пољу за претраживање).</li><li>Ако све ради исправно, можете <strong>онемогућити стандардно индексирање</strong> у наставку и такође <strong>очистити стандардне табеле претраживања</strong> за уштеду простора на диску и побољшање брзине надоградње.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Користите претраживање пуна текста. Када је омогућено, сучеље претраживања ће бити покретано додатком"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Онемогућите стандардно индексирање. Када је омогућено, апликација ће престати напајати стандардни мотор претраживања подацима (додатак ће то учинити)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Одаберите које контексте треба поновно изградити индекс претраживања."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Поновно Изгради Индекс Претраживања"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Поновна изградња индекса претраживања успешно је завршена за одабране контексте."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Очисти Стандардне Табеле Претраживања"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Опционално очистите стандардне OJS/OMP/OPS табеле претраживања пре поновне изградње. Ово ће уклонити све постојеће податке претраживања из стандардног система претраживања."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Очисти стандардне табеле претраживања пре поновне изградње индекса"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Дошло је до неочекиване грешке током претраживања"

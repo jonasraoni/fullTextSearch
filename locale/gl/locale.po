@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/gl_ES/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: gl\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin de Busca de Texto Completo"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Proporciona un índice de texto completo baseado en base de datos para envíos OJS/OMP/OPS, compatible con MySQL e PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Para unha integración perfecta, sen interrupcións, siga as instrucións de abaixo:</strong></p><ol><li>Despois de activar o plugin, reconstrua o índice de busca para todas as revistas, ou execute <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (a bandeira asegura que só se reconstruirán os datos para o plugin), para encher o índice de busca do plugin con datos de publicacións antigas. As novas e actualizadas publicacións indexaranse automaticamente.</li><li>Unha vez que a indexación estea rematada, <strong>active a busca de texto completo</strong> de abaixo e comprobe se a interface de usuario de busca funciona ben (pode probala buscando unha palabra chave na caixa de busca).</li><li>Se todo funciona correctamente, pode <strong>desactivar a indexación estándar</strong> de abaixo e tamén <strong>limpar as táboas de busca estándar</strong> para aforrar espazo en disco e mellorar a velocidade de actualización.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Use a busca de texto completo. Cando estea activada, a interface de busca será impulsada polo plugin"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Desactive a indexación estándar. Cando estea activada, a aplicación deixará de alimentar o motor de busca estándar con datos (o plugin encargarase diso)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Escolle que contextos deben ter o seu índice de busca reconstruído."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Reconstruír Índice de Busca"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "A reconstrución do índice de busca completouse con éxito para os contextos seleccionados."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Limpar Táboas de Busca Estándar"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opcionalmente limpar as táboas de busca estándar de OJS/OMP/OPS antes de reconstruír. Isto eliminará todos os datos de busca existentes do sistema de busca estándar."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Limpar táboas de busca estándar antes de reconstruír o índice"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Ocorreu un erro inesperado durante a busca"
