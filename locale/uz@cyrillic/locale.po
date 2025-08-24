@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Uzbek (Cyrillic) <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/uz_UZ@cyrillic/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uz@cyrillic\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Тўлиқ Матн Қидирув Плагини"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS тақдимотлари учун маълумотлар базаси асосидаги тўлиқ матн индексини тақдим этади, MySQL ва PostgreSQL билан мос келади."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Қайси контекстларнинг ҳидирув индексини қайта қуриш кераклигини танланг."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Қидирув Индексини Қайта Қур"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Танланган контекстлар учун ҳидирув индексини қайта қуриш муваффақиятли якунланди."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Стандарт Қидирув Жадвалини Тозалаш"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Ихтиёрий равишда қайта қуришдан олдин стандарт OJS ҳидирув жадвалларини тозаланг. Бу стандарт ҳидирув тизимидан барча мавжуд ҳидирув маълумотларини олиб ташлайди."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Индексни қайта қуришдан олдин стандарт ҳидирув жадвалларини тозалаш"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Қидирув пайтида кutilmagan xatolik юз берди"

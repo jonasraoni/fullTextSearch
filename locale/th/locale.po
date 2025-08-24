@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/th/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "ปลั๊กอินค้นหาข้อความเต็ม"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "ให้ดัชนีข้อความเต็มที่ใช้ฐานข้อมูลสำหรับการส่งบทความ OJS ที่เข้ากันได้กับ MySQL และ PostgreSQL"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "เลือกบริบทที่ควรสร้างดัชนีการค้นหาใหม่"
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "สร้างดัชนีการค้นหาใหม่"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "การสร้างดัชนีการค้นหาใหม่เสร็จสิ้นสำเร็จสำหรับบริบทที่เลือก"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "ล้างตารางการค้นหามาตรฐาน"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "เลือกที่จะล้างตารางการค้นหา OJS มาตรฐานก่อนการสร้างใหม่ ซึ่งจะลบข้อมูลการค้นหาทั้งหมดที่มีอยู่จากระบบการค้นหาเริ่มต้น"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "ล้างตารางการค้นหามาตรฐานก่อนการสร้างดัชนีใหม่"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขณะค้นหา"

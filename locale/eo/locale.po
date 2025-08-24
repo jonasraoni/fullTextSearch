@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Esperanto <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/eo/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: eo\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plagino por Plena Teksta Serĉo"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Provizas datumbazan plenan tekstan indekson por OJS-enmetoj, kongrua kun MySQL kaj PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Elektu kiujn kuntekstojn devus havi sian serĉan indekson rekonstruita."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Rekonstrui Serĉan Indekson"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Serĉa indekso rekonstruo kompletigita sukcese por la elektitaj kuntekstoj."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Malplenigi Normajn Serĉajn Tabelojn"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Laŭvole malplenigi la normajn OJS serĉajn tabelojn antaŭ rekonstruo. Ĉi tio forigos ĉiujn ekzistantajn serĉajn datumojn de la defaŭlta serĉa sistemo."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Malplenigi normajn serĉajn tabelojn antaŭ rekonstruo de indekso"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Neatendita eraro okazis dum serĉado"
