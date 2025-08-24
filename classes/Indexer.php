@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Indexer
+ *
  * @ingroup plugins_generic_fullTextSearch
  *
  * @brief Handles indexing of submission data into the full-text search table
@@ -15,9 +16,9 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
+use APP\core\Services;
 use APP\facades\Repo;
 use PKP\search\SearchFileParser;
-use APP\core\Services;
 
 class Indexer
 {
@@ -33,6 +34,7 @@ class Indexer
 
     /**
      * Index a submission by extracting relevant text fields and storing them in the search index
+     *
      * @param object $submission The submission object to index
      */
     public function indexSubmission(object $submission): void
@@ -68,6 +70,7 @@ class Indexer
 
     /**
      * Index a submission file by extracting text content and updating the search index
+     *
      * @param int $submissionId The submission ID
      * @param int $submissionFileId The submission file ID
      */
@@ -81,7 +84,7 @@ class Indexer
         $parser = SearchFileParser::fromFile($submissionFile);
         $texts = [];
         if ($parser?->open()) {
-            while(($text = $parser->read()) !== false) {
+            while (($text = $parser->read()) !== false) {
                 $texts[] = $text;
             }
             $parser->close();
@@ -97,6 +100,7 @@ class Indexer
 
     /**
      * Delete a submission from the search index
+     *
      * @param int $submissionId The submission ID to delete
      */
     public function deleteSubmission(int $submissionId): void
@@ -106,6 +110,7 @@ class Indexer
 
     /**
      * Remove galley text from a submission in the search index
+     *
      * @param int $submissionId The submission ID
      */
     public function removeFileFromIndex(int $submissionId): void
@@ -115,7 +120,9 @@ class Indexer
 
     /**
      * Convert localized array data to a single string
+     *
      * @param array|null $localized The localized array data
+     *
      * @return string The flattened string
      */
     private function implodeLocalized(?array $localized): string
@@ -125,7 +132,9 @@ class Indexer
 
     /**
      * Flatten a nested localized array structure
+     *
      * @param array|null $localized The nested localized array
+     *
      * @return array The flattened array
      */
     private function flattenLocalizedArray(?array $localized): array

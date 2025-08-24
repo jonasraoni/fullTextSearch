@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class FullTextSearchPlugin
+ *
  * @ingroup plugins_generic_fullTextSearch
  *
  * @brief Full-text search plugin that provides database-backed indexing for OJS submissions
@@ -15,21 +16,21 @@
 
 namespace APP\plugins\generic\fullTextSearch;
 
+use APP\core\Application;
+use APP\notification\NotificationManager;
 use APP\plugins\generic\fullTextSearch\classes\Dao;
 use APP\plugins\generic\fullTextSearch\classes\Indexer;
 use APP\plugins\generic\fullTextSearch\classes\SearchService;
 use APP\plugins\generic\fullTextSearch\classes\SettingsForm;
-use APP\core\Application;
-use PKP\config\Config;
 use Exception;
-use PKP\plugins\GenericPlugin;
-use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
+use PKP\config\Config;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use APP\notification\NotificationManager;
+use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 
 class FullTextSearchPlugin extends GenericPlugin
@@ -38,6 +39,7 @@ class FullTextSearchPlugin extends GenericPlugin
 
     /**
      * @copydoc Plugin::register
+     *
      * @param null|int $mainContextId
      */
     public function register($category, $path, $mainContextId = null): bool
@@ -63,12 +65,12 @@ class FullTextSearchPlugin extends GenericPlugin
     {
         try {
             $table = Dao::TABLE_NAME;
-            if (Manager::schema()->hasTable($table)) {
+            if (DB::schema()->hasTable($table)) {
                 $this->installed = true;
                 return;
             }
 
-            Manager::schema()->create($table, function (Blueprint $table) {
+            DB::schema()->create($table, function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->bigInteger('context_id');
                 $table->bigInteger('submission_id')->unique();
@@ -85,13 +87,13 @@ class FullTextSearchPlugin extends GenericPlugin
                 $table->timestamp('updated_at')->nullable();
             });
 
-            $indexFormat = Manager::connection() instanceof PostgresConnection
+            $indexFormat = DB::connection() instanceof PostgresConnection
                 ? "CREATE INDEX {$table}_%s ON {$table} USING GIN (to_tsvector('simple', coalesce(%s,'')))"
                 : "ALTER TABLE {$table} ADD FULLTEXT {$table}_%s (%s)";
 
             // Add full-text indexes for individual fields
             foreach (['title', 'abstract', 'authors', 'keywords', 'subjects', 'disciplines', 'coverage', 'galley_text', 'type'] as $field) {
-                Manager::statement(sprintf($indexFormat, $field, $field));
+                DB::statement(sprintf($indexFormat, $field, $field));
             }
 
             $this->installed = true;

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SettingsForm
+ *
  * @ingroup plugins_generic_fullTextSearch
  *
  * @brief Settings form for the Full Text Search plugin
@@ -15,14 +16,14 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
-use APP\notification\Notification;
-use APP\plugins\generic\fullTextSearch\FullTextSearchPlugin;
 use APP\core\Application;
+use APP\notification\Notification;
+use APP\notification\NotificationManager;
+use APP\plugins\generic\fullTextSearch\FullTextSearchPlugin;
 use APP\template\TemplateManager;
 use PKP\form\Form;
 use PKP\form\validation\FormValidatorCSRF;
 use PKP\form\validation\FormValidatorPost;
-use APP\notification\NotificationManager;
 
 class SettingsForm extends Form
 {
@@ -60,6 +61,8 @@ class SettingsForm extends Form
 
     /**
      * @copydoc Form::fetch
+     *
+     * @param null|mixed $template
      */
     public function fetch($request, $template = null, $display = false): string
     {
