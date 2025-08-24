@@ -17,7 +17,6 @@
 namespace APP\plugins\generic\fullTextSearch\classes;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\submission\Submission;
 use Illuminate\Database\PostgresConnection;
