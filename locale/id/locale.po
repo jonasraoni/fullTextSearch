@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/id_ID/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin Pencarian Teks Lengkap"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Menyediakan indeks teks lengkap berbasis database untuk pengajuan OJS, kompatibel dengan MySQL dan PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Pilih konteks mana yang harus memiliki indeks pencarian yang dibangun ulang."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Bangun Ulang Indeks Pencarian"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Pembangunan ulang indeks pencarian berhasil diselesaikan untuk konteks yang dipilih."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Bersihkan Tabel Pencarian Standar"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opsional bersihkan tabel pencarian standar OJS sebelum membangun ulang. Ini akan menghapus semua data pencarian yang ada dari sistem pencarian standar."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Bersihkan tabel pencarian standar sebelum membangun ulang indeks"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Terjadi kesalahan tak terduga saat melakukan pencarian"

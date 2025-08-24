@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/vi_VN/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin Tìm Kiếm Văn Bản Đầy Đủ"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Cung cấp chỉ mục văn bản đầy đủ dựa trên cơ sở dữ liệu cho các bài nộp OJS, tương thích với MySQL và PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Chọn các ngữ cảnh nào cần xây dựng lại chỉ mục tìm kiếm."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Xây Dựng Lại Chỉ Mục Tìm Kiếm"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Việc xây dựng lại chỉ mục tìm kiếm đã hoàn thành thành công cho các ngữ cảnh đã chọn."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Xóa Bảng Tìm Kiếm Tiêu Chuẩn"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Tùy chọn xóa các bảng tìm kiếm tiêu chuẩn OJS trước khi xây dựng lại. Điều này sẽ loại bỏ tất cả dữ liệu tìm kiếm hiện có từ hệ thống tìm kiếm tiêu chuẩn."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Xóa bảng tìm kiếm tiêu chuẩn trước khi xây dựng lại chỉ mục"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Đã xảy ra lỗi không mong muốn trong quá trình tìm kiếm"

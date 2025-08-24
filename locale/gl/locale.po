@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/gl_ES/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: gl\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin de Busca de Texto Completo"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Proporciona un índice de texto completo baseado en base de datos para envíos OJS, compatible con MySQL e PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Escolle que contextos deben ter o seu índice de busca reconstruído."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Reconstruír Índice de Busca"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "A reconstrución do índice de busca completouse con éxito para os contextos seleccionados."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Limpar Táboas de Busca Estándar"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opcionalmente limpar as táboas de busca estándar de OJS antes de reconstruír. Isto eliminará todos os datos de busca existentes do sistema de busca estándar."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Limpar táboas de busca estándar antes de reconstruír o índice"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Ocorreu un erro inesperado durante a busca"

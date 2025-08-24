@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/he_IL/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "תוסף חיפוש טקסט מלא"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "מספק אינדקס טקסט מלא מבוסס מסד נתונים להגשות OJS, תואם ל-MySQL ו-PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "בחר אילו הקשרים צריכים שיהיה להם אינדקס חיפוש שנבנה מחדש."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "בנה מחדש אינדקס חיפוש"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "בנייה מחדש של אינדקס החיפוש הושלמה בהצלחה עבור ההקשרים שנבחרו."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "נקה טבלאות חיפוש סטנדרטיות"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "אופציונלית נקה את טבלאות החיפוש הסטנדרטיות של OJS לפני בנייה מחדש. זה יסיר את כל נתוני החיפוש הקיימים ממערכת החיפוש הסטנדרטית."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "נקה טבלאות חיפוש סטנדרטיות לפני בנייה מחדש של האינדקס"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "אירעה שגיאה בלתי צפויה במהלך החיפוש"

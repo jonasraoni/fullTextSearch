@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Scottish Gaelic <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/gd_GB/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: gd\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : (n > 2 && n < 20) ? 2 : 3;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugan Lorg Teacsa Iomlan"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "A' toirt seachad clàr-amais teacsa iomlan stèidhichte air stòr-dàta airson cur a-steach OJS, co-chòrdail ri MySQL agus PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Tagh dè na co-theacsannan a dh'fheumas an clàr-amais lorg aca a bhith air ath-thogail."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Ath-thogail Clàr-amais Lorg"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Chaidh ath-thogail a' chlàir-amais lorg a chrìochnachadh gu soirbheachail airson na co-theacsannan a chaidh a thaghadh."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Glan Tàrlaichean Lorg Stannardach"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Roghainneil glan tàrlaichean lorg stannardach OJS mus ath-thogail thu. Bheir seo air falbh a h-uile dàta lorg a th' ann bhon t-siostam lorg stannardach."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Glan tàrlaichean lorg stannardach mus ath-thogail thu an clàr-amais"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Thachair mearachd neo-riaghlach rè an lorg"

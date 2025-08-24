@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/mk_MK/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: mk\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Додаток за Пребарување Целосен Текст"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Обезбедува индекс за целосен текст базиран на база на податоци за OJS поднесоци, компатибилен со MySQL и PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Изберете кои контексти треба да имаат преизграден индекс за пребарување."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Преизгради Индекс за Пребарување"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Преизградбата на индексот за пребарување е успешно завршена за избраните контексти."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Исчисти Стандардни Табели за Пребарување"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Опционално исчистете ги стандардните OJS табели за пребарување пред преизградбата. Ова ќе ги отстрани сите постоечки податоци за пребарување од стандардниот систем за пребарување."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Исчисти стандардни табели за пребарување пред преизградба на индексот"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Се појави неочекувана грешка за време на пребарувањето"

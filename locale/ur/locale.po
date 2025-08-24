@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Urdu <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/ur_PK/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ur\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "مکمل متن تلاش پلگ ان"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS جمع کرائیوں کے لیے ڈیٹا بیس پر مبنی مکمل متن انڈیکس فراہم کرتا ہے، MySQL اور PostgreSQL کے ساتھ مطابقت رکھتا ہے۔"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "انتخاب کریں کہ کون سے سیاق و سباق کے تلاش انڈیکس کو دوبارہ تعمیر کرنا ہے۔"
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "تلاش انڈیکس دوبارہ تعمیر کریں"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "منتخب کردہ سیاق و سباق کے لیے تلاش انڈیکس کی دوبارہ تعمیر کامیابی سے مکمل ہو گئی۔"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "معیاری تلاش ٹیبلز صاف کریں"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "اختیاری طور پر دوبارہ تعمیر سے پہلے معیاری OJS تلاش ٹیبلز کو صاف کریں۔ یہ معیاری تلاش سسٹم سے تمام موجودہ تلاش کے اعداد و شمار کو ہٹا دے گا۔"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "انڈیکس دوبارہ تعمیر کرنے سے پہلے معیاری تلاش ٹیبلز صاف کریں"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "تلاش کے دوران ایک غیر متوقع خرابی پیش آئی"

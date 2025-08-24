@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/ca_ES/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin de Cerca de Text Complet"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Proporciona un índex de text complet basat en base de dades per a enviaments OJS, compatible amb MySQL i PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Trieu quins contextos han de tenir el seu índex de cerca reconstruït."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Reconstruir Índex de Cerca"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "La reconstrucció de l'índex de cerca s'ha completat amb èxit per als contextos seleccionats."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Netejar Taules de Cerca Estàndard"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opcionalment netegeu les taules de cerca estàndard d'OJS abans de reconstruir. Això eliminarà totes les dades de cerca existents del sistema de cerca estàndard."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Netejar taules de cerca estàndard abans de reconstruir l'índex"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "S'ha produït un error inesperat durant la cerca"

@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/zh_CN/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "全文搜索插件"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "为OJS投稿提供基于数据库的全文索引，兼容MySQL和PostgreSQL。"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "选择哪些上下文应该重建其搜索索引。"
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "重建搜索索引"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "所选上下文的搜索索引重建已成功完成。"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "清除标准搜索表"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "可选地在重建之前清除标准OJS搜索表。这将从默认搜索系统中删除所有现有的搜索数据。"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "重建索引前清除标准搜索表"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "搜索时发生意外错误"

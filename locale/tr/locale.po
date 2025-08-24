@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/tr_TR/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Tam Metin Arama Eklentisi"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS gönderileri için veritabanı destekli tam metin indeksi sağlar, MySQL ve PostgreSQL ile uyumludur."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Hangi bağlamların arama indeksinin yeniden oluşturulması gerektiğini seçin."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Arama İndeksini Yeniden Oluştur"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Seçilen bağlamlar için arama indeksi yeniden oluşturma başarıyla tamamlandı."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Standart Arama Tablolarını Temizle"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "İsteğe bağlı olarak yeniden oluşturmadan önce standart OJS arama tablolarını temizleyin. Bu, varsayılan arama sisteminden tüm mevcut arama verilerini kaldıracaktır."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "İndeksi yeniden oluşturmadan önce standart arama tablolarını temizle"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Arama sırasında beklenmeyen bir hata oluştu"
