@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/Dao.inc.php
+ * @file classes/Dao.php
  *
  * Copyright (c) 2025 Simon Fraser University
  * Copyright (c) 2025 John Willinsky
@@ -15,13 +15,16 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
-use Application;
-use Context;
+use APP\core\Application;
 use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Query\Builder;
-use Services;
+use APP\core\Services;
 use APP\plugins\generic\fullTextSearch\classes\Indexer;
+use PKP\context\Context;
+use APP\submission\Submission;
+use PKP\submissionFile\SubmissionFile;
+use PKP\search\SubmissionSearch;
 
 class Dao
 {
@@ -108,15 +111,15 @@ class Dao
             $fields = $field ? ["fts.{$field}"] : [];
             if (!$field) {
                 foreach([
-                    SUBMISSION_SEARCH_AUTHOR,
-                    SUBMISSION_SEARCH_TITLE,
-                    SUBMISSION_SEARCH_ABSTRACT,
-                    SUBMISSION_SEARCH_GALLEY_FILE,
-                    SUBMISSION_SEARCH_DISCIPLINE,
-                    SUBMISSION_SEARCH_SUBJECT,
-                    SUBMISSION_SEARCH_KEYWORD,
-                    SUBMISSION_SEARCH_TYPE,
-                    SUBMISSION_SEARCH_COVERAGE
+                    SubmissionSearch::SUBMISSION_SEARCH_AUTHOR,
+                    SubmissionSearch::SUBMISSION_SEARCH_TITLE,
+                    SubmissionSearch::SUBMISSION_SEARCH_ABSTRACT,
+                    SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE,
+                    SubmissionSearch::SUBMISSION_SEARCH_DISCIPLINE,
+                    SubmissionSearch::SUBMISSION_SEARCH_SUBJECT,
+                    SubmissionSearch::SUBMISSION_SEARCH_KEYWORD,
+                    SubmissionSearch::SUBMISSION_SEARCH_TYPE,
+                    SubmissionSearch::SUBMISSION_SEARCH_COVERAGE
                 ] as $fieldType) {
                     $fields[] = 'fts.' . $this->getFieldForType($fieldType);
                 }
@@ -162,11 +165,10 @@ class Dao
         // Order
         $orderBy = strtolower($orderBy);
         $orderDirection = strtolower($orderDirection) === 'asc' ? 'asc' : 'desc';
-        switch ($orderBy) {
-            case 'score':
-            default:
-                $q->orderBy('score', $orderDirection);
-        }
+        $q->orderBy(match($orderBy) {
+            'score' => 'score',
+            default => 'score'
+        }, $orderDirection);
 
         // Count total
         $total = (clone $q)->count('fts.submission_id');
@@ -183,15 +185,15 @@ class Dao
     private function getFieldForType(string $fieldType): ?string
     {
         $fieldMap = [
-            SUBMISSION_SEARCH_AUTHOR => 'authors',
-            SUBMISSION_SEARCH_TITLE => 'title',
-            SUBMISSION_SEARCH_ABSTRACT => 'abstract',
-            SUBMISSION_SEARCH_GALLEY_FILE => 'galley_text',
-            SUBMISSION_SEARCH_DISCIPLINE => 'disciplines',
-            SUBMISSION_SEARCH_SUBJECT => 'subjects',
-            SUBMISSION_SEARCH_KEYWORD => 'keywords',
-            SUBMISSION_SEARCH_TYPE => 'type',
-            SUBMISSION_SEARCH_COVERAGE => 'coverage',
+            SubmissionSearch::SUBMISSION_SEARCH_AUTHOR => 'authors',
+            SubmissionSearch::SUBMISSION_SEARCH_TITLE => 'title',
+            SubmissionSearch::SUBMISSION_SEARCH_ABSTRACT => 'abstract',
+            SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE => 'galley_text',
+            SubmissionSearch::SUBMISSION_SEARCH_DISCIPLINE => 'disciplines',
+            SubmissionSearch::SUBMISSION_SEARCH_SUBJECT => 'subjects',
+            SubmissionSearch::SUBMISSION_SEARCH_KEYWORD => 'keywords',
+            SubmissionSearch::SUBMISSION_SEARCH_TYPE => 'type',
+            SubmissionSearch::SUBMISSION_SEARCH_COVERAGE => 'coverage',
         ];
 
         return $fieldMap[$fieldType] ?? null;
@@ -222,7 +224,7 @@ class Dao
             Manager::table(static::TABLE_NAME, 'fts')
                 ->join('submissions AS s', 's.submission_id', '=', 'fts.submission_id')
                 ->where('s.context_id', $contextId)
-                ->where('s.status', '!=', STATUS_PUBLISHED)
+                ->where('s.status', '!=', Submission::STATUS_PUBLISHED)
                 ->delete();
         }
     }
@@ -234,8 +236,6 @@ class Dao
     public function getAllContexts(): array
     {
         $contexts = [];
-
-        /** @var Context $context */
         foreach (Application::getContextDAO()->getAll(false)->toIterator() as $context) {
             $contexts[$context->getId()] = $context->getLocalizedName();
         }
@@ -250,9 +250,6 @@ class Dao
     public function rebuildSearchIndex(array $contextIds): void
     {
         $indexer = new Indexer();
-        import('classes.submission.Submission');
-        import('lib.pkp.classes.submission.SubmissionFile');
-
         foreach ($contextIds as $contextId) {
             if (empty($contextId)) {
                 continue;
@@ -266,7 +263,7 @@ class Dao
             // Get only published submissions for this context
             $submissionsIterator = Services::get('submission')->getMany([
                 'contextId' => $contextId,
-                'status' => [STATUS_PUBLISHED]
+                'status' => [Submission::STATUS_PUBLISHED]
             ]);
 
             foreach ($submissionsIterator as $submission) {
@@ -274,7 +271,7 @@ class Dao
                 // Also index any galley files
                 $submissionFilesIterator = Services::get('submissionFile')->getMany([
                     'submissionIds' => [$submission->getId()],
-                    'fileStages' => [SUBMISSION_FILE_PROOF],
+                    'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
                 ]);
                 foreach ($submissionFilesIterator as $submissionFile) {
                     $indexer->indexSubmissionFile($submission->getId(), $submissionFile->getId());

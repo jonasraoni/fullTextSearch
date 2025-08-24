@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/SettingsForm.inc.php
+ * @file classes/SettingsForm.php
  *
  * Copyright (c) 2025 Simon Fraser University
  * Copyright (c) 2025 John Willinsky
@@ -15,34 +15,28 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
+use APP\notification\Notification;
 use APP\plugins\generic\fullTextSearch\FullTextSearchPlugin;
-use Application;
-use Form;
-use FormValidatorCSRF;
-use FormValidatorPost;
-use NotificationManager;
-use TemplateManager;
-
-import('lib.pkp.classes.form.Form');
+use APP\core\Application;
+use APP\template\TemplateManager;
+use PKP\form\Form;
+use PKP\form\validation\FormValidatorCSRF;
+use PKP\form\validation\FormValidatorPost;
+use APP\notification\NotificationManager;
 
 class SettingsForm extends Form
 {
-    /** @var FullTextSearchPlugin */
-    public $plugin;
-
-    /** @var Dao */
-    private $dao;
+    private Dao $dao;
 
     /**
      * @copydoc Form::__construct
      */
-    public function __construct(FullTextSearchPlugin $plugin)
+    public function __construct(public FullTextSearchPlugin $plugin)
     {
-        $this->plugin = $plugin;
-        $this->dao = new Dao();
         parent::__construct($plugin->getTemplateResource('settings.tpl'));
         $this->addCheck(new FormValidatorPost($this));
         $this->addCheck(new FormValidatorCSRF($this));
+        $this->dao = new Dao();
     }
 
     /**
@@ -92,7 +86,7 @@ class SettingsForm extends Form
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification(
                 Application::get()->getRequest()->getUser()->getId(),
-                NOTIFICATION_TYPE_SUCCESS,
+                Notification::NOTIFICATION_TYPE_SUCCESS,
                 ['contents' => __('plugins.generic.fullTextSearch.rebuildComplete')]
             );
         }

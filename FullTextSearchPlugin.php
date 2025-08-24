@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file FullTextSearchPlugin.inc.php
+ * @file FullTextSearchPlugin.php
  *
  * Copyright (c) 2025 Simon Fraser University
  * Copyright (c) 2025 John Willinsky
@@ -19,25 +19,22 @@ use APP\plugins\generic\fullTextSearch\classes\Dao;
 use APP\plugins\generic\fullTextSearch\classes\Indexer;
 use APP\plugins\generic\fullTextSearch\classes\SearchService;
 use APP\plugins\generic\fullTextSearch\classes\SettingsForm;
-use Application;
-use Config;
+use APP\core\Application;
+use PKP\config\Config;
 use Exception;
-use GenericPlugin;
-use HookRegistry;
+use PKP\plugins\GenericPlugin;
 use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Schema\Blueprint;
-use JSONMessage;
-use LinkAction;
-use AjaxModal;
-use NotificationManager;
-
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\core\JSONMessage;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use APP\notification\NotificationManager;
+use PKP\plugins\Hook;
 
 class FullTextSearchPlugin extends GenericPlugin
 {
-    /** @var bool */
-    private $installed = false;
+    private bool $installed = false;
 
     /**
      * @copydoc Plugin::register
@@ -53,32 +50,10 @@ class FullTextSearchPlugin extends GenericPlugin
             return true;
         }
 
-        $this->useAutoLoader();
         $this->ensureSchema();
         $this->registerIndexingHooks();
         $this->registerSearchHook();
         return true;
-    }
-
-    /**
-     * Registers a custom autoloader to handle the plugin namespace
-     */
-    private function useAutoLoader(): void
-    {
-        spl_autoload_register(function ($className) {
-            $path = explode(__NAMESPACE__ . '\\', $className, 2);
-            if (reset($path)) {
-                return;
-            }
-
-            $path = explode('\\', end($path));
-            $class = array_pop($path);
-            $path = array_map(function ($name) {
-                return strtolower($name[0]) . substr($name, 1);
-            }, $path);
-            $path[] = $class;
-            $this->import(implode('.', $path));
-        });
     }
 
     /**
@@ -130,11 +105,11 @@ class FullTextSearchPlugin extends GenericPlugin
      */
     private function registerIndexingHooks(): void
     {
-        HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', [$this, 'articleMetadataChanged']);
-        HookRegistry::register('ArticleSearchIndex::submissionFileChanged', [$this, 'submissionFileChanged']);
-        HookRegistry::register('ArticleSearchIndex::submissionFileDeleted', [$this, 'submissionFileDeleted']);
-        HookRegistry::register('ArticleSearchIndex::articleDeleted', [$this, 'articleDeleted']);
-        HookRegistry::register('Publication::unpublish', [$this, 'publicationUnpublished']);
+        Hook::add('ArticleSearchIndex::articleMetadataChanged', [$this, 'articleMetadataChanged']);
+        Hook::add('ArticleSearchIndex::submissionFileChanged', [$this, 'submissionFileChanged']);
+        Hook::add('ArticleSearchIndex::submissionFileDeleted', [$this, 'submissionFileDeleted']);
+        Hook::add('ArticleSearchIndex::articleDeleted', [$this, 'articleDeleted']);
+        Hook::add('Publication::unpublish', [$this, 'publicationUnpublished']);
     }
 
     /**
@@ -197,7 +172,7 @@ class FullTextSearchPlugin extends GenericPlugin
      */
     private function registerSearchHook(): void
     {
-        HookRegistry::register('SubmissionSearch::retrieveResults', function (string $hookName, array $args): bool {
+        Hook::add('SubmissionSearch::retrieveResults', function (string $hookName, array $args): bool {
             [$context, $keywords, $publishedFrom, $publishedTo, $orderBy, $orderDir, $exclude, $page, $itemsPerPage, &$totalResults, &$error, &$results] = $args;
             try {
                 $service = new SearchService();

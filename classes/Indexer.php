@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/Indexer.inc.php
+ * @file classes/Indexer.php
  *
  * Copyright (c) 2025 Simon Fraser University
  * Copyright (c) 2025 John Willinsky
@@ -15,10 +15,9 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
-use DAORegistry;
-use SearchFileParser;
-use Services;
-use SubmissionFileDAO;
+use APP\facades\Repo;
+use PKP\search\SearchFileParser;
+use APP\core\Services;
 
 class Indexer
 {
@@ -74,16 +73,14 @@ class Indexer
      */
     public function indexSubmissionFile(int $submissionId, int $submissionFileId): void
     {
-        /** @var SubmissionFileDAO $submissionFileDao */
-        $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-        $submissionFile = $submissionFileDao->getById($submissionFileId);
+        $submissionFile = Repo::submissionFile()->get($submissionFileId);
         if (!$submissionFile) {
             return;
         }
 
         $parser = SearchFileParser::fromFile($submissionFile);
         $texts = [];
-        if ($parser && $parser->open()) {
+        if ($parser?->open()) {
             while(($text = $parser->read()) !== false) {
                 $texts[] = $text;
             }
