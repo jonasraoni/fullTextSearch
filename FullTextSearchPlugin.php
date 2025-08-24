@@ -17,6 +17,7 @@
 namespace APP\plugins\generic\fullTextSearch;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\plugins\generic\fullTextSearch\classes\Dao;
 use APP\plugins\generic\fullTextSearch\classes\Indexer;
@@ -33,7 +34,6 @@ use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 use PKP\submissionFile\SubmissionFile;
-use Services;
 
 class FullTextSearchPlugin extends GenericPlugin
 {
@@ -173,21 +173,23 @@ class FullTextSearchPlugin extends GenericPlugin
     public function submissionFilesChanged(string $hookName, array $args): bool
     {
         [$submission] = $args;
-        import('lib.pkp.classes.submission.SubmissionFile'); // Load constant
-        $submissionFilesIterator = Services::get('submissionFile')->getMany([
-            'submissionIds' => [$submission->getId()],
-            'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
-        ]);
+        $submissionFilesIterator = Repo::submissionFile()
+            ->getCollector()
+            ->filterBySubmissionIds([$submission->getId()])
+            ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF])
+            ->getMany();
         $indexer = new Indexer();
         foreach ($submissionFilesIterator as $submissionFile) {
             $indexer->indexSubmissionFile($submission, $submissionFile);
-            $dependentFilesIterator = Services::get('submissionFile')->getMany([
-                'assocTypes' => [Application::ASSOC_TYPE_SUBMISSION_FILE],
-                'assocIds' => [$submissionFile->getId()],
-                'submissionIds' => [$submission->getId()],
-                'fileStages' => [SubmissionFile::SUBMISSION_FILE_DEPENDENT],
-                'includeDependentFiles' => true,
-            ]);
+            $dependentFilesIterator = Repo::submissionFile()->getCollector()
+                ->filterByAssoc(
+                    Application::ASSOC_TYPE_SUBMISSION_FILE,
+                    [$submissionFile->getId()]
+                )
+                ->filterBySubmissionIds([$submission->getId()])
+                ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
+                ->includeDependentFiles()
+                ->getMany();
             foreach ($dependentFilesIterator as $dependentFile) {
                 $indexer->indexSubmissionFile($submission, $dependentFile);
             }

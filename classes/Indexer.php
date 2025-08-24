@@ -16,8 +16,7 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
-use APP\submission\Submission;
-use Illuminate\Support\Facades\DB;
+use APP\facades\Repo;
 use PKP\context\Context;
 use PKP\search\SearchFileParser;
 use PKP\submissionFile\SubmissionFile;
