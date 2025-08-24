@@ -211,9 +211,8 @@ class Dao
     public function clearStandardSearchTables(): void
     {
         $connection = DB::connection();
-        $connection->table('submission_search_object_keywords')->truncate();
-        $connection->table('submission_search_objects')->truncate();
-        $connection->table('submission_search_keyword_list')->truncate();
+        $connection->table('submission_search_keyword_list')->delete();
+        $connection->table('submission_search_objects')->delete();
     }
 
     /**
