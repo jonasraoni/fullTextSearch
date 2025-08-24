@@ -14,8 +14,8 @@
 <version>
 	<application>fullTextSearch</application>
 	<type>plugins.generic</type>
-	<release>1.0.0.0</release>
-	<date>2025-08-22</date>
+	<release>2.0.0.0</release>
+	<date>2025-08-24</date>
 	<lazy-load>1</lazy-load>
 	<sitewide>1</sitewide>
 	<class>FullTextSearchPlugin</class>
