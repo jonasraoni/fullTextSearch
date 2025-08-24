@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sq\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin për Kërkimin e Tekstit të Plotë"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Ofron një indeks të plotë të tekstit të bazuar në bazën e të dhënave për paraqitjet e OJS, i përputhshëm me MySQL dhe PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Zgjidhni se cilat kontekste duhet të rindërtohen indeksi i kërkimit të tyre."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Rindërto Indeksin e Kërkimit"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Rindërtimi i indeksit të kërkimit u përfundua me sukses për kontekstet e zgjedhura."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Pastro Tabelat e Kërkimit Standard"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opsionalisht pastro tabelat e kërkimit standard të OJS para rindërtimit. Kjo do të heqë të gjitha të dhënat ekzistuese të kërkimit nga sistemi i kërkimit të paracaktuar."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Pastro tabelat e kërkimit standard para rindërtimit të indeksit"
+
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "Për një integrim të qetë, pa ndërprerje, ndiqni udhëzimet më poshtë: Pasi të aktivizoni plugin-in, rindërtoni indeksin e kërkimit për të gjitha revistat, ose ekzekutoni php tools/rebuildSearchIndex.php --skip-standard-index (flamuri siguron që vetëm të dhënat për plugin-in do të rindërtohen), për të mbushur indeksin e kërkimit të plugin-it me të dhëna nga botimet e vjetra. Botimet e reja dhe të përditësuara do të indeksohen automatikisht. Pasi indeksimi të përfundojë, aktivizoni kërkimin e tekstit të plotë më poshtë dhe kontrolloni nëse ndërfaqja e përdoruesit të kërkimit po funksionon mirë (mund ta testoni duke kërkuar për një fjalë kyçe në kutinë e kërkimit). Nëse gjithçka po funksionon siç duhet, mund të çaktivizoni indeksimin standard më poshtë dhe gjithashtu të pastroni tabelat e kërkimit standard për të kursyer hapësirën në disk dhe për të përmirësuar shpejtësinë e përmirësimit."
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Përdor kërkimin e tekstit të plotë. Kur aktivizohet, ndërfaqja e kërkimit do të fuqizohet nga plugin-i"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Çaktivizo indeksimin standard. Kur aktivizohet, aplikacioni do të ndalojë të ushqejë të dhëna në motorin standard të kërkimit (plugin-i do ta bëjë atë)"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Ndodhi një gabim i papritur gjatë kërkimit"

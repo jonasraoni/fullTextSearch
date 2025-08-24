@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ckb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "پڵاگینی گەڕانی پڕۆژەی تەواو"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "پڕۆژەکانی OJS بۆ ئەندێکسی پڕۆژەی تەواو دەدات کە پشت بە داتابەیس دەبەستێت، لەگەڵ MySQL و PostgreSQL دەگونجێت."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>بۆ یەکخستنی بێ کێشە، بێ ناوەڕۆک، ئەم ڕێنماییانە جێبەجێ بکە:</strong></p>"
+"<ol><li>دوای چالاککردنی پڵاگینەکە، ئەندێکسی گەڕان بۆ هەموو گۆڤارەکان دووبارە دروست بکەوە، یان <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> جێبەجێ بکە (ئاڵا دڵنیا دەکات کە تەنها داتاکانی پڵاگینەکە دووبارە دروست دەکرێتەوە)، بۆ پڕکردنەوەی ئەندێکسی گەڕانی پڵاگینەکە بە داتا لە بڵاوکراوە کۆنەکان. بڵاوکراوە نوێ و نوێکراوەکان خۆکارانە ئەندێکس دەکرێن.</li>"
+"<li>کاتێک ئەندێکسکردنەکە تەواو بوو، <strong>گەڕانی پڕۆژەی تەواو چالاک بکە</strong> لە خوارەوە و دڵنیا بە کە ڕووکاری بەکارهێنەری گەڕان بە باشی کار دەکات (دەتوانیت تاقی بکەیتەوە بە گەڕان بۆ وشەیەکی کلیلی لە بۆکسەکەی گەڕان).</li>"
+"<li>ئەگەر هەموو شتەکان بە باشی کار دەکەن، دەتوانیت <strong>ئەندێکسکردنی ستاندارد ناچالاک بکەیت</strong> لە خوارەوە و هەروەها <strong>خشتەکانی گەڕانی ستاندارد پاک بکەیتەوە</strong> بۆ پاراستنی بۆشایی دیسک و باشترکردنی خێرایی نوێکردنەوە.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "گەڕانی پڕۆژەی تەواو بەکاربهێنە. کاتێک چالاکە ڕووکاری گەڕان بە پڵاگینەکە کار دەکات"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "ئەندێکسکردنی ستاندارد ناچالاک بکە. کاتێک چالاکە ئەپەکە وەست دەدات لە داتا دانی بە مەکینەی گەڕانی ستاندارد (پڵاگینەکە دەیکات)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "هەڵبژێرە کام کۆنتێکستەکان دەبێت ئەندێکسی گەڕانیان دووبارە دروست بکرێتەوە."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "ئەندێکسی گەڕان دووبارە دروست بکەوە"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "دووبارە دروستکردنەوەی ئەندێکسی گەڕان بە سەرکەوتوویی تەواو بوو بۆ کۆنتێکستە هەڵبژێردراوەکان."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "خشتەکانی گەڕانی ستاندارد پاک بکەوە"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "بە پێی ئارەزوومەند خشتەکانی گەڕانی ستانداردی OJS پاک بکەوە پێش دووبارە دروستکردنەوە. ئەمە هەموو داتا هەبووەکانی گەڕان لە سیستەمی گەڕانی بنەڕەتی لابەدەدات."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "خشتەکانی گەڕانی ستاندارد پاک بکەوە پێش دووبارە دروستکردنەوەی ئەندێکس"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "هەڵەیەکی چاوەڕوان نەکراو ڕوویدا لە کاتی گەڕان"

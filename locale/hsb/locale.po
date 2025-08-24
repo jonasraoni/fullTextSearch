@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hsb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin za pytanje połneho teksta"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Staja datowa bazowa indeksa połneho teksta za OJS předawki k dispoziciji, kompatibelny z MySQL a PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Za bjez přetorhow integraciju slědujće slědowacym instrukcijam:</strong></p>"
+"<ol><li>Po zmóžnjenju plugina, znowa natwarće indeks pytanja za wšě časopisy, abo wuwjedźće <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (flaga zawěsćuje, zo jenož daty za plugin budźeja znowa natwarjene), zo by so indeks pytanja plugina z datami ze starych publikacijow wupjelnił. Nowe a zaktualizowane publikacije budźeja awtomatisce indeksowane.</li>"
+"<li>Hdyž indeksowanje je skónčene, <strong>zmóžniće pytanje połneho teksta</strong> deleka a přepruwujće, hač pytanski wužiwarski powjerch dobre funguje (móžeće to testować, pytajo klučowe słowo w pytanskim polu).</li>"
+"<li>Jeli wšitko dobre funguje, móžeće <strong>standardne indeksowanje deaktiwować</strong> deleka a tež <strong>standardne pytanske tabele wuproznić</strong>, zo by so diskowy rum zaškitował a aktualizowanska malsnosć polěpšiła.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Pytanje połneho teksta wužiwać. Hdyž zmóžnjene, pytanski powjerch budźe so přez plugin napohować"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Standardne indeksowanje deaktiwować. Hdyž zmóžnjene, aplikacija budźe přestać daty do standardneho pytanskeho mašiny sćěłać (plugin budźe to činić)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Wubjerće, kotre konteksty maja swój pytanski indeks znowa natwarjeny."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Pytanski indeks znowa natwarić"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Znowa natwarjenje pytanskeho indeksa je wuspěšnje skónčene za wubrane konteksty."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Standardne pytanske tabele wuproznić"
+
+msgid "plugins.generic/fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opcijonalnje wuprozniće standardne pytanske tabele OJS před znowa natwarjenim. To budźe wšě eksistowace pytanske daty ze standardneho pytanskeho systema wotpórać."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Standardne pytanske tabele wuproznić před znowa natwarjenim indeksa"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Njewočakowana zmylka je nastała při pytanju"

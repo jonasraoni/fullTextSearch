@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ps\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "د بشپړ متن لټون پلگین"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "د OJS سپارنو لپاره د MySQL او PostgreSQL سره مطابقت لرونکی د ډیټابیس ملاتړ شوی بشپړ متن شاخص چمتو کوي."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>د بې وقفې یوځای کیدو لپاره، لاندې لارښوونو تعقیب کړئ:</strong></p>"
+"<ol><li>د پلگین فعالولو وروسته، د ټولو مجلو لپاره د لټون شاخص بیا جوړ کړئ، یا <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> چل کړئ (د بیرغ ډاډ ترلاسه کوي چې یوازې د پلگین لپاره د ډاټا به بیا جوړ شي)، د پلگین د لټون شاخص د زوړ خپرونو له ډاټا څخه ډکولو لپاره. نوي او تازه شوي خپرونه به په اتوماتيک ډول شاخص شي.</li>"
+"<li>کله چې شاخص کول پای ته ورسي، لاندې <strong>د بشپړ متن لټون فعال کړئ</strong> او وګورئ چې د لټون د کارن انټرفیس په ښه ډول کار کوي (تاسو کولی شئ د لټون په صندوق کې د کلیدي کلمې په لټون سره دا ازموینه کړئ).</li>"
+"<li>که هرڅه په ښه ډول کار کوي، نو تاسو کولی شئ لاندې <strong>معیاري شاخص کول غیرفعال کړئ</strong> او همدارنګه <strong>معیاري لټون جدولونه پاک کړئ</strong> د ډیسک ځای د سپمولو او د لوړولو سرعت د ښه کولو لپاره.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "د بشپړ متن لټون وکاروئ. کله چې فعال شي نو د لټون انټرفیس به د پلگین له خوا چلول کیږي"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "معیاري شاخص کول غیرفعال کړئ. کله چې فعال شي نو غوښتنلیک به د معیاري لټون انجن ته د ډاټا ورکول بند کړي (پلگین به دا کوي)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "د هغه سیاقونو انتخاب کړئ چې باید د دوی د لټون شاخص بیا جوړ شي."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "د لټون شاخص بیا جوړ کړئ"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "د غوره شوي سیاقونو لپاره د لټون شاخص بیا جوړول په بریالیتوب سره پای ته ورسیدل."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "معیاري لټون جدولونه پاک کړئ"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "د بیا جوړولو دمخه په اختیاري ډول معیاري OJS لټون جدولونه پاک کړئ. دا به د تیرو لټون ډاټا ټول له تیرو لټون سیسټم څخه لرې کړي."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "د شاخص بیا جوړولو دمخه معیاري لټون جدولونه پاک کړئ"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "د لټون په وخت کې یو ناڅاپه تیروتنه رامنځته شوه"

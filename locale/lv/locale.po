@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Pilna teksta meklēšanas spraudnis"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Nodrošina datubāzē balstītu pilna teksta indeksu OJS iesniegumiem, kas saderīgs ar MySQL un PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Bez pārtraukumiem integrācijai, ievērojiet tālāk norādītās instrukcijas:</strong></p>"
+"<ol><li>Pēc spraudņa ieslēgšanas, atjaunojiet meklēšanas indeksu visiem žurnāliem vai palaidiet <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (karogs nodrošina, ka tikai spraudņa dati tiks atjaunoti), lai aizpildītu spraudņa meklēšanas indeksu ar datiem no vecajām publikācijām. Jaunās un atjauninātās publikācijas tiks automātiski indeksētas.</li>"
+"<li>Pēc indeksēšanas pabeigšanas, <strong>ieslēdziet pilna teksta meklēšanu</strong> zemāk un pārbaudiet, vai meklēšanas lietotāja saskarne darbojas labi (jūs varat to testēt, meklējot atslēgas vārdu meklēšanas lodziņā).</li>"
+"<li>Ja viss darbojas pareizi, jūs varat <strong>atslēgt standarta indeksēšanu</strong> zemāk un arī <strong>notīrīt standarta meklēšanas tabulas</strong>, lai ietaupītu diska vietu un uzlabotu atjaunināšanas ātrumu.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Izmantojiet pilna teksta meklēšanu. Kad ieslēgts, meklēšanas saskarne tiks darbināta ar spraudni"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Atslēdziet standarta indeksēšanu. Kad ieslēgts, lietotne pārtrauks barot datus standarta meklēšanas dzinējam (spraudnis to darīs)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Izvēlieties, kuriem kontekstiem jābūt atjaunotam meklēšanas indeksam."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Atjaunot meklēšanas indeksu"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Meklēšanas indeksa atjaunošana veiksmīgi pabeigta izvēlētajiem kontekstiem."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Notīrīt standarta meklēšanas tabulas"
+
+msgid "plugins.generic/fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Pēc izvēles notīrīt standarta OJS meklēšanas tabulas pirms atjaunošanas. Tas noņems visus esošos meklēšanas datus no noklusētās meklēšanas sistēmas."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Notīrīt standarta meklēšanas tabulas pirms indeksa atjaunošanas"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Meklēšanas laikā notika negaidīta kļūda"

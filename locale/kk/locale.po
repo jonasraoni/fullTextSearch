@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: kk\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Толық мәтін іздеу плагині"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS тапсырыстары үшін MySQL және PostgreSQL-мен үйлесімді дерекқорға негізделген толық мәтін индексін қамтамасыз етеді."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Үзіліссіз интеграция үшін, кедергісіз, төмендегі нұсқауларды орындаңыз:</strong></p>"
+"<ol><li>Плагинді қосқаннан кейін, барлық журналдар үшін іздеу индексін қайта құрыңыз, немесе <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> командасын іске қосыңыз (байрақ тек плагин үшін деректер қайта құрылатынын кепілдік етеді), плагиннің іздеу индексін ескі басылымдардың деректерімен толтыру үшін. Жаңа және жаңартылған басылымдар автоматты түрде индекстеледі.</li>"
+"<li>Индекстеу аяқталғаннан кейін, төменде <strong>толық мәтін іздеуін қосыңыз</strong> және іздеу пайдаланушы интерфейсі жақсы жұмыс істеп тұрғанын тексеріңіз (сіз оны іздеу қорабында кілт сөзді іздеу арқылы сынап көре аласыз).</li>"
+"<li>Егер бәрі жақсы жұмыс істеп тұрса, сіз төменде <strong>стандартты индекстеуді өшіре аласыз</strong> және сондай-ақ <strong>стандартты іздеу кестелерін тазалай аласыз</strong> диск кеңістігін үнемдеу және жаңарту жылдамдығын арттыру үшін.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Толық мәтін іздеуін пайдаланыңыз. Қосылған кезде іздеу интерфейсі плагин арқылы жұмыс істейді"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Стандартты индекстеуді өшіріңіз. Қосылған кезде қосымша стандартты іздеу қозғалтқышына деректер беруді тоқтатады (плагин мұны істейді)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Қай контексттердің іздеу индексі қайта құрылуы керектігін таңдаңыз."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Іздеу индексін қайта құру"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Таңдалған контексттер үшін іздеу индексінің қайта құруы сәтті аяқталды."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Стандартты іздеу кестелерін тазалау"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Қайта құру алдында стандартты OJS іздеу кестелерін қалауыңызша тазалаңыз. Бұл әдепкі іздеу жүйесінен барлық қолданыстағы іздеу деректерін жойып тастайды."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Индексті қайта құру алдында стандартты іздеу кестелерін тазалаңыз"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Іздеу кезінде күтпеген қате орын алды"

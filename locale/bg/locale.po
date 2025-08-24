@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Плъгин за пълнотекстово търсене"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Предоставя пълнотекстов индекс, базиран на база данни за OJS представяния, съвместим с MySQL и PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>За безпроблемна интеграция без прекъсвания следвайте инструкциите по-долу:</strong></p>"
+"<ol><li>След активиране на плъгина преизградете индекса за търсене за всички списания или стартирайте <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (флагът гарантира, че само данните за плъгина ще бъдат преизградени), за да попълните индекса за търсене на плъгина с данни от стари публикации. Новите и актуализираните публикации ще бъдат индексирани автоматично.</li>"
+"<li>След приключване на индексирането <strong>активирайте пълнотекстовото търсене</strong> по-долу и проверете дали потребителският интерфейс за търсене работи правилно (можете да го тествате, като търсите ключова дума в полето за търсене).</li>"
+"<li>Ако всичко работи правилно, можете да <strong>деактивирате стандартното индексиране</strong> по-долу и също да <strong>изчистите стандартните таблици за търсене</strong>, за да спестите дисково пространство и да подобрите скоростта на обновяването.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Използвайте пълнотекстово търсене. Когато е активирано, интерфейсът за търсене ще бъде задвижван от плъгина"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Деактивирайте стандартното индексиране. Когато е активирано, приложението ще спре да подава данни към стандартната машина за търсене (плъгинът ще го прави)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Изберете кои контексти трябва да имат преизграден техния индекс за търсене."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Преизгради индекс за търсене"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Индексът за търсене е преизграден успешно за избраните контексти."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Изчисти стандартните таблици за търсене"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "По желание изчистете стандартните таблици за търсене на OJS преди преизграждане. Това ще премахне всички съществуващи данни за търсене от системата за търсене по подразбиране."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Изчистете стандартните таблици за търсене преди преизграждане на индекса"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Възникна неочаквана грешка по време на търсенето"

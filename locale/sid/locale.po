@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Sidamo <http://translate.pkp.sfu.ca/projects/ojs/plugins-generic-fullTextSearch/sid/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sid\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Qaraa Qaallii Xaafii"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS qaallii xaafii database-backed full-text index loosiissanno, MySQL i PostgreSQL kaa'la."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Kunni contexts search index rebuild loosiissanno doori."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Search Index Rebuild"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Search index rebuild doori contexts kaa'la xaafii."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Standard Search Tables Clear"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Standard search tables rebuild kaa'la clear loosiissanno. Kunni default search system kaa'la search data xaafii."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Standard search tables index rebuild kaa'la clear"
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "Seamless integration kaa'la, interruptions kaa'la, kunni instructions kaa'la follow: Plugin enable kaa'la, rebuild search index journals kaa'la, yaa php tools/rebuildSearchIndex.php --skip-standard-index (flag plugin data rebuild loosiissanno), plugin search index old publications data kaa'la fill. New updated publications automatically indexed. Indexation xaafii, full text search enable search user interface working fine check (search box kaa'la keyword search kaa'la test). Everything working properly, standard indexing disable standard search tables clear disk space save upgrade speed improve."
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Full text search use. Enable kaa'la search interface plugin powered."
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Standard indexing disable. Enable kaa'la application standard search engine data feed stop (plugin loosiissanno)"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Search kaa'la unexpected error xaafii"

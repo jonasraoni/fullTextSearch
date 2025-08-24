@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ms\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Pemalam Carian Teks Penuh"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Menyediakan indeks teks penuh berasaskan pangkalan data untuk penghantaran OJS, serasi dengan MySQL dan PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Untuk integrasi yang lancar tanpa gangguan, ikuti arahan di bawah:</strong></p>"
+"<ol><li>Selepas mengaktifkan pemalam, bina semula indeks carian untuk semua jurnal, atau jalankan <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (bendera memastikan bahawa hanya data untuk pemalam akan dibina semula), untuk mengisi indeks carian pemalam dengan data dari penerbitan lama. Penerbitan baharu dan yang dikemas kini akan diindeks secara automatik.</li>"
+"<li>Selepas pengindeksan selesai, <strong>aktifkan carian teks penuh</strong> di bawah dan periksa sama ada antara muka pengguna carian berfungsi dengan baik (anda boleh mengujinya dengan mencari kata kunci dalam kotak carian).</li>"
+"<li>Jika semuanya berfungsi dengan baik, anda boleh <strong>melumpuhkan pengindeksan standard</strong> di bawah dan juga <strong>membersihkan jadual carian standard</strong> untuk menjimatkan ruang cakera dan meningkatkan kelajuan kemas kini.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Gunakan carian teks penuh. Apabila diaktifkan, antara muka carian akan dikuasakan oleh pemalam"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Lumpuhkan pengindeksan standard. Apabila diaktifkan, aplikasi akan berhenti membekalkan data kepada enjin carian standard (pemalam akan melakukannya)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Pilih konteks mana yang harus mempunyai indeks carian mereka dibina semula."
+
+msgid "plugins.generic/fullTextSearch.settings.rebuildButton"
+msgstr "Bina Semula Indeks Carian"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Pembinaan semula indeks carian berjaya diselesaikan untuk konteks yang dipilih."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Bersihkan Jadual Carian Standard"
+
+msgid "plugins.generic/fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Secara pilihan, bersihkan jadual carian OJS standard sebelum membina semula. Ini akan membuang semua data carian sedia ada dari sistem carian lalai."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Bersihkan jadual carian standard sebelum membina semula indeks"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Ralat tidak dijangka berlaku semasa mencari"

@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/th/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "ปลั๊กอินค้นหาข้อความเต็ม"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "ให้ดัชนีข้อความเต็มที่ใช้ฐานข้อมูลสำหรับการส่งบทความ OJS ที่เข้ากันได้กับ MySQL และ PostgreSQL"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "เลือกบริบทที่ควรสร้างดัชนีการค้นหาใหม่"
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "สร้างดัชนีการค้นหาใหม่"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "การสร้างดัชนีการค้นหาใหม่เสร็จสิ้นสำเร็จสำหรับบริบทที่เลือก"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "ล้างตารางการค้นหามาตรฐาน"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "เลือกที่จะล้างตารางการค้นหา OJS มาตรฐานก่อนการสร้างใหม่ ซึ่งจะลบข้อมูลการค้นหาทั้งหมดที่มีอยู่จากระบบการค้นหาเริ่มต้น"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "ล้างตารางการค้นหามาตรฐานก่อนการสร้างดัชนีใหม่"
+
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "For a seamless integration, without interruptions, follow the instructions below: After enabling the plugin, rebuild the search index for all journals, or run php tools/rebuildSearchIndex.php --skip-standard-index (the flag ensures that only the data for the plugin will be rebuilt), to fill the plugin's search index with data from old publications. New and updated publications will be indexed automatically. Once the indexation is over, enable the full text search below and check if the search user interface is working fine (you can test it by searching for a keyword in the search box). If everything is working properly, you can disable the standard indexing below and also clear the standard search tables to save disk space and improve upgrade speed."
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Use full text search. When enabled the search interface will be powered by the plugin"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Disable standard indexing. When enabled the application will stop feeding data to the standard search engine (the plugin will do it)"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "เกิดข้อผิดพลาดที่ไม่คาดคิดขณะค้นหา"

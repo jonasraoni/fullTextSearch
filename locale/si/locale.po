@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: si\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "සම්පූර්ණ පාඨ සොයාගැනීමේ ප්ලගිනය"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS ඉදිරිපත් කිරීම් සඳහා MySQL සහ PostgreSQL සමඟ ගැළපෙන දත්ත ගබඩා-පදනම් කරගත් සම්පූර්ණ පාඨ සොයාගැනීමේ දර්ශකයක් සපයයි."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "ඔවුන්ගේ සොයාගැනීමේ දර්ශකය නැවත ගොඩනගා ගත යුතු සන්දර්භයන් තෝරන්න."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "සොයාගැනීමේ දර්ශකය නැවත ගොඩනඟන්න"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "තෝරාගත් සන්දර්භයන් සඳහා සොයාගැනීමේ දර්ශකය සාර්ථකව නැවත ගොඩනගා ඇත."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "සම්මත සොයාගැනීමේ වගු මකා දමන්න"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "නැවත ගොඩනගන්නට පෙර සම්මත OJS සොයාගැනීමේ වගු මකා දැමීමට විකල්පයක්. මෙය සම්මත සොයාගැනීමේ පද්ධතියෙන් පවතින සියලුම සොයාගැනීමේ දත්ත ඉවත් කරයි."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "දර්ශකය නැවත ගොඩනගන්නට පෙර සම්මත සොයාගැනීමේ වගු මකා දමන්න"
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "නොකඩවා ඒකාබද්ධ වීමක් සඳහා, පහත උපදෙස් අනුගමනය කරන්න: ප්ලගිනය සක්‍රීය කිරීමෙන් පසු, සියලුම සඟරා සඳහා සොයාගැනීමේ දර්ශකය නැවත ගොඩනඟන්න, නැතහොත් php tools/rebuildSearchIndex.php --skip-standard-index (ධජය සහතික කරයි එම ප්ලගිනය සඳහා පමණක් දත්ත නැවත ගොඩනගනු ඇත), පැරණි ප්‍රකාශනවලින් ප්ලගිනයේ සොයාගැනීමේ දර්ශකය පුරවන්න. නව සහ යාවත්කාලීන ප්‍රකාශන ස්වයංක්‍රීයව දර්ශනය කරනු ඇත. දර්ශනය අවසන් වූ පසු, පහත සම්පූර්ණ පාඨ සොයාගැනීම සක්‍රීය කර සොයාගැනීමේ පරිශීලක අතුරුමුහුණත හොඳින් ක්‍රියාත්මක වේදැයි පරීක්ෂා කරන්න (සොයාගැනීමේ කොටුවේ යම් යම් වචනයක් සොයා ගැනීමෙන් ඔබට පරීක්ෂා කළ හැකිය). සියල්ල හොඳින් ක්‍රියාත්මක වන්නේ නම්, ඔබට පහත සම්මත දර්ශනය අක්‍රීය කළ හැකිය සහ තැටි ඉඩ ප්‍රමාණය ඉතිරි කිරීමට සහ උසස් කිරීමේ වේගය වැඩිදියුණු කිරීමට සම්මත සොයාගැනීමේ වගු මකා දැමිය හැකිය."
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "සම්පූර්ණ පාඨ සොයාගැනීම භාවිතා කරන්න. සක්‍රීය කළ විට සොයාගැනීමේ අතුරුමුහුණත ප්ලගිනය මගින් බලගැන්වේ"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "සම්මත දර්ශනය අක්‍රීය කරන්න. සක්‍රීය කළ විට යෙදුම සම්මත සොයාගැනීමේ එන්ජිමට දත්ත සැපයීම නවත්වයි (ප්ලගිනය එය කරයි)"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "සොයාගැනීමේදී අනපේක්ෂිත දෝෂයක් සිදු විය"

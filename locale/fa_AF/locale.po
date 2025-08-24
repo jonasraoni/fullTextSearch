@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/fa_AF/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fa_AF\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "د بشپړ متن لټون پلگین"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "د OJS سپارنو لپاره د ډیټابیس پر بنسټ د بشپړ متن انډیکس چمتو کوي، چې له MySQL او PostgreSQL سره مطابقت لري."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>د بې وقفې د یوځای کولو لپاره، لاندې لارښوونې تعقیب کړئ:</strong></p>"
+"<ol><li>د پلگین فعالولو وروسته، د ټولو مجلو لپاره د لټون انډیکس بیا جوړ کړئ، یا <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> پیل کړئ (نښه ډاډه کوي چې یوازې د پلگین لپاره د معلوماتو بیا جوړول کیږي)، د پلگین د لټون انډیکس د زوړ خپرونو له معلوماتو څخه ډکولو لپاره. نوي او تازه شوي خپرون به په خپله انډیکس شي.</li>"
+"<li>د انډیکس کولو پای ته رسیدو وروسته، <strong>د بشپړ متن لټون فعال کړئ</strong> لاندې او وګورئ چې د لټون د کارن انټرفیس ښه کار کوي (تاسو کولی شئ د لټون په بکس کې د کلیدي کلمې په لټون سره دا ازموینه کړئ).</li>"
+"<li>که چیرې هرڅه ښه کار کوي، نو تاسو کولی شئ <strong>معیاري انډیکس کول غیرفعال کړئ</strong> لاندې او همدارنګه <strong>معیاري لټون جدولونه پاک کړئ</strong> ترڅو د ډیسک ځای خوندي کړئ او د تازه کولو سرعت ښه کړئ.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "د بشپړ متن لټون وکاروئ. کله چې فعال وي، د لټون انټرفیس به د پلگین له خوا چلول کیږي"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "معیاري انډیکس کول غیرفعال کړئ. کله چې فعال وي، اپلیکیشن به د معیاري لټون انجن ته د معلوماتو ورکول بند کړي (پلگین به دا کوي)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "وټاکئ چې کوم سیاقونه باید د دوی د لټون انډیکس بیا جوړ شي."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "د لټون انډیکس بیا جوړ کړئ"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "د لټون انډیکس بیا جوړول په بریالیتوب سره د ټاکل شویو سیاقونو لپاره پای ته ورسید."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "معیاري لټون جدولونه پاک کړئ"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "د بیا جوړولو دمخه په اختیاري ډول معیاري OJS لټون جدولونه پاک کړئ. دا به د معیاري لټون سیسټم څخه ټول موجود لټون معلومات لرې کړي."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "د انډیکس بیا جوړولو دمخه معیاري لټون جدولونه پاک کړئ"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "د لټون په جریان کې یو ناڅاپي تیروتنه رامنځته شوه"

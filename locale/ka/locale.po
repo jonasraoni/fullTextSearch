@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ka\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "სრული ტექსტის ძიების პლაგინი"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "მოწოდებს მონაცემთა ბაზაზე დაფუძნებულ სრულ ტექსტურ ინდექსს OJS წარდგენებისთვის, თავსებადი MySQL და PostgreSQL-თან."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>უწყვეტი ინტეგრაციისთვის, შეფერხების გარეშე, მიჰყევით ქვემოთ მოყვანილ ინსტრუქციებს:</strong></p>"
+"<ol><li>პლაგინის ჩართვის შემდეგ, ხელახლა შექმენით ძიების ინდექსი ყველა ჟურნალისთვის, ან გაუშვით <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (დროშა უზრუნველყოფს, რომ მხოლოდ პლაგინის მონაცემები ხელახლა შეიქმნება), რომ შეავსოთ პლაგინის ძიების ინდექსი ძველი პუბლიკაციების მონაცემებით. ახალი და განახლებული პუბლიკაციები ავტომატურად ინდექსდება.</li>"
+"<li>ინდექსირების დასრულების შემდეგ, <strong>ჩართეთ სრული ტექსტის ძიება</strong> ქვემოთ და შეამოწმეთ მუშაობს თუ არა ძიების მომხმარებლის ინტერფეისი კარგად (შეგიძლიათ შეამოწმოთ საკვანძო სიტყვის ძიებით ძიების ყუთში).</li>"
+"<li>თუ ყველაფერი კარგად მუშაობს, შეგიძლიათ <strong>გამორთოთ სტანდარტული ინდექსირება</strong> ქვემოთ და ასევე <strong>გაასუფთაოთ სტანდარტული ძიების ცხრილები</strong> დისკის სივრცის დასაზოგად და განახლების სიჩქარის გასაუმჯობესებლად.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "გამოიყენეთ სრული ტექსტის ძიება. როცა ჩართულია, ძიების ინტერფეისი პლაგინის მიერ იქნება მართული"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "გამორთეთ სტანდარტული ინდექსირება. როცა ჩართულია, აპლიკაცია შეწყვეტს მონაცემების მიწოდებას სტანდარტულ ძიების ძრავაში (პლაგინი ამას გააკეთებს)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "აირჩიეთ რომელი კონტექსტები უნდა ჰქონდეთ ხელახლა შექმნილი ძიების ინდექსი."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "ხელახლა შექმენით ძიების ინდექსი"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "ძიების ინდექსის ხელახლა შექმნა წარმატებით დასრულდა შერჩეული კონტექსტებისთვის."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "გაასუფთაოთ სტანდარტული ძიების ცხრილები"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "სურვილისამებრ გაასუფთაოთ სტანდარტული OJS ძიების ცხრილები ხელახლა შექმნამდე. ეს წაშლის ყველა არსებულ ძიების მონაცემს სტანდარტული ძიების სისტემიდან."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "გაასუფთაოთ სტანდარტული ძიების ცხრილები ინდექსის ხელახლა შექმნამდე"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "მოულოდნელი შეცდომა მოხდა ძიებისას"

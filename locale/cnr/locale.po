@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cnr\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin za pretragu punog teksta"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Pruža indeks punog teksta zasnovan na bazi podataka za OJS predaje, kompatibilan sa MySQL i PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Za besprekidnu integraciju bez prekida slijedite upute u nastavku:</strong></p>"
+"<ol><li>Nakon omogućavanja plugina, ponovo izgradite indeks pretrage za sve časopise ili pokrenite <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (zastava osigurava da će samo podaci za plugin biti ponovo izgrađeni), da popunite indeks pretrage plugina podacima iz starih publikacija. Nove i ažurirane publikacije će biti automatski indeksirane.</li>"
+"<li>Nakon završetka indeksiranja <strong>omogućite pretragu punog teksta</strong> u nastavku i provjerite radi li korisničko sučelje za pretragu u redu (možete ga testirati pretraživanjem ključne riječi u polju za pretragu).</li>"
+"<li>Ako sve radi kako treba, možete <strong>onemogućiti standardno indeksiranje</strong> u nastavku i također <strong>očistiti standardne tablice pretrage</strong> da uštedite prostor na disku i poboljšate brzinu nadogradnje.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Koristite pretragu punog teksta. Kada je omogućeno, korisničko sučelje za pretragu će biti pokretano pluginom"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Onemogućite standardno indeksiranje. Kada je omogućeno, aplikacija će prestati slati podatke u standardni motor za pretragu (plugin će to raditi)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Odaberite koji konteksti trebaju imati ponovo izgrađen indeks pretrage."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Ponovo izgradi indeks pretrage"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Ponovno izgradnja indeksa pretrage uspješno je završena za odabrane kontekste."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Očisti standardne tablice pretrage"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Po želji očistite standardne tablice pretrage OJS prije ponovne izgradnje. Ovo će ukloniti sve postojeće podatke pretrage iz standardnog sustava pretrage."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Očistite standardne tablice pretrage prije ponovne izgradnje indeksa"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Došlo je do neočekivane greške tijekom pretrage"

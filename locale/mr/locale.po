@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/mr/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: mr\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "पूर्ण मजकूर शोध प्लगिन"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS सबमिशन्ससाठी MySQL आणि PostgreSQL सोबत सुसंगत डेटाबेस-बॅक्ड फुल-टेक्स्ट इंडेक्स प्रदान करतो."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>अखंड एकात्मतेसाठी, व्यत्ययाशिवाय, खालील सूचनांचे पालन करा:</strong></p>"
+"<ol><li>प्लगिन सक्षम केल्यानंतर, सर्व जर्नल्ससाठी शोध इंडेक्स पुन्हा तयार करा, किंवा <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> चालवा (ध्वज सुनिश्चित करतो की फक्त प्लगिनसाठीचे डेटा पुन्हा तयार केले जातील), जुनी प्रकाशने यांच्या डेटाने प्लगिनचा शोध इंडेक्स भरण्यासाठी. नवीन आणि अद्ययावत प्रकाशने स्वयंचलितपणे अनुक्रमित केली जातील.</li>"
+"<li>अनुक्रमणिका संपल्यानंतर, खाली <strong>पूर्ण मजकूर शोध सक्षम करा</strong> आणि शोध वापरकर्ता इंटरफेस चांगल्या प्रकारे काम करत आहे का ते तपासा (आपण शोध बॉक्समध्ये कीवर्ड शोधून त्याची चाचणी घेऊ शकता).</li>"
+"<li>जर सर्व काही चांगल्या प्रकारे काम करत असेल, तर आपण खाली <strong>मानक अनुक्रमणिका अक्षम करू शकता</strong> आणि <strong>मानक शोध सारण्या साफ करू शकता</strong> डिस्क स्पेस वाचवण्यासाठी आणि अपग्रेड गती सुधारण्यासाठी.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "पूर्ण मजकूर शोध वापरा. जेव्हा सक्षम केले जाते तेव्हा शोध इंटरफेस प्लगिनद्वारे चालवले जाते"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "मानक अनुक्रमणिका अक्षम करा. जेव्हा सक्षम केले जाते तेव्हा अनुप्रयोग मानक शोध इंजिनला डेटा पुरवणे थांबवेल (प्लगिन ते करेल)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "कोणत्या संदर्भांना त्यांचा शोध इंडेक्स पुन्हा तयार करायला हवा ते निवडा."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "शोध इंडेक्स पुन्हा तयार करा"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "निवडलेल्या संदर्भांसाठी शोध इंडेक्स पुन्हा तयार करणे यशस्वीरित्या पूर्ण झाले."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "मानक शोध सारण्या साफ करा"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "पुन्हा तयार करण्यापूर्वी पर्यायानुसार मानक OJS शोध सारण्या साफ करा. हे मूळ शोध प्रणालीतून सर्व विद्यमान शोध डेटा काढून टाकेल."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "इंडेक्स पुन्हा तयार करण्यापूर्वी मानक शोध सारण्या साफ करा"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "शोध दरम्यान अनपेक्षित त्रुटी आली"

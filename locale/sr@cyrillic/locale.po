@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Serbian (Cyrillic) <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/sr_RS@cyrillic/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr@cyrillic\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Додатак за Претраживање Пуна Текста"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Пружа индекс пуна текста темељен на бази података за OJS пријаве, компатибилан с MySQL и PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Одаберите које контексте треба поновно изградити индекс претраживања."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Поновно Изгради Индекс Претраживања"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Поновна изградња индекса претраживања успешно је завршена за одабране контексте."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Очисти Стандардне Табеле Претраживања"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Опционално очистите стандардне OJS табеле претраживања пре поновне изградње. Ово ће уклонити све постојеће податке претраживања из стандардног система претраживања."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Очисти стандардне табеле претраживања пре поновне изградње индекса"
+
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "For a seamless integration, without interruptions, follow the instructions below: After enabling the plugin, rebuild the search index for all journals, or run php tools/rebuildSearchIndex.php --skip-standard-index (the flag ensures that only the data for the plugin will be rebuilt), to fill the plugin's search index with data from old publications. New and updated publications will be indexed automatically. Once the indexation is over, enable the full text search below and check if the search user interface is working fine (you can test it by searching for a keyword in the search box). If everything is working properly, you can disable the standard indexing below and also clear the standard search tables to save disk space and improve upgrade speed."
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Use full text search. When enabled the search interface will be powered by the plugin"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Disable standard indexing. When enabled the application will stop feeding data to the standard search engine (the plugin will do it)"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Дошло је до неочекиване грешке током претраживања"

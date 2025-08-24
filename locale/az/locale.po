@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: az\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Tam Mətn Axtarış Plagini"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS təqdimatları üçün MySQL və PostgreSQL ilə uyğun verilənlər bazası dəstəyi olan tam mətn indeksi təqdim edir."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Kəsintisiz, rahat inteqrasiya üçün aşağıdakı təlimatları izləyin:</strong></p>"
+"<ol><li>Plagini aktivləşdirdikdən sonra bütün jurnallar üçün axtarış indeksini yenidən qurun və ya <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> əmrini işə salın (bayraq yalnız plagin üçün məlumatların yenidən qurulacağını təmin edir), köhnə nəşrlərdən plaginin axtarış indeksini məlumatlarla doldurmaq üçün. Yeni və yenilənmiş nəşrlər avtomatik olaraq indekslənəcək.</li>"
+"<li>İndeksləmə bitdikdən sonra aşağıda <strong>tam mətn axtarışını aktivləşdirin</strong> və axtarış istifadəçi interfeysinin düzgün işlədiyini yoxlayın (axtarış qutusunda açar söz axtararaq sınaya bilərsiniz).</li>"
+"<li>Hər şey düzgün işləyirsə, aşağıda <strong>standart indeksləməni deaktiv edə bilərsiniz</strong> və həmçinin disk sahəsini qənaət etmək və yeniləmə sürətini artırmaq üçün <strong>standart axtarış cədvəllərini təmizləyə bilərsiniz</strong>.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Tam mətn axtarışından istifadə edin. Aktivləşdirildikdə axtarış interfeysi plagin tərəfindən idarə olunacaq"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Standart indeksləməni deaktiv edin. Aktivləşdirildikdə tətbiq standart axtarış mühərrikinə məlumat verməyi dayandıracaq (plagin bunu edəcək)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Hansı kontekstlərin axtarış indeksinin yenidən qurulması lazım olduğunu seçin."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Axtarış İndeksini Yenidən Qur"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Seçilmiş kontekstlər üçün axtarış indeksi uğurla yenidən quruldu."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Standart Axtarış Cədvəllərini Təmizlə"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Yenidən qurmadan əvvəl standart OJS axtarış cədvəllərini təmizləmək üçün seçin. Bu, standart axtarış sistemindən bütün mövcud axtarış məlumatlarını siləcək."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "İndeksi yenidən qurmadan əvvəl standart axtarış cədvəllərini təmizlə"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Axtarış zamanı gözlənilməz xəta baş verdi"

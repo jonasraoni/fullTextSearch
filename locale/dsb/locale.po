@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: dsb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin za pytań pśełnego teksta"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Staja datowa bazowa indeksa pśełnego teksta za OJS pśedawki k dispoziciji, kompatibelny z MySQL a PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Za pśerězne integraciju bźez pśetergow slědujśo slědujucym instrukcijam:</strong></p>"
+"<ol><li>Pó zmóžnjenju plugina, znowego natwariśo indeks pytań za wšykne casopisy, abo wuwjeźćo <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (flaga zawěsćujo, až se jano daty za plugin znowego natwarjeju), aby se indeks pytań plugina z datami ze starych publikacijow wupjelnił. Nowe a zaktualizěrowane publikacije se awtomatiski indeksěruju.</li>"
+"<li>Gaž indeksěrowanje jo skóńcone, <strong>zmóžniśo pytań pśełnego teksta</strong> dołojce a pśeglědujśo, lěc pytańske wužywaŕske pówjerch dobre funkcioněrujo (móžośo to testowaś, pytaśo klucowe słowo w pytańskem pólu).</li>"
+"<li>Jolic wšykno dobre funkcioněrujo, móžośo <strong>standardne indeksěrowanje deaktiwěrowaś</strong> dołojce a teke <strong>standardne pytańske tabele wuprozniś</strong>, aby se diskowy rum zašćitał a aktualizěrowańska malsnosć pólěpšyła.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Pytań pśełnego teksta wužywaś. Gaž zmóžnjone, pytańske pówjerch se pśez plugin napędujo"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Standardne indeksěrowanje deaktiwěrowaś. Gaž zmóžnjone, aplikacija pśestanjo daty do standardnego pytańskego mašiny sćěłaś (plugin to buźo cyniś)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Wubjeŕśo, kótare konteksty maju swój pytański indeks znowego natwarjony."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Pytański indeks znowego natwariś"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Znowego natwarjenje pytańskego indeksa jo wuspěšnje skóńcone za wubrane konteksty."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Standardne pytańske tabele wuprozniś"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opcijonalnje wuprozniśo standardne pytańske tabele OJS pśed znowego natwarjenim. To buźo wšykne eksistěrujuce pytańske daty ze standardnego pytańskego systema wótpóraś."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Standardne pytańske tabele wuprozniś pśed znowego natwarjenim indeksa"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Njewócakowana zmólka jo nastała pśi pytańu"

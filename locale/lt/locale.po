@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Pilno teksto paieškos įskiepis"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Suteikia duomenų bazės pagrindu sukurtą pilno teksto indeksą OJS pateikimams, suderinamą su MySQL ir PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Sklandžiai integracijai be pertraukų, vadovaukitės toliau pateiktais nurodymais:</strong></p>"
+"<ol><li>Įjungus įskiepį, iš naujo sukurkite paieškos indeksą visiems žurnalams arba paleiskite <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (vėliavėlė užtikrina, kad tik įskiepio duomenys bus iš naujo sukurti), kad užpildytumėte įskiepio paieškos indeksą duomenimis iš senų publikacijų. Naujos ir atnaujintos publikacijos bus automatiškai indeksuojamos.</li>"
+"<li>Baigus indeksavimą, <strong>įjunkite pilno teksto paiešką</strong> žemiau ir patikrinkite, ar paieškos vartotojo sąsaja veikia gerai (galite išbandyti ieškodami raktažodžio paieškos laukelyje).</li>"
+"<li>Jei viskas veikia gerai, galite <strong>išjungti standartinį indeksavimą</strong> žemiau ir taip pat <strong>išvalyti standartines paieškos lenteles</strong>, kad sutaupytumėte disko vietos ir pagerintumėte atnaujinimo greitį.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Naudokite pilno teksto paiešką. Kai įjungta, paieškos sąsaja bus valdoma įskiepio"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Išjunkite standartinį indeksavimą. Kai įjungta, programa nustos tiekti duomenis į standartinę paieškos variklį (įskiepis tai darys)"
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Pasirinkite, kurie kontekstai turėtų turėti iš naujo sukurtą paieškos indeksą."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Iš naujo sukurti paieškos indeksą"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Paieškos indekso iš naujo kūrimas sėkmingai baigtas pasirinktiems kontekstams."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Išvalyti standartines paieškos lenteles"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Pasirinktinai išvalykite standartines OJS paieškos lenteles prieš iš naujo kurdami. Tai pašalins visus esamus paieškos duomenis iš numatytosios paieškos sistemos."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Išvalykite standartines paieškos lenteles prieš iš naujo kurdami indeksą"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Paieškos metu įvyko netikėta klaida"
