@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/Indexer.inc.php
+ * @file classes/Indexer.php
  *
  * Copyright (c) 2025 Simon Fraser University
  * Copyright (c) 2025 John Willinsky
@@ -15,11 +15,11 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
-use Context;
-use Illuminate\Database\Capsule\Manager;
-use SearchFileParser;
-use Submission;
-use SubmissionFile;
+use APP\submission\Submission;
+use Illuminate\Support\Facades\DB;
+use PKP\context\Context;
+use PKP\search\SearchFileParser;
+use PKP\submissionFile\SubmissionFile;
 
 class Indexer
 {
@@ -78,18 +78,18 @@ class Indexer
         set_time_limit(0);
         $parser = SearchFileParser::fromFile($submissionFile);
         $texts = [];
-        if ($parser && $parser->open()) {
+        if ($parser?->open()) {
             while(($text = $parser->read()) !== false) {
                 $texts[] = $text;
             }
             $parser->close();
         }
 
-        $galleyText = Manager::connection()->getPdo()->quote($this->implodeLocalized($texts));
+        $galleyText = DB::connection()->getPdo()->quote($this->implodeLocalized($texts));
         $this->dao->upsert(
             $submission->getId(),
             (int) $submission->getData('contextId'),
-            ['galley_text' => Manager::raw("CONCAT(COALESCE(galley_text, ''), ' ', {$galleyText})")]
+            ['galley_text' => DB::raw("CONCAT(COALESCE(galley_text, ''), ' ', {$galleyText})")]
         );
     }
 

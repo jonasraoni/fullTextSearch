@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file FullTextSearchPlugin.inc.php
+ * @file FullTextSearchPlugin.php
  *
  * Copyright (c) 2025 Simon Fraser University
  * Copyright (c) 2025 John Willinsky
@@ -19,26 +19,24 @@ use APP\plugins\generic\fullTextSearch\classes\Dao;
 use APP\plugins\generic\fullTextSearch\classes\Indexer;
 use APP\plugins\generic\fullTextSearch\classes\SearchService;
 use APP\plugins\generic\fullTextSearch\classes\SettingsForm;
-use Application;
-use Config;
+use APP\core\Application;
+use PKP\config\Config;
 use Exception;
-use GenericPlugin;
-use HookRegistry;
+use PKP\plugins\GenericPlugin;
 use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Schema\Blueprint;
-use JSONMessage;
-use LinkAction;
-use AjaxModal;
-use NotificationManager;
+use PKP\core\JSONMessage;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use APP\notification\NotificationManager;
+use PKP\plugins\Hook;
+use PKP\submissionFile\SubmissionFile;
 use Services;
-
-import('lib.pkp.classes.plugins.GenericPlugin');
 
 class FullTextSearchPlugin extends GenericPlugin
 {
-    /** @var bool */
-    private $installed = false;
+    private bool $installed = false;
     /** @var bool */
     private $disableStandardIndexing = false;
     /** @var bool */
@@ -60,7 +58,6 @@ class FullTextSearchPlugin extends GenericPlugin
 
         $this->disableStandardIndexing = (bool) $this->getSetting(CONTEXT_SITE, 'disableStandardIndexing');
         $this->useFullTextSearch = (bool) $this->getSetting(CONTEXT_SITE, 'useFullTextSearch');
-        $this->useAutoLoader();
         $this->ensureSchema();
         $this->registerIndexingHooks();
         if ($this->useFullTextSearch) {
@@ -68,27 +65,6 @@ class FullTextSearchPlugin extends GenericPlugin
         }
 
         return true;
-    }
-
-    /**
-     * Registers a custom autoloader to handle the plugin namespace
-     */
-    private function useAutoLoader(): void
-    {
-        spl_autoload_register(function ($className) {
-            $path = explode(__NAMESPACE__ . '\\', $className, 2);
-            if (reset($path)) {
-                return;
-            }
-
-            $path = explode('\\', end($path));
-            $class = array_pop($path);
-            $path = array_map(function ($name) {
-                return strtolower($name[0]) . substr($name, 1);
-            }, $path);
-            $path[] = $class;
-            $this->import(implode('.', $path));
-        });
     }
 
     /**
@@ -141,24 +117,24 @@ class FullTextSearchPlugin extends GenericPlugin
     private function registerIndexingHooks(): void
     {
         // Metadata
-        HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', [$this, 'articleMetadataChanged']);
-        HookRegistry::register('MonographSearchIndex::submissionMetadataChanged', [$this, 'articleMetadataChanged']);
-        HookRegistry::register('MonographSearchIndex::monographMetadataChanged', [$this, 'articleMetadataChanged']);
-        HookRegistry::register('PreprintSearchIndex::preprintMetadataChanged', [$this, 'articleMetadataChanged']);
+        Hook::add('ArticleSearchIndex::articleMetadataChanged', [$this, 'articleMetadataChanged']);
+        Hook::add('MonographSearchIndex::submissionMetadataChanged', [$this, 'articleMetadataChanged']);
+        Hook::add('MonographSearchIndex::monographMetadataChanged', [$this, 'articleMetadataChanged']);
+        Hook::add('PreprintSearchIndex::preprintMetadataChanged', [$this, 'articleMetadataChanged']);
         // Files
-        HookRegistry::register('ArticleSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
-        HookRegistry::register('MonographSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
-        HookRegistry::register('PreprintSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
+        Hook::add('ArticleSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
+        Hook::add('MonographSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
+        Hook::add('PreprintSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
         // Submission deleted
-        HookRegistry::register('ArticleSearchIndex::articleDeleted', [$this, 'articleDeleted']);
-        HookRegistry::register('MonographSearchIndex::submissionDeleted', [$this, 'articleDeleted']);
-        HookRegistry::register('PreprintSearchIndex::preprintDeleted', [$this, 'articleDeleted']);
+        Hook::add('ArticleSearchIndex::articleDeleted', [$this, 'articleDeleted']);
+        Hook::add('MonographSearchIndex::submissionDeleted', [$this, 'articleDeleted']);
+        Hook::add('PreprintSearchIndex::preprintDeleted', [$this, 'articleDeleted']);
         // Remove unpublished submission from index
-        HookRegistry::register('Publication::unpublish', [$this, 'publicationUnpublished']);
+        Hook::add('Publication::unpublish', [$this, 'publicationUnpublished']);
         // Rebuild index
-        HookRegistry::register('ArticleSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
-        HookRegistry::register('MonographSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
-        HookRegistry::register('PreprintSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
+        Hook::add('ArticleSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
+        Hook::add('MonographSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
+        Hook::add('PreprintSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
     }
 
     /**
@@ -198,16 +174,16 @@ class FullTextSearchPlugin extends GenericPlugin
         import('lib.pkp.classes.submission.SubmissionFile'); // Load constant
         $submissionFilesIterator = Services::get('submissionFile')->getMany([
             'submissionIds' => [$submission->getId()],
-            'fileStages' => [SUBMISSION_FILE_PROOF],
+            'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
         ]);
         $indexer = new Indexer();
         foreach ($submissionFilesIterator as $submissionFile) {
             $indexer->indexSubmissionFile($submission, $submissionFile);
             $dependentFilesIterator = Services::get('submissionFile')->getMany([
-                'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
+                'assocTypes' => [Application::ASSOC_TYPE_SUBMISSION_FILE],
                 'assocIds' => [$submissionFile->getId()],
                 'submissionIds' => [$submission->getId()],
-                'fileStages' => [SUBMISSION_FILE_DEPENDENT],
+                'fileStages' => [SubmissionFile::SUBMISSION_FILE_DEPENDENT],
                 'includeDependentFiles' => true,
             ]);
             foreach ($dependentFilesIterator as $dependentFile) {
@@ -245,7 +221,7 @@ class FullTextSearchPlugin extends GenericPlugin
      */
     private function registerSearchHook(): void
     {
-        HookRegistry::register('SubmissionSearch::retrieveResults', function (string $hookName, array $args): bool {
+        Hook::add('SubmissionSearch::retrieveResults', function (string $hookName, array $args): bool {
             [$context, $keywords, $publishedFrom, $publishedTo, $orderBy, $orderDir, $exclude, $page, $itemsPerPage, &$totalResults, &$error, &$results] = $args;
             try {
                 $service = new SearchService();
