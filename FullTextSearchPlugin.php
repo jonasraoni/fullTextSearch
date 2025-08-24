@@ -8,7 +8,6 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class FullTextSearchPlugin
- *
  * @ingroup plugins_generic_fullTextSearch
  *
  * @brief Full-text search plugin that provides database-backed indexing for OJS/OMP/OPS submissions
@@ -23,16 +22,17 @@ use APP\plugins\generic\fullTextSearch\classes\Dao;
 use APP\plugins\generic\fullTextSearch\classes\Indexer;
 use APP\plugins\generic\fullTextSearch\classes\SearchService;
 use APP\plugins\generic\fullTextSearch\classes\SettingsForm;
+use Illuminate\Support\Facades\Schema;
+use PKP\config\Config;
 use Exception;
+use PKP\plugins\GenericPlugin;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
-use PKP\config\Config;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
+use Illuminate\Support\Facades\DB;
 use PKP\submissionFile\SubmissionFile;
 
 class FullTextSearchPlugin extends GenericPlugin
@@ -45,7 +45,6 @@ class FullTextSearchPlugin extends GenericPlugin
 
     /**
      * @copydoc Plugin::register
-     *
      * @param null|int $mainContextId
      */
     public function register($category, $path, $mainContextId = null): bool
@@ -76,12 +75,12 @@ class FullTextSearchPlugin extends GenericPlugin
     {
         try {
             $table = Dao::TABLE_NAME;
-            if (DB::schema()->hasTable($table)) {
+            if (Schema::hasTable($table)) {
                 $this->installed = true;
                 return;
             }
 
-            DB::schema()->create($table, function (Blueprint $table) {
+            Schema::create($table, function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->bigInteger('context_id');
                 $table->bigInteger('submission_id')->unique();
@@ -234,6 +233,7 @@ class FullTextSearchPlugin extends GenericPlugin
                 $results = $ids;
             } catch (Exception $e) {
                 $error = __('plugins.generic.fullTextSearch.search.error');
+                $results = [];
             }
             return true;
         });
