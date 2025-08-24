@@ -111,12 +111,12 @@ class FullTextSearchPlugin extends GenericPlugin
             });
 
             $indexFormat = Manager::connection() instanceof PostgresConnection
-                ? "ALTER TABLE {$table} ADD FULLTEXT {$table}_%s (%s)"
-                : "CREATE INDEX {$table}_%s ON {$table} USING GIN (to_tsvector('simple', coalesce(%s,'')))";
+                ? "CREATE INDEX {$table}_%s ON {$table} USING GIN (to_tsvector('simple', coalesce(%s,'')))"
+                : "ALTER TABLE {$table} ADD FULLTEXT {$table}_%s (%s)";
 
             // Add full-text indexes for individual fields
             foreach (['title', 'abstract', 'authors', 'keywords', 'subjects', 'disciplines', 'coverage', 'galley_text', 'type'] as $field) {
-                Manager::statement(sprintf($indexFormat, $field));
+                Manager::statement(sprintf($indexFormat, $field, $field));
             }
 
             $this->installed = true;
