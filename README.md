@@ -29,7 +29,9 @@ We recommend installing this plugin using the Plugin Gallery within OJS/OPS/OMP.
 > - Create the folder `plugins/generic/fullTextSearch` and place the plugin files in it.
 > - Run the command `php lib/pkp/tools/installPluginVersion.php plugins/generic/fullTextSearch/version.xml` at the main OJS/OPS/OMP folder, this will ensure the plugin is installed/upgraded properly.
 
-After installing and enabling the plugin, access its settings to configure search preferences and rebuild the search index for optimal performance.
+**After installing and enabling the plugin, access its settings and rebuild the search index for all contexts**
+
+**After re-indexing and ensuring the plugin is working fine, access the settings again, and make sure you mark the checkbox to clear the standard search tables. Besides making the database much smaller (if your installation is large, there will be millions of records on them), it will improve the upgrade speed.**
 
 ## Configuration
 
