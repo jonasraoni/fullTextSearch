@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SearchService
+ *
  * @ingroup plugins_generic_fullTextSearch
  *
  * @brief Service layer for full-text search operations
@@ -40,6 +41,7 @@ class SearchService
      * @param int $perPage The number of items per page
      * @param mixed $publishedFrom Optional publication date from filter
      * @param mixed $publishedTo Optional publication date to filter
+     *
      * @return array{0:int[],1:int} Array containing submission IDs and total count
      */
     public function search(?Context $context, array $keywords, string $orderBy, string $orderDirection, array $exclude, int $page, int $perPage, $publishedFrom = null, $publishedTo = null): array

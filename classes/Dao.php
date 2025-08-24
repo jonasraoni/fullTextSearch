@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Dao
+ *
  * @ingroup plugins_generic_fullTextSearch
  *
  * @brief Data Access Object for the full-text search index table
@@ -16,12 +17,12 @@
 namespace APP\plugins\generic\fullTextSearch\classes;
 
 use APP\core\Application;
-use Illuminate\Database\Capsule\Manager;
+use APP\core\Services;
+use APP\submission\Submission;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Query\Builder;
-use APP\core\Services;
+use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
-use APP\submission\Submission;
 use PKP\search\SubmissionSearch;
 
 class Dao
@@ -30,6 +31,7 @@ class Dao
 
     /**
      * Insert or update a submission record in the full-text search index
+     *
      * @param int $submissionId The submission ID
      * @param int $contextId The context ID
      * @param array $fields The fields to store (title, abstract, authors, etc.)
@@ -43,7 +45,7 @@ class Dao
             'updated_at' => date('Y-m-d H:i:s'),
         ], $fields);
 
-        Manager::table(static::TABLE_NAME)->updateOrInsert(
+        DB::table(static::TABLE_NAME)->updateOrInsert(
             ['submission_id' => $submissionId],
             $data
         );
@@ -51,15 +53,17 @@ class Dao
 
     /**
      * Delete a submission record from the full-text search index
+     *
      * @param int $submissionId The submission ID to delete
      */
     public function deleteBySubmission(int $submissionId): void
     {
-        Manager::table(static::TABLE_NAME)->where('submission_id', $submissionId)->delete();
+        DB::table(static::TABLE_NAME)->where('submission_id', $submissionId)->delete();
     }
 
     /**
      * Search the full-text index for submissions matching the given criteria
+     *
      * @param ?Context $context The context object or null for all contexts
      * @param array $keywords Array of search keywords keyed by field type
      * @param string $orderBy The field to order by
@@ -69,11 +73,12 @@ class Dao
      * @param int $perPage The number of items per page
      * @param mixed $publishedFrom Optional publication date from filter
      * @param mixed $publishedTo Optional publication date to filter
+     *
      * @return array{0:int[],1:int} Array containing submission IDs and total count
      */
     public function search(?Context $context, array $keywords, string $orderBy, string $orderDirection, array $exclude, int $page, int $perPage, $publishedFrom = null, $publishedTo = null): array
     {
-        $q = Manager::table(static::TABLE_NAME, 'fts');
+        $q = DB::table(static::TABLE_NAME, 'fts');
 
         if ($context) {
             $q->where('fts.context_id', $context->getId());
@@ -96,7 +101,7 @@ class Dao
             $field = $this->getFieldForType($fieldType);
             $fields = $field ? ["fts.{$field}"] : [];
             if (!$field) {
-                foreach([
+                foreach ([
                     SubmissionSearch::SUBMISSION_SEARCH_AUTHOR,
                     SubmissionSearch::SUBMISSION_SEARCH_TITLE,
                     SubmissionSearch::SUBMISSION_SEARCH_ABSTRACT,
@@ -114,7 +119,7 @@ class Dao
             $hasSearchCriteria = true;
             $q->where(function (Builder $q) use ($fields, $query, &$scores, &$scoreParams) {
                 foreach ($fields as $field) {
-                    if (Manager::connection() instanceof PostgresConnection) {
+                    if (DB::connection() instanceof PostgresConnection) {
                         $tsVector = "to_tsvector('simple', coalesce({$field}, ''))";
                         $tsQuery = "plainto_tsquery('simple', ?)";
                         $q->orWhereRaw("{$tsVector} @@ {$tsQuery}", [$query]);
@@ -190,7 +195,7 @@ class Dao
      */
     public function clearStandardSearchTables(): void
     {
-        $connection = Manager::connection();
+        $connection = DB::connection();
         $connection->table('submission_search_object_keywords')->truncate();
         $connection->table('submission_search_objects')->truncate();
         $connection->table('submission_search_keyword_list')->truncate();
@@ -198,11 +203,12 @@ class Dao
 
     /**
      * Clean up old/unpublished submissions from the full-text search index
+     *
      * @param array $contextIds Array of context IDs to clean up
      */
     public function cleanUnpublishedSubmissions(array $contextIds): void
     {
-        Manager::table(static::TABLE_NAME, 'fts')
+        DB::table(static::TABLE_NAME, 'fts')
             ->join('submissions AS s', 's.submission_id', '=', 'fts.submission_id')
             ->whereIn('s.context_id', $contextIds)
             ->where('s.status', '!=', Submission::STATUS_PUBLISHED)
@@ -211,6 +217,7 @@ class Dao
 
     /**
      * Get all contexts for settings form
+     *
      * @return array Array of context ID => localized name
      */
     public function getAllContexts(): array
@@ -225,6 +232,7 @@ class Dao
 
     /**
      * Rebuild the search index for selected contexts
+     *
      * @param array $contextIds Array of context IDs to rebuild
      * @param ?bool $log Whether to log the rebuild process
      * @param ?array $switches The switches to use for the rebuild process
