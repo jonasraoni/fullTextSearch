@@ -18,6 +18,7 @@ namespace APP\plugins\generic\fullTextSearch\classes;
 
 use APP\core\Application;
 use APP\core\Services;
+use APP\facades\Repo;
 use APP\submission\Submission;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Query\Builder;
@@ -269,18 +270,20 @@ class Dao
             }
 
             // Get only published submissions for this context
-            $submissionsIterator = Services::get('submission')->getMany([
-                'contextId' => $contextId,
-                'status' => [Submission::STATUS_PUBLISHED]
-            ]);
+            $submissionsIterator = Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$contextId])
+                ->filterByStatus([Submission::STATUS_PUBLISHED])
+                ->getMany();
 
             foreach ($submissionsIterator as $submission) {
                 $indexer->indexSubmission($submission);
                 // Also index any galley files
-                $submissionFilesIterator = Services::get('submissionFile')->getMany([
-                    'submissionIds' => [$submission->getId()],
-                    'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
-                ]);
+                $submissionFilesIterator = Repo::submissionFile()
+                    ->getCollector()
+                    ->filterBySubmissionIds([$submission->getId()])
+                    ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF])
+                    ->getMany();
                 foreach ($submissionFilesIterator as $submissionFile) {
                     $indexer->indexSubmissionFile($submission->getId(), $submissionFile->getId());
                 }

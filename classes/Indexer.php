@@ -16,7 +16,6 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
-use APP\core\Services;
 use APP\facades\Repo;
 use PKP\search\SearchFileParser;
 
@@ -93,7 +92,7 @@ class Indexer
         $galleyText = $this->implodeLocalized($texts);
         $this->dao->upsert(
             $submissionId,
-            (int) Services::get('submission')->get($submissionId)->getData('contextId'),
+            (int) Repo::submission()->get($submissionId)->getData('contextId'),
             ['galley_text' => $galleyText]
         );
     }
