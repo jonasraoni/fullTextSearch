@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/sl_SI/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sl_SI\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Vtičnik za Iskanje Celotnega Besedila"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Nudi indeks celotnega besedila na osnovi baze podatkov za OJS prispevke, kompatibilen z MySQL in PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Izberite, kateri konteksti naj imajo obnovljen indeks iskanja."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Obnovi Indeks Iskanja"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Obnova indeksa iskanja je bila uspešno dokončana za izbrane kontekste."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Počisti Standardne Tabele Iskanja"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opcionalno počistite standardne OJS tabele iskanja pred obnovo. To bo odstranilo vse obstoječe podatke iskanja iz standardnega sistema iskanja."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Počisti standardne tabele iskanja pred obnovo indeksa"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Med iskanjem je prišlo do nepričakovane napake"

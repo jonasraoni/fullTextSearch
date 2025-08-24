@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/bs_BA/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bs_BA\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Dodatak za Pretraživanje Puna Teksta"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Pruža indeks puna teksta temeljen na bazi podataka za OJS prijave, kompatibilan s MySQL i PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Odaberite koje kontekste treba ponovno izgraditi indeks pretraživanja."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Ponovno Izgradi Indeks Pretraživanja"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Ponovna izgradnja indeksa pretraživanja uspješno je završena za odabrane kontekste."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Očisti Standardne Tabele Pretraživanja"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opcionalno očistite standardne OJS tabele pretraživanja prije ponovne izgradnje. Ovo će ukloniti sve postojeće podatke pretraživanja iz standardnog sistema pretraživanja."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Očisti standardne tabele pretraživanja prije ponovne izgradnje indeksa"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Došlo je do neočekivane greške tijekom pretraživanja"

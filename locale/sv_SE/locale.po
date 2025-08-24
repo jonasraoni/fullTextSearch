@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/sv_SE/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Fulltextsökningsplugin"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Tillhandahåller ett databasbaserat fulltextindex för OJS-inlämningar, kompatibelt med MySQL och PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Välj vilka kontexter som ska ha sitt sökindex ombyggt."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Bygg Om Sökindex"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Ombyggnad av sökindexet slutfördes framgångsrikt för de valda kontexterna."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Rensa Standard Söktabeller"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Valfritt rensa standard OJS-söktabeller innan ombyggnad. Detta kommer att ta bort all befintlig sökdata från standardsöksystemet."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Rensa standardsöktabeller innan ombyggnad av index"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Ett oväntat fel uppstod under sökningen"

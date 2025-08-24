@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/ar_IQ/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar_IQ\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "إضافة البحث في النص الكامل"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "يوفر فهرس نص كامل مدعوم بقاعدة بيانات للمقالات المقدمة إلى OJS، متوافق مع MySQL وPostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "اختر السياقات التي يجب إعادة بناء فهرس البحث الخاص بها."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "إعادة بناء فهرس البحث"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "تم إكمال إعادة بناء فهرس البحث بنجاح للسياقات المختارة."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "مسح جداول البحث القياسية"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "اختيارياً مسح جداول البحث القياسية لـ OJS قبل إعادة البناء. سيؤدي هذا إلى إزالة جميع بيانات البحث الموجودة من نظام البحث الافتراضي."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "مسح جداول البحث القياسية قبل إعادة بناء الفهرس"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "حدث خطأ غير متوقع أثناء البحث"

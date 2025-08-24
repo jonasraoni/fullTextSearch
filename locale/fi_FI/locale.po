@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/fi_FI/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi_FI\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Täystekstihaku-lisäosa"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Tarjoaa tietokantapohjaisen täysteksti-indeksin OJS-ehdotuksille, yhteensopiva MySQL:n ja PostgreSQL:n kanssa."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Valitse, mitkä kontekstit tarvitsevat hakunsa uudelleenrakennuksen."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Rakenna Hakutoiminto Uudelleen"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Hakutoiminnon uudelleenrakennus valmistui onnistuneesti valituille konteksteille."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Tyhjennä Vakiohakutaulukot"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Valinnainen: tyhjennä vakio OJS-hakutaulukot ennen uudelleenrakennusta. Tämä poistaa kaikki olemassa olevat hakutiedot vakiohakujärjestelmästä."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Tyhjennä vakiohakutaulukot ennen indeksin uudelleenrakennusta"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Hakuvaiheessa tapahtui odottamaton virhe"

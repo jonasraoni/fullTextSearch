@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/pt_PT/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin de Pesquisa em Texto Completo"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Fornece um índice de texto completo baseado em base de dados para submissões OJS, compatível com MySQL e PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Escolha quais contextos devem ter o seu índice de pesquisa reconstruído."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Reconstruir Índice de Pesquisa"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "A reconstrução do índice de pesquisa foi concluída com sucesso para os contextos selecionados."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Limpar Tabelas de Pesquisa Padrão"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opcionalmente limpar as tabelas de pesquisa padrão do OJS antes de reconstruir. Isto removerá todos os dados de pesquisa existentes do sistema de pesquisa padrão."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Limpar tabelas de pesquisa padrão antes de reconstruir o índice"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Ocorreu um erro inesperado durante a pesquisa"

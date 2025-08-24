@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Uzbek (Latin) <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/uz_UZ@latin/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uz_UZ@latin\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "To'liq Matn Qidiruv Plagini"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "OJS taqdimotlari uchun ma'lumotlar bazasi asosidagi to'liq matn indeksini taqdim etadi, MySQL va PostgreSQL bilan mos keladi."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Qaysi kontekstlarning qidiruv indeksini qayta qurish kerakligini tanlang."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Qidiruv Indeksini Qayta Qur"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Tanlangan kontekstlar uchun qidiruv indeksini qayta qurish muvaffaqiyatli yakunlandi."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Standart Qidiruv Jadvalini Tozalash"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Ixtiyoriy ravishda qayta qurishdan oldin standart OJS qidiruv jadvallarini tozalang. Bu standart qidiruv tizimidan barcha mavjud qidiruv ma'lumotlarini olib tashlaydi."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Indeksni qayta qurishdan oldin standart qidiruv jadvallarini tozalash"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Qidiruv paytida kutilmagan xatolik yuz berdi"

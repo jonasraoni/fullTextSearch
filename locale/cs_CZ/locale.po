@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/cs_CZ/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin pro fulltextové vyhledávání"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Poskytuje databázový fulltextový index pro OJS příspěvky, kompatibilní s MySQL a PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Vyberte, které kontexty by měly mít přestavěný vyhledávací index."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Přestavět Vyhledávací Index"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Přestavění vyhledávacího indexu bylo úspěšně dokončeno pro vybrané kontexty."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Vymazat Standardní Vyhledávací Tabulky"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Volitelně vymazat standardní OJS vyhledávací tabulky před přestavbou. Tím se odstraní všechna existující vyhledávací data ze standardního vyhledávacího systému."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Vymazat standardní vyhledávací tabulky před přestavbou indexu"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Při vyhledávání došlo k neočekávané chybě"

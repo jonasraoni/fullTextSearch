@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Norwegian (Bokmål) <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/nb_NO/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nb_NO\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Fulltekstsøk Plugin"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Gir en databasebasert fulltekstindeks for OJS-innsendinger, kompatibel med MySQL og PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Velg hvilke kontekster som skal ha søkeindeksen sin gjenoppbygget."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Gjenoppbygg Søkeindeks"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Gjenoppbygging av søkeindeksen ble fullført for de valgte kontekstene."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Tøm Standard Søketabeller"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Valgfritt tøm standard OJS-søketabeller før gjenoppbygging. Dette vil fjerne alle eksisterende søkedata fra standardsøkesystemet."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Tøm standard søketabeller før gjenoppbygging av indeks"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "En uventet feil oppstod under søket"

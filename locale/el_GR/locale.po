@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/el_GR/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el_GR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Πρόσθετο Πλήρους Κειμένου Αναζήτησης"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Παρέχει ένα ευρετήριο πλήρους κειμένου με βάση τη βάση δεδομένων για υποβολές OJS, συμβατό με MySQL και PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Επιλέξτε ποια περιβάλλοντα θα πρέπει να έχουν το ευρετήριο αναζήτησής τους ξαναχτισμένο."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Ανακατασκευή Ευρετηρίου Αναζήτησης"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Η ανακατασκευή του ευρετηρίου αναζήτησης ολοκληρώθηκε επιτυχώς για τα επιλεγμένα περιβάλλοντα."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Καθαρισμός Πρότυπων Πινάκων Αναζήτησης"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Προαιρετικά καθαρίστε τους πρότυπους πίνακες αναζήτησης OJS πριν από την ανακατασκευή. Αυτό θα αφαιρέσει όλα τα υπάρχοντα δεδομένα αναζήτησης από το πρότυπο σύστημα αναζήτησης."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Καθαρισμός πρότυπων πινάκων αναζήτησης πριν από την ανακατασκευή του ευρετηρίου"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "Προέκυψε ένα απρόσμενο σφάλμα κατά την αναζήτηση"

@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Full Text Search Plugin\n"
+"POT-Creation-Date: 2025-08-22 18:00+0000\n"
+"PO-Revision-Date: 2025-08-22 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/plugins/fullTextSearch/ro_RO/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro_RO\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+
+msgid "plugins.generic.fullTextSearch.name"
+msgstr "Plugin Căutare Text Complet"
+
+msgid "plugins.generic.fullTextSearch.description"
+msgstr "Oferă un index de text complet bazat pe baza de date pentru înregistrările OJS, compatibil cu MySQL și PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
+msgstr "Alegeți ce contexte ar trebui să aibă indexul de căutare reconstruit."
+
+msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
+msgstr "Reconstruiește Indexul de Căutare"
+
+msgid "plugins.generic.fullTextSearch.rebuildComplete"
+msgstr "Reconstruirea indexului de căutare a fost finalizată cu succes pentru contextele selectate."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
+msgstr "Șterge Tabelele de Căutare Standard"
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
+msgstr "Opțional șterge tabelele de căutare standard OJS înainte de reconstruire. Aceasta va elimina toate datele de căutare existente din sistemul de căutare standard."
+
+msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
+msgstr "Șterge tabelele de căutare standard înainte de reconstruirea indexului"
+
+msgid "plugins.generic.fullTextSearch.search.error"
+msgstr "A apărut o eroare neașteptată în timpul căutării"
