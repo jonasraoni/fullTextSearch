@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Teljes Szöveg Keresés Plugin"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Adatbázis-alapú teljes szöveg indexet biztosít OJS beadványokhoz, kompatibilis MySQL-lel és PostgreSQL-lel."
+msgstr "Adatbázis-alapú teljes szöveg indexet biztosít OJS/OMP/OPS beadványokhoz, kompatibilis MySQL-lel és PostgreSQL-lel."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>A zökkenőmentes integráció érdekében, megszakítások nélkül, kövesse az alábbi utasításokat:</strong></p><ol><li>A plugin engedélyezése után, építse újra a keresési indexet minden folyóirathoz, vagy futtassa a <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> parancsot (a zászló biztosítja, hogy csak a plugin adatai legyenek újraépítve), hogy kitöltse a plugin keresési indexét régi publikációk adataival. Az új és frissített publikációk automatikusan indexelésre kerülnek.</li><li>Az indexelés befejezése után, <strong>engedélyezze a teljes szöveg keresést</strong> alul, és ellenőrizze, hogy a keresési felhasználói felület megfelelően működik-e (ezt tesztelheti egy kulcsszó keresésével a keresőmezőben).</li><li>Ha minden megfelelően működik, <strong>letilthatja a szabványos indexelést</strong> alul, és <strong>törölheti a szabványos keresési táblákat</strong> is a lemezterület megtakarítása és a frissítési sebesség javítása érdekében.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Használja a teljes szöveg keresést. Ha engedélyezve van, a keresési felületet a plugin fogja működtetni"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Tiltsa le a szabványos indexelést. Ha engedélyezve van, az alkalmazás leállítja az adatok szabványos keresőmotorhoz való továbbítását (a plugin fogja ezt megtenni)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Válassza ki, mely kontextusoknak kell újraépíteni a keresési indexüket."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Szabványos Keresési Táblák Törlése"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Opcionálisan törölje a szabványos OJS keresési táblákat az újraépítés előtt. Ez eltávolítja az összes meglévő keresési adatot a szabványos keresési rendszerből."
+msgstr "Opcionálisan törölje a szabványos OJS/OMP/OPS keresési táblákat az újraépítés előtt. Ez eltávolítja az összes meglévő keresési adatot a szabványos keresési rendszerből."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Szabványos keresési táblák törlése az index újraépítése előtt"

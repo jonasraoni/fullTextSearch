@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "全文搜尋外掛程式"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "為OJS投稿提供基於資料庫的全文索引，相容於MySQL和PostgreSQL。"
+msgstr "為OJS/OMP/OPS投稿提供基於資料庫的全文索引，相容於MySQL和PostgreSQL。"
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>為了無縫整合，不中斷，請按照以下說明操作：</strong></p><ol><li>啟用外掛程式後，重建所有期刊的搜尋索引，或執行 <code>php tools/rebuildSearchIndex.php --skip-standard-index</code>（該標誌確保只重建外掛程式的資料），用舊出版物的資料填充外掛程式的搜尋索引。新的和更新的出版物將自動索引。</li><li>索引完成後，<strong>啟用下面的全文搜尋</strong>並檢查搜尋使用者介面是否正常工作（您可以透過在搜尋框中搜尋關鍵字來測試）。</li><li>如果一切正常工作，您可以<strong>禁用下面的標準索引</strong>，也可以<strong>清除標準搜尋表</strong>以節省磁碟空間並提高升級速度。</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "使用全文搜尋。啟用後，搜尋介面將由外掛程式提供支援"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "禁用標準索引。啟用後，應用程式將停止向標準搜尋引擎提供資料（外掛程式將處理）"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "選擇哪些上下文應該重建其搜尋索引。"
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "清除標準搜尋表"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "可選地在重建之前清除標準OJS搜尋表。這將從預設搜尋系統中刪除所有現有的搜尋資料。"
+msgstr "可選地在重建之前清除標準OJS/OMP/OPS搜尋表。這將從預設搜尋系統中刪除所有現有的搜尋資料。"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "重建索引前清除標準搜尋表"

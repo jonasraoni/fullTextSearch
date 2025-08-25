@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Testu Osoko Bilaketa Plugina"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS aurkezpenetarako datu-basean oinarritutako testu osoko indizea eskaintzen du, MySQL eta PostgreSQL-ekin bateragarria."
+msgstr "OJS/OMP/OPS aurkezpenetarako datu-basean oinarritutako testu osoko indizea eskaintzen du, MySQL eta PostgreSQL-ekin bateragarria."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Integrazio leun bat lortzeko, etenik gabe, jarraitu beheko argibideei:</strong></p><ol><li>Plugina gaitzen ondoren, berreraiki bilaketa indizea aldizkari guztietarako, edo exekutatu <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (banderak bermatzen du pluginerako datuak soilik berreraikiko direla), plugineko bilaketa indizea betetzeko argitalpen zaharren datuekin. Argitalpen berriak eta eguneratutakoak automatikoki indexatuko dira.</li><li>Indexazioa amaitzen denean, <strong>gaitzen testu osoko bilaketa</strong> behean eta egiaztatu bilaketa erabiltzaile interfazea ondo funtzionatzen duen (testu bat bilakatuz proba dezakezu bilaketa koadroan).</li><li>Guztia ondo funtzionatzen badu, <strong>desgaitu estandar indexazioa</strong> behean eta <strong>garbitu estandar bilaketa taulak</strong> ere disko espazioa aurrezteko eta eguneratze abiadura hobetzeko.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Erabili testu osoko bilaketa. Gaitzen denean, bilaketa interfazea pluginak bultzatuko du"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Desgaitu estandar indexazioa. Gaitzen denean, aplikazioak datuak estandar bilaketa motorrari emateari utziko dio (pluginak egingo du)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Aukeratu zein testuinguruk behar duten beren bilaketa indizea berreraikitzea."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Estandar Bilaketa Taulak Garbitu"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Aukeran OJS estandar bilaketa taulak garbitu berreraiki aurretik. Honek bilaketa sistemaren estandarraren datu guztiak kenduko ditu."
+msgstr "Aukeran OJS/OMP/OPS estandar bilaketa taulak garbitu berreraiki aurretik. Honek bilaketa sistemaren estandarraren datu guztiak kenduko ditu."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Garbitu estandar bilaketa taulak indizea berreraiki aurretik"

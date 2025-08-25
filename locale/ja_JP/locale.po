@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "フルテキスト検索プラグイン"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJSの投稿用にデータベースベースのフルテキストインデックスを提供し、MySQLとPostgreSQLと互換性があります。"
+msgstr "OJS/OMP/OPSの投稿用にデータベースベースのフルテキストインデックスを提供し、MySQLとPostgreSQLと互換性があります。"
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>シームレスな統合のために、中断することなく、以下の手順に従ってください：</strong></p><ol><li>プラグインを有効にした後、すべてのジャーナルの検索インデックスを再構築するか、<code>php tools/rebuildSearchIndex.php --skip-standard-index</code>を実行してください（このフラグにより、プラグインのデータのみが再構築されることが保証されます）。古い出版物のデータでプラグインの検索インデックスを埋めるためです。新しい出版物と更新された出版物は自動的にインデックス化されます。</li><li>インデックス化が完了したら、下の<strong>フルテキスト検索を有効にし</strong>、検索ユーザーインターフェースが正常に動作するかどうかを確認してください（検索ボックスでキーワードを検索してテストできます）。</li><li>すべてが正常に動作する場合、下の<strong>標準インデックス化を無効にし</strong>、また<strong>標準検索テーブルをクリア</strong>して、ディスク容量を節約し、アップグレード速度を向上させることができます。</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "フルテキスト検索を使用。有効にすると、検索インターフェースはプラグインによって提供されます"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "標準インデックス化を無効化。有効にすると、アプリケーションは標準検索エンジンへのデータ提供を停止します（プラグインが処理します）"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "検索インデックスを再構築するコンテキストを選択してください。"
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "標準検索テーブルをクリア"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "オプションで、再構築前に標準OJS検索テーブルをクリアします。これにより、デフォルト検索システムから既存の検索データがすべて削除されます。"
+msgstr "オプションで、再構築前に標準OJS/OMP/OPS検索テーブルをクリアします。これにより、デフォルト検索システムから既存の検索データがすべて削除されます。"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "インデックス再構築前に標準検索テーブルをクリア"

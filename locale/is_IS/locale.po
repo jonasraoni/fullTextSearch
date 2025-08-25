@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Fulltextsleit Forritsauki"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Veitir gagnagrunnsundirstöðu fulltextsleit fyrir OJS framlög, samhæft við MySQL og PostgreSQL."
+msgstr "Veitir gagnagrunnsundirstöðu fulltextsleit fyrir OJS/OMP/OPS framlög, samhæft við MySQL og PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Fyrir óaðfinnanleg samþættingu, án truflana, fylgdu leiðbeiningunum hér að neðan:</strong></p><ol><li>Eftir að hafa virkjað forritsaukann, endurbyggja leitarvísitölu fyrir allar tímarit, eða keyra <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (fáninn tryggir að aðeins gögnin fyrir forritsaukann verði endurbyggð), til að fylla leitarvísitölu forritsaukaans með gögnum frá gömlum útgáfum. Nýjar og uppfærðar útgáfur verða sjálfkrafa vísitöluð.</li><li>Þegar vísitögunni er lokið, <strong>virkja fulltextsleit</strong> hér að neðan og athugað hvort leitarviðmót notandans virki vel (þú getur prófað það með því að leita að lykilorði í leitarreitnum).</li><li>Ef allt virkar rétt, getur þú <strong>óvirkjað staðlaða vísitölu</strong> hér að neðan og einnig <strong>hreinsað staðlaðar leitarfærslur</strong> til að spara diskpláss og bæta uppfærsluhraða.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Nota fulltextsleit. Þegar virkjað er, mun leitarviðmótið vera knúið af forritsaukanum"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Óvirkja staðlaða vísitölu. Þegar virkjað er, mun forritið hætta að gefa gögnum til staðlaða leitarvélarinnar (forritsauki mun gera það)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Veldu hvaða samhengi ættu að hafa leitarvísitölu sína endurbyggða."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Hreinsa Staðlaðar Leitarfærslur"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Valfrjálst hreinsa staðlaðar OJS leitarfærslur fyrir endurbygginguna. Þetta mun fjarlægja allar fyrirliggjandi leitargögn úr staðlaða leitarkerfinu."
+msgstr "Valfrjálst hreinsa staðlaðar OJS/OMP/OPS leitarfærslur fyrir endurbygginguna. Þetta mun fjarlægja allar fyrirliggjandi leitargögn úr staðlaða leitarkerfinu."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Hreinsa staðlaðar leitarfærslur fyrir endurbygginguna á vísitölunni"

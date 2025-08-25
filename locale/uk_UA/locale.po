@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Плагін повнотекстового пошуку"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Надає повнотекстовий індекс на основі бази даних для подань OJS, сумісний з MySQL та PostgreSQL."
+msgstr "Надає повнотекстовий індекс на основі бази даних для подань OJS/OMP/OPS, сумісний з MySQL та PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Для безперешкодної інтеграції, без перерв, дотримуйтесь наступних інструкцій:</strong></p><ol><li>Після встановлення плагіна, перебудуйте індекс пошуку для всіх журналів, або запустіть <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (прапорець забезпечує, що тільки дані для плагіна будуть перебудовані), щоб заповнити індекс пошуку плагіна даними зі старих публікацій. Нові та оновлені публікації будуть автоматично проіндексовані.</li><li>Після завершення індексації, <strong>увімкніть повнотекстовий пошук</strong> нижче та перевірте, чи правильно працює інтерфейс користувача пошуку (ви можете протестувати це, шукаючи ключове слово в полі пошуку).</li><li>Якщо все працює правильно, ви можете <strong>вимкнути стандартну індексацію</strong> нижче, а також <strong>очистити стандартні таблиці пошуку</strong> для економії місця на диску та покращення швидкості оновлення.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Використовувати повнотекстовий пошук. Коли увімкнено, інтерфейс пошуку буде працювати від плагіна"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Вимкнути стандартну індексацію. Коли увімкнено, додаток перестане подавати дані до стандартної пошукової системи (плагін це зробить)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Виберіть, які контексти повинні мати перебудований індекс пошуку."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Очистити Стандартні Таблиці Пошуку"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Опціонально очистити стандартні таблиці пошуку OJS перед перебудовою. Це видалить всі існуючі дані пошуку зі стандартної системи пошуку."
+msgstr "Опціонально очистити стандартні таблиці пошуку OJS/OMP/OPS перед перебудовою. Це видалить всі існуючі дані пошуку зі стандартної системи пошуку."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Очистити стандартні таблиці пошуку перед перебудовою індексу"

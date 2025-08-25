@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Додатак за Претраживање Пуна Текста"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Пружа индекс пуна текста темељен на бази података за OJS пријаве, компатибилан с MySQL и PostgreSQL."
+msgstr "Пружа индекс пуна текста темељен на бази података за OJS/OMP/OPS пријаве, компатибилан с MySQL и PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>За беспрекидну интеграцију, без прекида, следите упутства у наставку:</strong></p><ol><li>Након омогућавања додатка, поновно изградите индекс претраживања за све часописе, или покрените <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (заставица осигурава да ће се поновно изградити само подаци за додатак), да бисте попунили индекс претраживања додатка подацима из старих публикација. Нове и ажуриране публикације ће се аутоматски индексирати.</li><li>Након што се индексирање заврши, <strong>омогућите претраживање пуна текста</strong> у наставку и проверите да ли корисничко сучеље претраживања ради добро (можете тестирати претраживањем кључне речи у пољу за претраживање).</li><li>Ако све ради исправно, можете <strong>онемогућити стандардно индексирање</strong> у наставку и такође <strong>очистити стандардне табеле претраживања</strong> за уштеду простора на диску и побољшање брзине надоградње.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Користите претраживање пуна текста. Када је омогућено, сучеље претраживања ће бити покретано додатком"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Онемогућите стандардно индексирање. Када је омогућено, апликација ће престати напајати стандардни мотор претраживања подацима (додатак ће то учинити)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Одаберите које контексте треба поновно изградити индекс претраживања."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Очисти Стандардне Табеле Претраживања"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Опционално очистите стандардне OJS табеле претраживања пре поновне изградње. Ово ће уклонити све постојеће податке претраживања из стандардног система претраживања."
+msgstr "Опционално очистите стандардне OJS/OMP/OPS табеле претраживања пре поновне изградње. Ово ће уклонити све постојеће податке претраживања из стандардног система претраживања."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Очисти стандардне табеле претраживања пре поновне изградње индекса"

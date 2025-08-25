@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "مکمل متن تلاش پلگ ان"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS جمع کرائیوں کے لیے ڈیٹا بیس پر مبنی مکمل متن انڈیکس فراہم کرتا ہے، MySQL اور PostgreSQL کے ساتھ مطابقت رکھتا ہے۔"
+msgstr "OJS/OMP/OPS جمع کرائیوں کے لیے ڈیٹا بیس پر مبنی مکمل متن انڈیکس فراہم کرتا ہے، MySQL اور PostgreSQL کے ساتھ مطابقت رکھتا ہے۔"
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>بغیر کسی رکاوٹ کے، بہتر انضمام کے لیے، نیچے دی گئی ہدایات پر عمل کریں:</strong></p><ol><li>پلگ ان کو فعال کرنے کے بعد، تمام جرائد کے لیے تلاش انڈیکس کو دوبارہ تعمیر کریں، یا <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> چلائیں (پرچم یقینی بناتا ہے کہ صرف پلگ ان کے لیے ڈیٹا دوبارہ تعمیر ہوگا)، پرانے اشاعتوں کے ڈیٹا کے ساتھ پلگ ان کے تلاش انڈیکس کو بھرنے کے لیے۔ نئے اور اپ ڈیٹ شدہ اشاعت خود بخود انڈیکس ہوں گی۔</li><li>انڈیکسنگ ختم ہونے کے بعد، <strong>نیچے مکمل متن تلاش کو فعال کریں</strong> اور چیک کریں کہ تلاش کا صارف انٹرفیس اچھی طرح کام کر رہا ہے (آپ اسے تلاش باکس میں ایک کلیدی لفظ تلاش کر کے ٹیسٹ کر سکتے ہیں)۔</li><li>اگر سب کچھ اچھی طرح کام کر رہا ہے، تو آپ <strong>نیچے معیاری انڈیکسنگ کو غیر فعال کر سکتے ہیں</strong> اور <strong>معیاری تلاش ٹیبلز کو بھی صاف کر سکتے ہیں</strong> ڈسک کی جگہ بچانے اور اپ گریڈ کی رفتار بہتر بنانے کے لیے۔</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "مکمل متن تلاش استعمال کریں۔ جب فعال ہو تو تلاش کا انٹرفیس پلگ ان کے ذریعے چلے گا"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "معیاری انڈیکسنگ کو غیر فعال کریں۔ جب فعال ہو تو ایپلیکیشن معیاری تلاش انجن کو ڈیٹا دینا بند کر دے گی (پلگ ان یہ کرے گا)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "انتخاب کریں کہ کون سے سیاق و سباق کے تلاش انڈیکس کو دوبارہ تعمیر کرنا ہے۔"
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "معیاری تلاش ٹیبلز صاف کریں"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "اختیاری طور پر دوبارہ تعمیر سے پہلے معیاری OJS تلاش ٹیبلز کو صاف کریں۔ یہ معیاری تلاش سسٹم سے تمام موجودہ تلاش کے اعداد و شمار کو ہٹا دے گا۔"
+msgstr "اختیاری طور پر دوبارہ تعمیر سے پہلے معیاری OJS/OMP/OPS تلاش ٹیبلز کو صاف کریں۔ یہ معیاری تلاش سسٹم سے تمام موجودہ تلاش کے اعداد و شمار کو ہٹا دے گا۔"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "انڈیکس دوبارہ تعمیر کرنے سے پہلے معیاری تلاش ٹیبلز صاف کریں"

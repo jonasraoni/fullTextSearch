@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Tam Metin Arama Eklentisi"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS gönderileri için veritabanı destekli tam metin indeksi sağlar, MySQL ve PostgreSQL ile uyumludur."
+msgstr "OJS/OMP/OPS gönderileri için veritabanı destekli tam metin indeksi sağlar, MySQL ve PostgreSQL ile uyumludur."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Kesintisiz bir entegrasyon için, aşağıdaki talimatları takip edin:</strong></p><ol><li>Eklentiyi etkinleştirdikten sonra, tüm dergiler için arama indeksini yeniden oluşturun veya <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> komutunu çalıştırın (bayrak, yalnızca eklenti için verilerin yeniden oluşturulmasını sağlar), eklentinin arama indeksini eski yayınlardan gelen verilerle doldurmak için. Yeni ve güncellenmiş yayınlar otomatik olarak indekslenecektir.</li><li>İndeksleme tamamlandığında, aşağıdaki <strong>tam metin aramasını etkinleştirin</strong> ve arama kullanıcı arayüzünün düzgün çalışıp çalışmadığını kontrol edin (arama kutusunda bir anahtar kelime arayarak test edebilirsiniz).</li><li>Her şey düzgün çalışıyorsa, aşağıdaki <strong>standart indekslemeyi devre dışı bırakabilir</strong> ve ayrıca <strong>standart arama tablolarını temizleyebilirsiniz</strong> disk alanından tasarruf etmek ve yükseltme hızını artırmak için.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Tam metin aramasını kullanın. Etkinleştirildiğinde, arama arayüzü eklenti tarafından desteklenecektir"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Standart indekslemeyi devre dışı bırakın. Etkinleştirildiğinde, uygulama standart arama motoruna veri beslemeyi durduracaktır (eklenti bunu yapacaktır)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Hangi bağlamların arama indeksinin yeniden oluşturulması gerektiğini seçin."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Standart Arama Tablolarını Temizle"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "İsteğe bağlı olarak yeniden oluşturmadan önce standart OJS arama tablolarını temizleyin. Bu, varsayılan arama sisteminden tüm mevcut arama verilerini kaldıracaktır."
+msgstr "İsteğe bağlı olarak yeniden oluşturmadan önce standart OJS/OMP/OPS arama tablolarını temizleyin. Bu, varsayılan arama sisteminden tüm mevcut arama verilerini kaldıracaktır."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "İndeksi yeniden oluşturmadan önce standart arama tablolarını temizle"

@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugin Căutare Text Complet"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Oferă un index de text complet bazat pe baza de date pentru înregistrările OJS, compatibil cu MySQL și PostgreSQL."
+msgstr "Oferă un index de text complet bazat pe baza de date pentru înregistrările OJS/OMP/OPS, compatibil cu MySQL și PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Pentru o integrare fără întreruperi, urmați instrucțiunile de mai jos:</strong></p><ol><li>După activarea plugin-ului, reconstruiți indexul de căutare pentru toate revistele, sau rulați <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (flagul asigură că doar datele pentru plugin vor fi reconstruite), pentru a umple indexul de căutare al plugin-ului cu date din publicațiile vechi. Publicațiile noi și actualizate vor fi indexate automat.</li><li>Odată ce indexarea s-a terminat, <strong>activați căutarea de text complet</strong> mai jos și verificați dacă interfața de utilizator pentru căutare funcționează bine (puteți testa aceasta căutând un cuvânt cheie în caseta de căutare).</li><li>Dacă totul funcționează corect, puteți <strong>dezactiva indexarea standard</strong> mai jos și, de asemenea, <strong>șterge tabelele de căutare standard</strong> pentru a economisi spațiu pe disc și a îmbunătăți viteza de actualizare.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Folosiți căutarea de text complet. Când este activată, interfața de căutare va fi alimentată de plugin"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Dezactivați indexarea standard. Când este activată, aplicația va înceta să alimenteze motorul de căutare standard cu date (plugin-ul va face acest lucru)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Alegeți ce contexte ar trebui să aibă indexul de căutare reconstruit."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Șterge Tabelele de Căutare Standard"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Opțional șterge tabelele de căutare standard OJS înainte de reconstruire. Aceasta va elimina toate datele de căutare existente din sistemul de căutare standard."
+msgstr "Opțional șterge tabelele de căutare standard OJS/OMP/OPS înainte de reconstruire. Aceasta va elimina toate datele de căutare existente din sistemul de căutare standard."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Șterge tabelele de căutare standard înainte de reconstruirea indexului"

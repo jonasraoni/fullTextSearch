@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Бүтэн Текст Хайлтын Нэмэлт"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS илгээмжүүдэд MySQL болон PostgreSQL-тэй нийцэх өгөгдлийн сан дээр суурилсан бүтэн текст хайлтын индекс өгдөг."
+msgstr "OJS/OMP/OPS илгээмжүүдэд MySQL болон PostgreSQL-тэй нийцэх өгөгдлийн сан дээр суурилсан бүтэн текст хайлтын индекс өгдөг."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Тасралтгүй нэгтгэлийн хувьд, саадгүйгээр, доорх зааварчилгааг дагана уу:</strong></p><ol><li>Нэмэлтийг идэвхжүүлсний дараа, бүх сэтгүүлүүдэд хайлтын индексийг дахин бүтээх, эсвэл <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> ажиллуулах (дэлгэц нь зөвхөн нэмэлтийн өгөгдлийг дахин бүтээх болно гэдгийг баталгаажуулна), хуучин хэвлэлүүдээс өгөгдлөөр нэмэлтийн хайлтын индексийг бөглөх. Шинэ болон шинэчлэгдсэн хэвлэлүүд автоматаар индексжих болно.</li><li>Индексжүүлэлт дууссаны дараа, <strong>доор бүтэн текст хайлтыг идэвхжүүлнэ үү</strong> болон хайлтын хэрэглэгчийн интерфейс сайн ажиллаж байгаа эсэхийг шалгана уу (хайлтын хайрцагт түлхүүр үгээр хайлт хийж үзэж болно).</li><li>Хэрэв бүх зүйл сайн ажиллаж байвал, та <strong>доор стандарт индексжүүлэлтийг идэвхгүй болгож</strong>, мөн <code>стандарт хайлтын хүснэгтүүдийг цэвэрлэж</code> диск зай хэмнэж, шинэчлэлтийн хурдыг сайжруулж болно.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Бүтэн текст хайлтыг ашиглана уу. Идэвхжүүлсэн үед хайлтын интерфейс нэмэлтээр ажиллах болно"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Стандарт индексжүүлэлтийг идэвхгүй болгох. Идэвхжүүлсэн үед аппликейшн стандарт хайлтын хөдөлгүүрт өгөгдөл өгөхөө зогсоох болно (нэмэлт үүнийг хийх болно)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Аль контекстуудын хайлтын индексийг дахин бүтээх шаардлагатайг сонгоно уу."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Стандарт Хайлтын Хүснэгтүүдийг Цэвэрлэх"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Сонгох боломжтой: дахин бүтээхээс өмнө стандарт OJS хайлтын хүснэгтүүдийг цэвэрлэнэ үү. Энэ нь стандарт хайлтын системээс бүх одоо байгаа хайлтын өгөгдлийг арилгана."
+msgstr "Сонгох боломжтой: дахин бүтээхээс өмнө стандарт OJS/OMP/OPS хайлтын хүснэгтүүдийг цэвэрлэнэ үү. Энэ нь стандарт хайлтын системээс бүх одоо байгаа хайлтын өгөгдлийг арилгана."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Индексийг дахин бүтээхээс өмнө стандарт хайлтын хүснэгтүүдийг цэвэрлэх"

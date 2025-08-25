@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "إضافة البحث في النص الكامل"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "يوفر فهرس نص كامل مدعوم بقاعدة بيانات للمقالات المقدمة إلى OJS، متوافق مع MySQL وPostgreSQL."
+msgstr "يوفر فهرس نص كامل مدعوم بقاعدة بيانات للمقالات المقدمة إلى OJS/OMP/OPS، متوافق مع MySQL وPostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>للتكامل السلس، بدون انقطاع، اتبع التعليمات أدناه:</strong></p><ol><li>بعد تفعيل الإضافة، أعد بناء فهرس البحث لجميع المجلات، أو شغل <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (العلم يضمن إعادة بناء بيانات الإضافة فقط)، لملء فهرس البحث للإضافة ببيانات من المنشورات القديمة. المنشورات الجديدة والمحدثة ستُفهرس تلقائياً.</li><li>بمجرد انتهاء الفهرسة، <strong>فعّل البحث في النص الكامل</strong> أدناه وتحقق من أن واجهة مستخدم البحث تعمل بشكل جيد (يمكنك اختبارها بالبحث عن كلمة مفتاحية في صندوق البحث).</li><li>إذا كان كل شيء يعمل بشكل صحيح، يمكنك <strong>إلغاء تفعيل الفهرسة القياسية</strong> أدناه وأيضاً <strong>مسح جداول البحث القياسية</strong> لتوفير مساحة القرص وتحسين سرعة الترقية.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "استخدم البحث في النص الكامل. عند التفعيل، ستُشغل واجهة البحث بواسطة الإضافة"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "ألغِ تفعيل الفهرسة القياسية. عند التفعيل، ستتوقف التطبيق عن تغذية محرك البحث القياسي بالبيانات (ستقوم الإضافة بذلك)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "اختر السياقات التي يجب إعادة بناء فهرس البحث الخاص بها."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "مسح جداول البحث القياسية"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "اختيارياً مسح جداول البحث القياسية لـ OJS قبل إعادة البناء. سيؤدي هذا إلى إزالة جميع بيانات البحث الموجودة من نظام البحث الافتراضي."
+msgstr "اختيارياً مسح جداول البحث القياسية لـ OJS/OMP/OPS قبل إعادة البناء. سيؤدي هذا إلى إزالة جميع بيانات البحث الموجودة من نظام البحث الافتراضي."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "مسح جداول البحث القياسية قبل إعادة بناء الفهرس"

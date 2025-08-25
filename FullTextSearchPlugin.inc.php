@@ -10,7 +10,7 @@
  * @class FullTextSearchPlugin
  * @ingroup plugins_generic_fullTextSearch
  *
- * @brief Full-text search plugin that provides database-backed indexing for OJS submissions
+ * @brief Full-text search plugin that provides database-backed indexing for OJS/OMP/OPS submissions
  */
 
 namespace APP\plugins\generic\fullTextSearch;

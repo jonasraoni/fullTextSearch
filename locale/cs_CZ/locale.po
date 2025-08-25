@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugin pro fulltextové vyhledávání"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Poskytuje databázový fulltextový index pro OJS příspěvky, kompatibilní s MySQL a PostgreSQL."
+msgstr "Poskytuje databázový fulltextový index pro OJS/OMP/OPS příspěvky, kompatibilní s MySQL a PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Pro bezproblémovou integraci bez přerušení postupujte podle následujících pokynů:</strong></p><ol><li>Po povolení pluginu přestavte vyhledávací index pro všechny časopisy nebo spusťte <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (příznak zajišťuje, že budou přestavěna pouze data pro plugin), abyste naplnili vyhledávací index pluginu daty ze starých publikací. Nové a aktualizované publikace budou automaticky indexovány.</li><li>Jakmile je indexování dokončeno, <strong>povolte fulltextové vyhledávání</strong> níže a zkontrolujte, zda vyhledávací uživatelské rozhraní funguje správně (můžete to otestovat vyhledáním klíčového slova ve vyhledávacím poli).</li><li>Pokud vše funguje správně, můžete <strong>zakázat standardní indexování</strong> níže a také <strong>vymazat standardní vyhledávací tabulky</strong> pro úsporu místa na disku a zlepšení rychlosti aktualizace.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Použít fulltextové vyhledávání. Když je povoleno, vyhledávací rozhraní bude napájeno pluginem"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Zakázat standardní indexování. Když je povoleno, aplikace přestane napájet standardní vyhledávací engine daty (plugin to udělá)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Vyberte, které kontexty by měly mít přestavěný vyhledávací index."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Vymazat Standardní Vyhledávací Tabulky"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Volitelně vymazat standardní OJS vyhledávací tabulky před přestavbou. Tím se odstraní všechna existující vyhledávací data ze standardního vyhledávacího systému."
+msgstr "Volitelně vymazat standardní OJS/OMP/OPS vyhledávací tabulky před přestavbou. Tím se odstraní všechna existující vyhledávací data ze standardního vyhledávacího systému."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Vymazat standardní vyhledávací tabulky před přestavbou indexu"

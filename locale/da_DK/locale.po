@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Fuldtekst Søge Plugin"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Giver en database-understøttet fuldtekst indeks for OJS indsendelser, kompatibel med MySQL og PostgreSQL."
+msgstr "Giver en database-understøttet fuldtekst indeks for OJS/OMP/OPS indsendelser, kompatibel med MySQL og PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>For en problemfri integration uden afbrydelser, følg instruktionerne nedenfor:</strong></p><ol><li>Efter at have aktiveret plugin'et, genopbyg søgeindekset for alle tidsskrifter, eller kør <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (flaget sikrer, at kun dataene for plugin'et vil blive genopbygget), for at fylde plugin'ets søgeindeks med data fra gamle publikationer. Nye og opdaterede publikationer vil blive indekseret automatisk.</li><li>Når indekseringen er færdig, <strong>aktiver fuldtekstsøgning</strong> nedenfor og tjek om søgebrugergrænsefladen fungerer fint (du kan teste det ved at søge efter et nøgleord i søgeboksen).</li><li>Hvis alt fungerer ordentligt, kan du <strong>deaktivere standardindeksering</strong> nedenfor og også <strong>rydde standardsøgetabellerne</strong> for at spare diskplads og forbedre opgraderingshastigheden.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Brug fuldtekstsøgning. Når aktiveret, vil søgegrænsefladen blive drevet af plugin'et"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Deaktiver standardindeksering. Når aktiveret, vil applikationen stoppe med at fodre data til standardsøgemotoren (plugin'et vil gøre det)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Vælg hvilke kontekster der skal have deres søgeindeks genopbygget."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Ryd Standard Søgetabeller"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Valgfrit ryd standard OJS søgetabeller før genopbygning. Dette vil fjerne alle eksisterende søgedata fra standardsøgesystemet."
+msgstr "Valgfrit ryd standard OJS/OMP/OPS søgetabeller før genopbygning. Dette vil fjerne alle eksisterende søgedata fra standardsøgesystemet."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Ryd standard søgetabeller før genopbygning af indeks"

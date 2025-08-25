@@ -15,10 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Full Text Search Plugin"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Provides a database-backed full-text index for OJS submissions, compatible with MySQL and PostgreSQL."
-
-msgid "plugins.generic.fullTextSearch.settings.description.title"
-msgstr "Setup Instructions"
+msgstr "Provides a database-backed full-text index for OJS/OMP/OPS submissions, compatible with MySQL and PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>For a seamless integration, without interruptions, follow the instructions below:</strong></p>"

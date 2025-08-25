@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Wtyczka wyszukiwania pełnotekstowego"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Zapewnia indeks pełnotekstowy oparty na bazie danych dla zgłoszeń OJS, kompatybilny z MySQL i PostgreSQL."
+msgstr "Zapewnia indeks pełnotekstowy oparty na bazie danych dla zgłoszeń OJS/OMP/OPS, kompatybilny z MySQL i PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Dla płynnej integracji, bez przerwań, postępuj zgodnie z poniższymi instrukcjami:</strong></p><ol><li>Po włączeniu wtyczki, przebuduj indeks wyszukiwania dla wszystkich czasopism lub uruchom <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (flaga zapewnia, że tylko dane dla wtyczki zostaną przebudowane), aby wypełnić indeks wyszukiwania wtyczki danymi ze starych publikacji. Nowe i zaktualizowane publikacje będą automatycznie indeksowane.</li><li>Gdy indeksowanie się zakończy, <strong>włącz wyszukiwanie pełnotekstowe</strong> poniżej i sprawdź, czy interfejs użytkownika wyszukiwania działa poprawnie (możesz to przetestować, wyszukując słowo kluczowe w polu wyszukiwania).</li><li>Jeśli wszystko działa poprawnie, możesz <strong>wyłączyć standardowe indeksowanie</strong> poniżej, a także <strong>wyczyścić standardowe tabele wyszukiwania</strong>, aby zaoszczędzić miejsce na dysku i poprawić prędkość aktualizacji.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Użyj wyszukiwania pełnotekstowego. Po włączeniu interfejs wyszukiwania będzie zasilany przez wtyczkę"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Wyłącz standardowe indeksowanie. Po włączeniu aplikacja przestanie zasilać standardowy silnik wyszukiwania danymi (wtyczka to zrobi)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Wybierz, które konteksty powinny mieć przebudowany indeks wyszukiwania."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Wyczyść Standardowe Tabele Wyszukiwania"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Opcjonalnie wyczyść standardowe tabele wyszukiwania OJS przed przebudową. To usunie wszystkie istniejące dane wyszukiwania z domyślnego systemu wyszukiwania."
+msgstr "Opcjonalnie wyczyść standardowe tabele wyszukiwania OJS/OMP/OPS przed przebudową. To usunie wszystkie istniejące dane wyszukiwania z domyślnego systemu wyszukiwania."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Wyczyść standardowe tabele wyszukiwania przed przebudową indeksu"

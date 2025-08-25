@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Тўлиқ Матн Қидирув Плагини"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS тақдимотлари учун маълумотлар базаси асосидаги тўлиқ матн индексини тақдим этади, MySQL ва PostgreSQL билан мос келади."
+msgstr "OJS/OMP/OPS тақдимотлари учун маълумотлар базаси асосидаги тўлиқ матн индексини тақдим этади, MySQL ва PostgreSQL билан мос келади."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Узуксиз интеграция учун, бузилишларсиз, қуйидаги кўрсатмаларга амал қилинг:</strong></p><ol><li>Плагинни фаоллаштиргандан сўнг, барча журналлар учун ҳидирув индексини қайта қуринг, ёки <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> ни ишга туширинг (байроқ фақат плагин учун маълумотлар қайта қурилишини таъминлайди), эски нашрлардан маълумотлар билан плагиннинг ҳидирув индексини тўлдириш учун. Янги ва янгиланган нашрлар автоматик равишда индексаланади.</li><li>Индексалаш тугагандан сўнг, <strong>қуйида тўлиқ матн ҳидирувини фаоллаштиринг</strong> ва ҳидирув фойдаланувчи интерфейси яхши ишлаётганини текширинг (ҳидирув қутисида калит сўзни ҳидириб синаб кўришингиз мумкин).</li><li>Агар ҳаммаси яхши ишлаётган бўлса, сиз <strong>қуйида стандарт индексалашни ўчиришингиз</strong> ва ҳамда <strong>стандарт ҳидирув жадвалларини тозалашингиз</strong> диск хотирасини сақлаш ва янгилаш тезлигини ошириш учун.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Тўлиқ матн ҳидирувини ишлатинг. Фаоллаштирилганда ҳидирув интерфейси плагин томонидан ишга туширилади"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Стандарт индексалашни ўчиринг. Фаоллаштирилганда дастур стандарт ҳидирув двигунига маълумотлар беришни тўхтатади (плагин буни қилади)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Қайси контекстларнинг ҳидирув индексини қайта қуриш кераклигини танланг."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Стандарт Қидирув Жадвалини Тозалаш"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Ихтиёрий равишда қайта қуришдан олдин стандарт OJS ҳидирув жадвалларини тозаланг. Бу стандарт ҳидирув тизимидан барча мавжуд ҳидирув маълумотларини олиб ташлайди."
+msgstr "Ихтиёрий равишда қайта қуришдан олдин стандарт OJS/OMP/OPS ҳидирув жадвалларини тозаланг. Бу стандарт ҳидирув тизимидан барча мавжуд ҳидирув маълумотларини олиб ташлайди."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Индексни қайта қуришдан олдин стандарт ҳидирув жадвалларини тозалаш"

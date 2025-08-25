@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugin pre Fulltextové Vyhľadávanie"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Poskytuje databázový fulltextový index pre OJS príspevky, kompatibilný s MySQL a PostgreSQL."
+msgstr "Poskytuje databázový fulltextový index pre OJS/OMP/OPS príspevky, kompatibilný s MySQL a PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Pre bezproblémovú integráciu bez prerušenia postupujte podľa nasledujúcich pokynov:</strong></p><ol><li>Po povolení pluginu prestavte vyhľadávací index pre všetky časopisy alebo spustite <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (príznak zabezpečuje, že budú prestavané len dáta pre plugin), aby ste naplnili vyhľadávací index pluginu dátami zo starých publikácií. Nové a aktualizované publikácie budú automaticky indexované.</li><li>Akonáhle je indexovanie dokončené, <strong>povolte fulltextové vyhľadávanie</strong> nižšie a skontrolujte, či vyhľadávacie používateľské rozhranie funguje správne (môžete to otestovať vyhľadávaním kľúčového slova vo vyhľadávacom poli).</li><li>Ak všetko funguje správne, môžete <strong>zakázať štandardné indexovanie</strong> nižšie a tiež <strong>vymazať štandardné vyhľadávacie tabuľky</strong> pre úsporu miesta na disku a zlepšenie rýchlosti aktualizácie.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Použiť fulltextové vyhľadávanie. Keď je povolené, vyhľadávacie rozhranie bude napájané pluginom"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Zakázať štandardné indexovanie. Keď je povolené, aplikácia prestane napájať štandardný vyhľadávací engine dátami (plugin to urobí)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Vyberte, ktoré kontexty by mali mať prestavaný vyhľadávací index."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Vymaž Štandardné Vyhľadávacie Tabuľky"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Volitelne vymaž štandardné OJS vyhľadávacie tabuľky pred prestavaním. Tým sa odstránia všetky existujúce vyhľadávacie dáta zo štandardného vyhľadávacieho systému."
+msgstr "Volitelne vymaž štandardné OJS/OMP/OPS vyhľadávacie tabuľky pred prestavaním. Tým sa odstránia všetky existujúce vyhľadávacie dáta zo štandardného vyhľadávacieho systému."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Vymaž štandardné vyhľadávacie tabuľky pred prestavaním indexu"

@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugin de Pesquisa em Texto Completo"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Fornece um índice de texto completo baseado em base de dados para submissões OJS, compatível com MySQL e PostgreSQL."
+msgstr "Fornece um índice de texto completo baseado em base de dados para submissões OJS/OMP/OPS, compatível com MySQL e PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Para uma integração sem interrupções, siga as instruções abaixo:</strong></p><ol><li>Após ativar o plugin, reconstrua o índice de pesquisa para todas as revistas, ou execute <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (a bandeira garante que apenas os dados do plugin serão reconstruídos), para preencher o índice de pesquisa do plugin com dados de publicações antigas. As publicações novas e atualizadas serão indexadas automaticamente.</li><li>Uma vez terminada a indexação, <strong>ative a pesquisa de texto completo</strong> abaixo e verifique se a interface de utilizador de pesquisa está a funcionar bem (pode testá-la pesquisando por uma palavra-chave na caixa de pesquisa).</li><li>Se tudo estiver a funcionar adequadamente, pode <strong>desativar a indexação padrão</strong> abaixo e também <strong>limpar as tabelas de pesquisa padrão</strong> para poupar espaço em disco e melhorar a velocidade de atualização.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Usar pesquisa de texto completo. Quando ativada, a interface de pesquisa será alimentada pelo plugin"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Desativar indexação padrão. Quando ativada, a aplicação deixará de alimentar o motor de pesquisa padrão (o plugin encarregar-se-á disso)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Escolha quais contextos devem ter o seu índice de pesquisa reconstruído."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Limpar Tabelas de Pesquisa Padrão"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Opcionalmente limpar as tabelas de pesquisa padrão do OJS antes de reconstruir. Isto removerá todos os dados de pesquisa existentes do sistema de pesquisa padrão."
+msgstr "Opcionalmente limpar as tabelas de pesquisa padrão do OJS/OMP/OPS antes de reconstruir. Isto removerá todos os dados de pesquisa existentes do sistema de pesquisa padrão."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Limpar tabelas de pesquisa padrão antes de reconstruir o índice"

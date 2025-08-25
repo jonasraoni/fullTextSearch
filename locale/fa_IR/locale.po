@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "افزونه جستجوی متن کامل"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "یک فهرست متن کامل مبتنی بر پایگاه داده برای ارسال‌های OJS فراهم می‌کند که با MySQL و PostgreSQL سازگار است."
+msgstr "یک فهرست متن کامل مبتنی بر پایگاه داده برای ارسال‌های OJS/OMP/OPS فراهم می‌کند که با MySQL و PostgreSQL سازگار است."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>برای یکپارچه‌سازی بی‌وقفه، بدون وقفه، دستورالعمل‌های زیر را دنبال کنید:</strong></p><ol><li>پس از فعال‌سازی افزونه، فهرست جستجو را برای تمام مجلات بازسازی کنید، یا <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> را اجرا کنید (پرچم اطمینان حاصل می‌کند که فقط داده‌های افزونه بازسازی شوند)، تا فهرست جستجوی افزونه را با داده‌های نشریات قدیمی پر کنید. نشریات جدید و به‌روزرسانی شده به طور خودکار فهرست‌بندی خواهند شد.</li><li>پس از اتمام فهرست‌بندی، <strong>جستجوی متن کامل را در زیر فعال کنید</strong> و بررسی کنید که رابط کاربری جستجو به خوبی کار می‌کند (می‌توانید با جستجوی یک کلمه کلیدی در جعبه جستجو آن را آزمایش کنید).</li><li>اگر همه چیز به درستی کار می‌کند، می‌توانید <strong>فهرست‌بندی استاندارد را در زیر غیرفعال کنید</strong> و همچنین <strong>جداول جستجوی استاندارد را پاک کنید</strong> تا فضای دیسک صرفه‌جویی کنید و سرعت ارتقا را بهبود بخشید.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "از جستجوی متن کامل استفاده کنید. وقتی فعال باشد، رابط جستجو توسط افزونه تأمین می‌شود"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "فهرست‌بندی استاندارد را غیرفعال کنید. وقتی فعال باشد، برنامه از تغذیه داده‌ها به موتور جستجوی استاندارد متوقف می‌شود (افزونه این کار را انجام خواهد داد)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "انتخاب کنید که کدام زمینه‌ها باید فهرست جستجوی خود را بازسازی کنند."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "پاک کردن جداول جستجوی استاندارد"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "اختیاری: جداول جستجوی استاندارد OJS را قبل از بازسازی پاک کنید. این کار تمام داده‌های جستجوی موجود را از سیستم جستجوی پیش‌فرض حذف خواهد کرد."
+msgstr "اختیاری: جداول جستجوی استاندارد OJS/OMP/OPS را قبل از بازسازی پاک کنید. این کار تمام داده‌های جستجوی موجود را از سیستم جستجوی پیش‌فرض حذف خواهد کرد."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "پاک کردن جداول جستجوی استاندارد قبل از بازسازی فهرست"

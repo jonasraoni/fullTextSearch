@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "पूर्ण पाठ खोज प्लगइन"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS प्रस्तुतियों के लिए डेटाबेस-समर्थित पूर्ण पाठ सूचकांक प्रदान करता है, MySQL और PostgreSQL के साथ संगत।"
+msgstr "OJS/OMP/OPS प्रस्तुतियों के लिए डेटाबेस-समर्थित पूर्ण पाठ सूचकांक प्रदान करता है, MySQL और PostgreSQL के साथ संगत।"
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>एक निर्बाध एकीकरण के लिए, बिना रुकावट के, नीचे दिए गए निर्देशों का पालन करें:</strong></p><ol><li>प्लगइन को सक्षम करने के बाद, सभी पत्रिकाओं के लिए खोज सूचकांक को पुनर्निर्मित करें, या <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> चलाएं (ध्वज सुनिश्चित करता है कि केवल प्लगइन के लिए डेटा पुनर्निर्मित होगा), पुराने प्रकाशनों के डेटा के साथ प्लगइन के खोज सूचकांक को भरने के लिए। नए और अपडेट किए गए प्रकाशन स्वचालित रूप से अनुक्रमित होंगे।</li><li>एक बार अनुक्रमणिका समाप्त हो जाने के बाद, <strong>नीचे पूर्ण पाठ खोज को सक्षम करें</strong> और जांचें कि खोज उपयोगकर्ता इंटरफ़ेस ठीक से काम कर रहा है (आप इसे खोज बॉक्स में एक कीवर्ड खोजकर परीक्षण कर सकते हैं)।</li><li>यदि सब कुछ ठीक से काम कर रहा है, तो आप <strong>नीचे मानक अनुक्रमणिका को अक्षम कर सकते हैं</strong> और <strong>मानक खोज तालिकाओं को भी साफ़ कर सकते हैं</strong> डिस्क स्थान बचाने और अपग्रेड गति में सुधार करने के लिए।</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "पूर्ण पाठ खोज का उपयोग करें। जब सक्षम हो, तो खोज इंटरफ़ेस प्लगइन द्वारा संचालित होगा"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "मानक अनुक्रमणिका को अक्षम करें। जब सक्षम हो, तो अनुप्रयोग मानक खोज इंजन को डेटा खिलाना बंद कर देगा (प्लगइन इसे करेगा)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "चुनें कि किन संदर्भों के खोज सूचकांक को पुनर्निर्मित किया जाना चाहिए।"
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "मानक खोज तालिकाएं साफ़ करें"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "वैकल्पिक रूप से पुनर्निर्माण से पहले मानक OJS खोज तालिकाओं को साफ़ करें। यह मानक खोज प्रणाली से सभी मौजूदा खोज डेटा को हटा देगा।"
+msgstr "वैकल्पिक रूप से पुनर्निर्माण से पहले मानक OJS/OMP/OPS खोज तालिकाओं को साफ़ करें। यह मानक खोज प्रणाली से सभी मौजूदा खोज डेटा को हटा देगा।"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "सूचकांक पुनर्निर्माण से पहले मानक खोज तालिकाएं साफ़ करें"

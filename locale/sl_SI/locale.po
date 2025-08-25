@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Vtičnik za Iskanje Celotnega Besedila"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Nudi indeks celotnega besedila na osnovi baze podatkov za OJS prispevke, kompatibilen z MySQL in PostgreSQL."
+msgstr "Nudi indeks celotnega besedila na osnovi baze podatkov za OJS/OMP/OPS prispevke, kompatibilen z MySQL in PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Za brezhibno integracijo brez prekinitev sledite spodnjim navodilom:</strong></p><ol><li>Po omogočitvi vtičnika obnovite indeks iskanja za vse revije ali zaženite <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (zastavica zagotavlja, da se bodo obnovili samo podatki za vtičnik), da napolnite indeks iskanja vtičnika s podatki iz starih publikacij. Nove in posodobljene publikacije bodo avtomatsko indeksirane.</li><li>Ko se indeksiranje konča, <strong>omogočite iskanje celotnega besedila</strong> spodaj in preverite, ali uporabniški vmesnik iskanja deluje pravilno (lahko ga preizkusite z iskanjem ključne besede v polju za iskanje).</li><li>Če vse deluje pravilno, lahko <strong>onemogočite standardno indeksiranje</strong> spodaj in tudi <strong>počistite standardne tabele iskanja</strong> za varčevanje prostora na disku in izboljšanje hitrosti nadgradnje.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Uporabite iskanje celotnega besedila. Ko je omogočeno, bo vmesnik iskanja poganjal vtičnik"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Onemogočite standardno indeksiranje. Ko je omogočeno, bo aplikacija prenehala podajati podatke standardnemu motorju iskanja (vtičnik bo to naredil)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Izberite, kateri konteksti naj imajo obnovljen indeks iskanja."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Počisti Standardne Tabele Iskanja"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Opcionalno počistite standardne OJS tabele iskanja pred obnovo. To bo odstranilo vse obstoječe podatke iskanja iz standardnega sistema iskanja."
+msgstr "Opcionalno počistite standardne OJS/OMP/OPS tabele iskanja pred obnovo. To bo odstranilo vse obstoječe podatke iskanja iz standardnega sistema iskanja."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Počisti standardne tabele iskanja pred obnovo indeksa"

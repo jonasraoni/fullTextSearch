@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugan Lorg Teacsa Iomlan"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "A' toirt seachad clàr-amais teacsa iomlan stèidhichte air stòr-dàta airson cur a-steach OJS, co-chòrdail ri MySQL agus PostgreSQL."
+msgstr "A' toirt seachad clàr-amais teacsa iomlan stèidhichte air stòr-dàta airson cur a-steach OJS/OMP/OPS, co-chòrdail ri MySQL agus PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Airson aonachadh gun bhriseadh, gun stad, lean na stiùiridhean gu h-ìosal:</strong></p><ol><li>Às deidh dhaibh a' plugan a chur an comas, ath-thogail clàr-amais lorg airson a h-uile iris, no ruith <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (tha am bratach a' dèanamh cinnteach nach ath-thogail ach dàta airson a' plugain), gus clàr-amais lorg a' plugain a lìonadh le dàta bho fhoillseachaidhean sean. Bidh foillseachaidhean ùra agus ùraichte air an clàr-amais gu fèin-obrachail.</li><li>Nuair a bhios an clàr-amais deiseil, <strong>cuir lorg teacsa iomlan an comas</strong> gu h-ìosal agus dèan cinnteach gu bheil eadar-aghaidh neach-cleachdaidh an lorg ag obair gu math (faodaidh tu a dhearbhadh le bhith a' lorg facal-iuchrach sa bhogsa lorg).</li><li>Ma tha a h-uile càil ag obair gu math, faodaidh tu <strong>clàr-amais stannardach a chur à comas</strong> gu h-ìosal agus cuideachd <strong>tàrlaichean lorg stannardach a ghlanadh</strong> gus àite diosc a shàbhaladh agus astar ùrachaidh a leasachadh.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Cleachd lorg teacsa iomlan. Nuair a tha e an comas, bidh eadar-aghaidh an lorg air a bhiadhanachadh leis a' phlugan"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Cuir clàr-amais stannardach à comas. Nuair a tha e an comas, stadaidh an aplacaid a bhith a' biadhanachadh dàta don einnsean lorg stannardach (nì am plugan seo)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Tagh dè na co-theacsannan a dh'fheumas an clàr-amais lorg aca a bhith air ath-thogail."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Glan Tàrlaichean Lorg Stannardach"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Roghainneil glan tàrlaichean lorg stannardach OJS mus ath-thogail thu. Bheir seo air falbh a h-uile dàta lorg a th' ann bhon t-siostam lorg stannardach."
+msgstr "Roghainneil glan tàrlaichean lorg stannardach OJS/OMP/OPS mus ath-thogail thu. Bheir seo air falbh a h-uile dàta lorg a th' ann bhon t-siostam lorg stannardach."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Glan tàrlaichean lorg stannardach mus ath-thogail thu an clàr-amais"

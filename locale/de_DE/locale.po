@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Volltext-Such-Plugin"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Bietet einen datenbankgestützten Volltext-Index für OJS-Einreichungen, kompatibel mit MySQL und PostgreSQL."
+msgstr "Bietet einen datenbankgestützten Volltext-Index für OJS/OMP/OPS-Einreichungen, kompatibel mit MySQL und PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Für eine nahtlose Integration ohne Unterbrechungen, befolgen Sie die folgenden Anweisungen:</strong></p><ol><li>Nach dem Aktivieren des Plugins, bauen Sie den Suchindex für alle Zeitschriften neu auf, oder führen Sie <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> aus (die Flagge stellt sicher, dass nur die Daten für das Plugin neu aufgebaut werden), um den Suchindex des Plugins mit Daten aus alten Publikationen zu füllen. Neue und aktualisierte Publikationen werden automatisch indexiert.</li><li>Sobald die Indexierung abgeschlossen ist, <strong>aktivieren Sie die Volltext-Suche</strong> unten und überprüfen Sie, ob die Suchbenutzeroberfläche ordnungsgemäß funktioniert (Sie können sie testen, indem Sie nach einem Schlüsselwort im Suchfeld suchen).</li><li>Wenn alles ordnungsgemäß funktioniert, können Sie die <strong>Standard-Indexierung unten deaktivieren</strong> und auch die <strong>Standard-Suchtabellen löschen</strong>, um Speicherplatz zu sparen und die Aktualisierungsgeschwindigkeit zu verbessern.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Volltext-Suche verwenden. Wenn aktiviert, wird die Suchoberfläche vom Plugin betrieben"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Standard-Indexierung deaktivieren. Wenn aktiviert, wird die Anwendung aufhören, die Standard-Suchmaschine mit Daten zu versorgen (das Plugin wird es übernehmen)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Wählen Sie aus, welche Kontexte ihren Suchindex neu aufbauen sollen."
@@ -30,10 +39,13 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Standard-Suchtabellen Löschen"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Optional die Standard-OJS-Suchtabellen vor dem Neuaufbau löschen. Dies entfernt alle vorhandenen Suchdaten aus dem Standard-Suchsystem."
+msgstr "Optional die Standard-OJS/OMP/OPS-Suchtabellen vor dem Neuaufbau löschen. Dies entfernt alle vorhandenen Suchdaten aus dem Standard-Suchsystem."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Standard-Suchtabellen vor dem Neuaufbau des Index löschen"
 
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Bei der Suche ist ein unerwarteter Fehler aufgetreten"
+
+
+

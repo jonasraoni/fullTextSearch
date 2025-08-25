@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "To'liq Matn Qidiruv Plagini"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS taqdimotlari uchun ma'lumotlar bazasi asosidagi to'liq matn indeksini taqdim etadi, MySQL va PostgreSQL bilan mos keladi."
+msgstr "OJS/OMP/OPS taqdimotlari uchun ma'lumotlar bazasi asosidagi to'liq matn indeksini taqdim etadi, MySQL va PostgreSQL bilan mos keladi."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Uzluksiz integratsiya uchun, buzilishlarsiz, quyidagi ko'rsatmalarga amal qiling:</strong></p><ol><li>Plaginni faollashtirgandan so'ng, barcha jurnallar uchun qidiruv indeksini qayta quring, yoki <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> ni ishga tushiring (bayroq faqat plaginni uchun ma'lumotlar qayta qurilishini ta'minlaydi), eski nashrlardan ma'lumotlar bilan plaginning qidiruv indeksini to'ldirish uchun. Yangi va yangilangan nashrlar avtomatik ravishda indeksalanadi.</li><li>Indeksalash tugagandan so'ng, <strong>quyida to'liq matn qidiruvini faollashtiring</strong> va qidiruv foydalanuvchi interfeysi yaxshi ishlayotganini tekshiring (qidiruv qutisida kalit so'zni qidirib sinab ko'rishingiz mumkin).</li><li>Agar hammasi yaxshi ishlayotgan bo'lsa, siz <strong>quyida standart indeksalashni o'chirishingiz</strong> va hamda <strong>standart qidiruv jadvallarini tozalashingiz</strong> disk xotirasi saqlash va yangilash tezligini oshirish uchun.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "To'liq matn qidiruvini ishlating. Faollashtirilganda qidiruv interfeysi plaginni tomonidan ishga tushiriladi"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Standart indeksalashni o'chiring. Faollashtirilganda dastur standart qidiruv dviguniga ma'lumotlar berishni to'xtatadi (plaginni buni qiladi)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Qaysi kontekstlarning qidiruv indeksini qayta qurish kerakligini tanlang."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Standart Qidiruv Jadvalini Tozalash"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Ixtiyoriy ravishda qayta qurishdan oldin standart OJS qidiruv jadvallarini tozalang. Bu standart qidiruv tizimidan barcha mavjud qidiruv ma'lumotlarini olib tashlaydi."
+msgstr "Ixtiyoriy ravishda qayta qurishdan oldin standart OJS/OMP/OPS qidiruv jadvallarini tozalang. Bu standart qidiruv tizimidan barcha mavjud qidiruv ma'lumotlarini olib tashlaydi."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Indeksni qayta qurishdan oldin standart qidiruv jadvallarini tozalash"

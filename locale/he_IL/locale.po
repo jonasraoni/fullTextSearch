@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "תוסף חיפוש טקסט מלא"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "מספק אינדקס טקסט מלא מבוסס מסד נתונים להגשות OJS, תואם ל-MySQL ו-PostgreSQL."
+msgstr "מספק אינדקס טקסט מלא מבוסס מסד נתונים להגשות OJS/OMP/OPS, תואם ל-MySQL ו-PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>לשילוב חלק ללא הפרעות, עקוב אחר ההוראות להלן:</strong></p><ol><li>לאחר הפעלת התוסף, בנה מחדש את אינדקס החיפוש עבור כל כתבי העת, או הרץ <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (הדגל מבטיח שרק הנתונים עבור התוסף ייבנו מחדש), כדי למלא את אינדקס החיפוש של התוסף בנתונים מפרסומים ישנים. פרסומים חדשים ומעודכנים יאונדקסו אוטומטית.</li><li>לאחר שהאינדוקס יסתיים, <strong>הפעל את חיפוש הטקסט המלא</strong> למטה ובדוק שממשק המשתמש לחיפוש עובד היטב (אתה יכול לבדוק זאת על ידי חיפוש מילת מפתח בתיבת החיפוש).</li><li>אם הכל עובד כמו שצריך, אתה יכול <strong>לכבות את האינדוקס הסטנדרטי</strong> למטה וגם <strong>לנקות את טבלאות החיפוש הסטנדרטיות</strong> כדי לחסוך מקום בדיסק ולשפר את מהירות השדרוג.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "השתמש בחיפוש טקסט מלא. כאשר מופעל, ממשק החיפוש יופעל על ידי התוסף"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "כבה אינדוקס סטנדרטי. כאשר מופעל, האפליקציה תפסיק להזין נתונים למנוע החיפוש הסטנדרטי (התוסף יעשה זאת)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "בחר אילו הקשרים צריכים שיהיה להם אינדקס חיפוש שנבנה מחדש."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "נקה טבלאות חיפוש סטנדרטיות"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "אופציונלית נקה את טבלאות החיפוש הסטנדרטיות של OJS לפני בנייה מחדש. זה יסיר את כל נתוני החיפוש הקיימים ממערכת החיפוש הסטנדרטית."
+msgstr "אופציונלית נקה את טבלאות החיפוש הסטנדרטיות של OJS/OMP/OPS לפני בנייה מחדש. זה יסיר את כל נתוני החיפוש הקיימים ממערכת החיפוש הסטנדרטית."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "נקה טבלאות חיפוש סטנדרטיות לפני בנייה מחדש של האינדקס"

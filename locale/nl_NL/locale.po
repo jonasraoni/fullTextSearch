@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Volledige Tekst Zoek Plugin"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Biedt een database-ondersteunde volledige tekst index voor OJS inzendingen, compatibel met MySQL en PostgreSQL."
+msgstr "Biedt een database-ondersteunde volledige tekst index voor OJS/OMP/OPS inzendingen, compatibel met MySQL en PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Voor een naadloze integratie, zonder onderbrekingen, volg de onderstaande instructies:</strong></p><ol><li>Na het inschakelen van de plugin, herbouw de zoekindex voor alle tijdschriften, of voer <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> uit (de vlag zorgt ervoor dat alleen de gegevens voor de plugin worden herbouwd), om de zoekindex van de plugin te vullen met gegevens van oude publicaties. Nieuwe en bijgewerkte publicaties worden automatisch geïndexeerd.</li><li>Zodra de indexering is voltooid, <strong>schakel de volledige tekst zoekfunctie</strong> hieronder in en controleer of de zoekgebruikersinterface goed werkt (u kunt dit testen door te zoeken naar een trefwoord in het zoekvak).</li><li>Als alles goed werkt, kunt u <strong>de standaard indexering hieronder uitschakelen</strong> en ook <strong>de standaard zoektabellen wissen</strong> om schijfruimte te besparen en de upgrade-snelheid te verbeteren.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Gebruik volledige tekst zoeken. Wanneer ingeschakeld, wordt de zoekinterface aangedreven door de plugin"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Schakel standaard indexering uit. Wanneer ingeschakeld, stopt de applicatie met het voeden van gegevens naar de standaard zoekmachine (de plugin zal dit doen)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Kies welke contexten hun zoekindex moeten laten herbouwen."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Standaard Zoektabellen Wissen"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Optioneel de standaard OJS zoektabellen wissen voordat u herbouwt. Dit verwijdert alle bestaande zoekgegevens uit het standaard zoeksysteem."
+msgstr "Optioneel de standaard OJS/OMP/OPS zoektabellen wissen voordat u herbouwt. Dit verwijdert alle bestaande zoekgegevens uit het standaard zoeksysteem."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Standaard zoektabellen wissen voordat u de index herbouwt"

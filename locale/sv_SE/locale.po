@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Fulltextsökningsplugin"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Tillhandahåller ett databasbaserat fulltextindex för OJS-inlämningar, kompatibelt med MySQL och PostgreSQL."
+msgstr "Tillhandahåller ett databasbaserat fulltextindex för OJS/OMP/OPS-inlämningar, kompatibelt med MySQL och PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>För en smidig integration, utan avbrott, följ instruktionerna nedan:</strong></p><ol><li>Efter att ha aktiverat plugin:et, bygg om sökindexet för alla tidskrifter, eller kör <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (flaggan säkerställer att endast data för plugin:et kommer att byggas om), för att fylla plugin:ets sökindex med data från gamla publikationer. Nya och uppdaterade publikationer kommer att indexeras automatiskt.</li><li>När indexeringen är klar, <strong>aktivera fulltextsökningen</strong> nedan och kontrollera om sökgränssnittet fungerar bra (du kan testa det genom att söka efter ett nyckelord i sökrutan).</li><li>Om allt fungerar ordentligt kan du <strong>inaktivera standardindexeringen</strong> nedan och också <strong>rensa standardsöktabellerna</strong> för att spara diskutrymme och förbättra uppgraderingshastigheten.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Använd fulltextsökning. När aktiverat kommer sökgränssnittet att drivas av plugin:et"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Inaktivera standardindexering. När aktiverat kommer applikationen att sluta mata data till standardsökmotorn (plugin:et kommer att hantera det)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Välj vilka kontexter som ska ha sitt sökindex ombyggt."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Rensa Standard Söktabeller"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Valfritt rensa standard OJS-söktabeller innan ombyggnad. Detta kommer att ta bort all befintlig sökdata från standardsöksystemet."
+msgstr "Valfritt rensa standard OJS/OMP/OPS-söktabeller innan ombyggnad. Detta kommer att ta bort all befintlig sökdata från standardsöksystemet."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Rensa standardsöktabeller innan ombyggnad av index"

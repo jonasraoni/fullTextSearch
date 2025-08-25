@@ -15,7 +15,16 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugin de Cerca de Text Complet"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Proporciona un índex de text complet basat en base de dades per a enviaments OJS, compatible amb MySQL i PostgreSQL."
+msgstr "Proporciona un índex de text complet basat en base de dades per a enviaments OJS/OMP/OPS, compatible amb MySQL i PostgreSQL."
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>Per a una integració perfecta, sense interrupcions, seguiu les instruccions següents:</strong></p><ol><li>Després d'activar el plugin, reconstruïu l'índex de cerca per a totes les revistes, o executeu <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (la bandera assegura que només es reconstruiran les dades per al plugin), per omplir l'índex de cerca del plugin amb dades de publicacions antigues. Les noves i actualitzades publicacions s'indexaran automàticament.</li><li>Un cop finalitzada la indexació, <strong>activeu la cerca de text complet</strong> a sota i comproveu si la interfície d'usuari de cerca funciona bé (podeu provar-la cercant una paraula clau a la caixa de cerca).</li><li>Si tot funciona correctament, podeu <strong>desactivar la indexació estàndard</strong> a sota i també <strong>netejar les taules de cerca estàndard</strong> per estalviar espai de disc i millorar la velocitat d'actualització.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Utilitzeu la cerca de text complet. Quan estigui activada, la interfície de cerca serà impulsada pel plugin"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Desactiveu la indexació estàndard. Quan estigui activada, l'aplicació deixarà d'alimentar el motor de cerca estàndard amb dades (el plugin s'encarregarà d'això)"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Trieu quins contextos han de tenir el seu índex de cerca reconstruït."
@@ -30,7 +39,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Netejar Taules de Cerca Estàndard"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Opcionalment netegeu les taules de cerca estàndard d'OJS abans de reconstruir. Això eliminarà totes les dades de cerca existents del sistema de cerca estàndard."
+msgstr "Opcionalment netegeu les taules de cerca estàndard d'OJS/OMP/OPS abans de reconstruir. Això eliminarà totes les dades de cerca existents del sistema de cerca estàndard."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Netejar taules de cerca estàndard abans de reconstruir l'índex"
