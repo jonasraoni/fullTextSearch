@@ -39,6 +39,10 @@ class FullTextSearchPlugin extends GenericPlugin
 {
     /** @var bool */
     private $installed = false;
+    /** @var bool */
+    private $disableStandardIndexing = false;
+    /** @var bool */
+    private $useFullTextSearch = false;
 
     /**
      * @copydoc Plugin::register
@@ -54,10 +58,15 @@ class FullTextSearchPlugin extends GenericPlugin
             return true;
         }
 
+        $this->disableStandardIndexing = (bool) $this->getSetting(CONTEXT_SITE, 'disableStandardIndexing');
+        $this->useFullTextSearch = (bool) $this->getSetting(CONTEXT_SITE, 'useFullTextSearch');
         $this->useAutoLoader();
         $this->ensureSchema();
         $this->registerIndexingHooks();
-        $this->registerSearchHook();
+        if ($this->useFullTextSearch) {
+            $this->registerSearchHook();
+        }
+
         return true;
     }
 
@@ -159,6 +168,12 @@ class FullTextSearchPlugin extends GenericPlugin
     {
         [$log, $context, $switches] = $args + [false, null, []];
         $indexer = new Indexer();
+        $this->useFullTextSearch = $this->useFullTextSearch && !in_array('--skip-standard-index', $switches);
+        if ($this->useFullTextSearch) {
+            // As we're overriding the rebuildSearchIndex tool, we need to clear the standard index manually to mimic its behavior
+            (new Dao())->clearStandardSearchTables();
+        }
+
         $indexer->rebuildIndex($context, $log, $switches);
         return true;
     }
@@ -171,7 +186,7 @@ class FullTextSearchPlugin extends GenericPlugin
         [$submission] = $args;
         $indexer = new Indexer();
         $indexer->indexSubmission($submission);
-        return true;
+        return $this->disableStandardIndexing;
     }
 
     /**
@@ -200,7 +215,7 @@ class FullTextSearchPlugin extends GenericPlugin
             }
         }
 
-        return true;
+        return $this->disableStandardIndexing;
     }
 
     /**
@@ -211,7 +226,7 @@ class FullTextSearchPlugin extends GenericPlugin
         [$submissionId] = $args;
         $indexer = new Indexer();
         $indexer->deleteSubmission((int) $submissionId);
-        return true;
+        return $this->disableStandardIndexing;
     }
 
     /**
@@ -222,7 +237,7 @@ class FullTextSearchPlugin extends GenericPlugin
         [$newPublication, $publication, $submission] = $args;
         $indexer = new Indexer();
         $indexer->deleteSubmission($submission->getId());
-        return true;
+        return $this->disableStandardIndexing;
     }
 
     /**
@@ -332,5 +347,13 @@ class FullTextSearchPlugin extends GenericPlugin
         }
 
         return parent::manage($args, $request);
+    }
+
+    /**
+     * @copydoc Plugin::getInstallSitePluginSettingsFile()
+     */
+    public function getInstallSitePluginSettingsFile(): string
+    {
+        return $this->getPluginPath() . '/settings.xml';
     }
 }

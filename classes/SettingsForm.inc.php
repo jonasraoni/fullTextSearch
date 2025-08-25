@@ -51,6 +51,8 @@ class SettingsForm extends Form
     public function initData(): void
     {
         $this->setData('contexts', $this->dao->getAllContexts());
+        $this->setData('useFullTextSearch', $this->plugin->getSetting(CONTEXT_SITE, 'useFullTextSearch'));
+        $this->setData('disableStandardIndexing', $this->plugin->getSetting(CONTEXT_SITE, 'disableStandardIndexing'));
         parent::initData();
     }
 
@@ -59,7 +61,7 @@ class SettingsForm extends Form
      */
     public function readInputData(): void
     {
-        $vars = ['selectedContexts', 'clearStandardSearch'];
+        $vars = ['selectedContexts', 'clearStandardSearch', 'useFullTextSearch', 'disableStandardIndexing'];
         $this->readUserVars($vars);
         parent::readInputData();
     }
@@ -81,6 +83,12 @@ class SettingsForm extends Form
     {
         $selectedContexts = (array) $this->getData('selectedContexts');
         $clearStandardSearch = (bool) $this->getData('clearStandardSearch');
+        $useFullTextSearch = (bool) $this->getData('useFullTextSearch');
+        $disableStandardIndexing = (bool) $this->getData('disableStandardIndexing');
+
+        // Save the new settings
+        $this->plugin->updateSetting(CONTEXT_SITE, 'useFullTextSearch', $useFullTextSearch);
+        $this->plugin->updateSetting(CONTEXT_SITE, 'disableStandardIndexing', $disableStandardIndexing);
 
         if ($clearStandardSearch) {
             $this->dao->clearStandardSearchTables();

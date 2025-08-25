@@ -21,63 +21,32 @@
 <form class="pkp_form" id="fullTextSearchSettings" method="POST" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="generic" plugin=$pluginName verb="settings" save=true}">
 	{csrf}
 
-	<div class="section">
-		<h2>{translate key="plugins.generic.fullTextSearch.settings.rebuildButton"}</h2>
+	<div class="description">
+		<p>{translate key="plugins.generic.fullTextSearch.settings.description"}</p>
+	</div>
+
+	{fbvFormSection title="navigation.settings" list="true"}
+		{fbvElement type="checkbox" id="useFullTextSearch" checked=$useFullTextSearch label="plugins.generic.fullTextSearch.settings.useFullTextSearch" translate="true"}
+		{fbvElement type="checkbox" id="disableStandardIndexing" checked=$disableStandardIndexing label="plugins.generic.fullTextSearch.settings.disableStandardIndexing" translate="true"}
+	{/fbvFormSection}
+
+	{fbvFormSection title="plugins.generic.fullTextSearch.settings.rebuildButton" list="true"}
 		<p>{translate key="plugins.generic.fullTextSearch.settings.selectContextsDescription"}</p>
 
-		<div class="form-group">
-			<label>
-				<input type="checkbox" id="selectAllContexts" name="selectAllContexts">
-				{translate key="common.selectAll"}
-			</label>
-		</div>
+		{fbvElement type="checkbox" id="selectAllContexts" name="selectAllContexts" label="common.selectAll"}
+		{fbvElement type="checkboxgroup" name="selectedContexts" id="selectedContexts" from=$contexts selected=[] translate=false}
+	{/fbvFormSection}
 
-		<div class="form-group">
-			{foreach from=$contexts key=contextId item=contextName}
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" name="selectedContexts[]" value="{$contextId}">
-						{$contextName}
-					</label>
-				</div>
-			{/foreach}
-		</div>
-	</div>
-
-	<div class="section">
-		<h2>{translate key="plugins.generic.fullTextSearch.settings.clearStandardSearch"}</h2>
+	{fbvFormSection title="plugins.generic.fullTextSearch.settings.clearStandardSearch" list="true"}
 		<p>{translate key="plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"}</p>
 
-		<div class="form-group">
-			<label>
-				<input type="checkbox" id="clearStandardSearch" name="clearStandardSearch">
-				{translate key="plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"}
-			</label>
-		</div>
-	</div>
+		{fbvElement type="checkbox" id="clearStandardSearch" checked=$clearStandardSearch label="plugins.generic.fullTextSearch.settings.clearStandardSearchLabel" translate="true"}
+	{/fbvFormSection}
 
-	<div class="form_buttons">
-		<button class="pkp_button pkp_button_primary" type="submit">
-			{translate key="plugins.generic.fullTextSearch.settings.rebuildButton"}
-		</button>
-	</div>
+	{fbvFormButtons submitText="common.save"}
 </form>
 
 <style>
-.pkp_form_file_view {
-	padding: 20px;
-}
-
-.pkp_form_file_view h3 {
-	margin-bottom: 15px;
-	color: #333;
-}
-
-.pkp_form_file_view h4 {
-	margin: 20px 0 10px 0;
-	color: #555;
-}
-
 .section {
 	margin: 20px 0;
 	padding: 15px;
@@ -86,45 +55,10 @@
 	background-color: #f9f9f9;
 }
 
-.form-group {
-	margin: 15px 0;
-}
-
-.checkbox {
-	margin: 8px 0;
-}
-
-.checkbox label {
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-	font-weight: normal;
-}
-
-.checkbox input[type="checkbox"] {
-	margin-right: 8px;
-}
-
-.form_buttons {
-	margin-top: 20px;
-	padding-top: 15px;
-	border-top: 1px solid #ddd;
-}
-
-.pkp_button {
-	padding: 8px 16px;
-	border: none;
+.description {
+	background-color: #e7f3ff;
+	padding: 15px;
 	border-radius: 4px;
-	cursor: pointer;
-	font-size: 14px;
-}
-
-.pkp_button_primary {
-	background-color: #007cba;
-	color: white;
-}
-
-.pkp_button_primary:hover {
-	background-color: #005a87;
+	border-left: 4px solid #007cba;
 }
 </style>

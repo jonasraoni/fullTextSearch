@@ -17,6 +17,21 @@ msgstr "Full Text Search Plugin"
 msgid "plugins.generic.fullTextSearch.description"
 msgstr "Provides a database-backed full-text index for OJS submissions, compatible with MySQL and PostgreSQL."
 
+msgid "plugins.generic.fullTextSearch.settings.description.title"
+msgstr "Setup Instructions"
+
+msgid "plugins.generic.fullTextSearch.settings.description"
+msgstr "<p><strong>For a seamless integration, without interruptions, follow the instructions below:</strong></p>"
+"<ol><li>After enabling the plugin, rebuild the search index for all journals, or run <code>php tools/rebuildSearchIndex.php --skip-standard-index</code> (the flag ensures that only the data for the plugin will be rebuilt), to fill the plugin's search index with data from old publications. New and updated publications will be indexed automatically.</li>"
+"<li>Once the indexation is over, <strong>enable the full text search</strong> below and check if the search user interface is working fine (you can test it by searching for a keyword in the search box).</li>"
+"<li>If everything is working properly, you can <strong>disable the standard indexing</strong> below and also <strong>clear the standard search tables</strong> to save disk space and improve upgrade speed.</li></ol>"
+
+msgid "plugins.generic.fullTextSearch.settings.useFullTextSearch"
+msgstr "Use full text search. When enabled the search interface will be powered by the plugin"
+
+msgid "plugins.generic.fullTextSearch.settings.disableStandardIndexing"
+msgstr "Disable standard indexing. When enabled the application will stop feeding data to the standard search engine (the plugin will do it)"
+
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Choose which contexts should have their search index rebuilt."
 
@@ -30,7 +45,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Clear Standard Search Tables"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Optionally clear the standard OJS search tables before rebuilding. This will remove all existing search data from the default search system."
+msgstr "Optionally clear the standard search tables before rebuilding. This will remove all existing search data from the default search system."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Clear standard search tables before rebuilding index"
