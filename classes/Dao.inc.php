@@ -214,17 +214,11 @@ class Dao
      */
     public function cleanUnpublishedSubmissions(array $contextIds): void
     {
-        foreach ($contextIds as $contextId) {
-            if (empty($contextId)) {
-                continue;
-            }
-
-            Manager::table(static::TABLE_NAME, 'fts')
-                ->join('submissions AS s', 's.submission_id', '=', 'fts.submission_id')
-                ->where('s.context_id', $contextId)
-                ->where('s.status', '!=', STATUS_PUBLISHED)
-                ->delete();
-        }
+        Manager::table(static::TABLE_NAME, 'fts')
+            ->join('submissions AS s', 's.submission_id', '=', 'fts.submission_id')
+            ->whereIn('s.context_id', $contextIds)
+            ->where('s.status', '!=', STATUS_PUBLISHED)
+            ->delete();
     }
 
     /**
@@ -246,21 +240,22 @@ class Dao
     /**
      * Rebuild the search index for selected contexts
      * @param array $contextIds Array of context IDs to rebuild
+     * @param ?bool $log Whether to log the rebuild process
+     * @param ?array $switches The switches to use for the rebuild process
      */
-    public function rebuildSearchIndex(array $contextIds): void
+    public function rebuildSearchIndex(array $contextIds, ?bool $log = false, ?array $switches = []): void
     {
-        $indexer = new Indexer();
+        set_time_limit(0);
         import('classes.submission.Submission');
-        import('lib.pkp.classes.submission.SubmissionFile');
-
+        $searchIndex = Application::getSubmissionSearchIndex();
         foreach ($contextIds as $contextId) {
-            if (empty($contextId)) {
-                continue;
-            }
-
             $context = Application::getContextDAO()->getById($contextId);
             if (!$context) {
                 continue;
+            }
+
+            if ($log) {
+                echo "Rebuilding index for context {$context->getLocalizedName()}\n";
             }
 
             // Get only published submissions for this context
@@ -270,19 +265,28 @@ class Dao
             ]);
 
             foreach ($submissionsIterator as $submission) {
-                $indexer->indexSubmission($submission);
-                // Also index any galley files
-                $submissionFilesIterator = Services::get('submissionFile')->getMany([
-                    'submissionIds' => [$submission->getId()],
-                    'fileStages' => [SUBMISSION_FILE_PROOF],
-                ]);
-                foreach ($submissionFilesIterator as $submissionFile) {
-                    $indexer->indexSubmissionFile($submission->getId(), $submissionFile->getId());
-                }
+                $searchIndex->submissionMetadataChanged($submission);
+                $searchIndex->submissionFilesChanged($submission);
             }
+        }
+
+        if ($log) {
+            echo "Cleaning up old/unpublished submissions from the index\n";
         }
 
         // Clean up old/unpublished submissions from the index
         $this->cleanUnpublishedSubmissions($contextIds);
+    }
+
+    /**
+     * Rebuild the search index
+     * @param ?Context $context The context
+     * @param ?bool $log Whether to log the rebuild process
+     * @param ?array $switches The switches to use for the rebuild process
+     */
+    public function rebuildIndex(?Context $context = null, ?bool $log = false, ?array $switches = []): void
+    {
+        $contextIds = $context ? [$context->getId()] : array_keys(Application::getContextDAO()->getAll()->toAssociativeArray());
+        $this->rebuildSearchIndex($contextIds, $log, $switches);
     }
 }

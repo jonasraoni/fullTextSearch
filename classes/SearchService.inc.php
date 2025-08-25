@@ -15,6 +15,8 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
+use Context;
+
 class SearchService
 {
     private Dao $dao;
@@ -29,7 +31,7 @@ class SearchService
 
     /**
      * Perform a search using the full-text index
-     * @param mixed $context The context object or null for all contexts
+     * @param ?Context $context The context object or null for all contexts
      * @param array $keywords Array of search keywords keyed by field type
      * @param string $orderBy The field to order by
      * @param string $orderDirection The order direction (ASC/DESC)
@@ -40,7 +42,7 @@ class SearchService
      * @param mixed $publishedTo Optional publication date to filter
      * @return array{0:int[],1:int} Array containing submission IDs and total count
      */
-    public function search($context, array $keywords, string $orderBy, string $orderDirection, array $exclude, int $page, int $perPage, $publishedFrom = null, $publishedTo = null): array
+    public function search(?Context $context, array $keywords, string $orderBy, string $orderDirection, array $exclude, int $page, int $perPage, $publishedFrom = null, $publishedTo = null): array
     {
         return $this->dao->search($context, $keywords, $orderBy, $orderDirection, $exclude, $page, $perPage, $publishedFrom, $publishedTo);
     }

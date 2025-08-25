@@ -15,6 +15,7 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
+use Context;
 use DAORegistry;
 use SearchFileParser;
 use Services;
@@ -74,6 +75,7 @@ class Indexer
      */
     public function indexSubmissionFile(int $submissionId, int $submissionFileId): void
     {
+        set_time_limit(0);
         /** @var SubmissionFileDAO $submissionFileDao */
         $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
         $submissionFile = $submissionFileDao->getById($submissionFileId);
@@ -138,5 +140,16 @@ class Indexer
             $out = array_merge($out, (array) $arr);
         }
         return $out;
+    }
+
+    /**
+     * Rebuild the index
+     * @param ?Context $context The context
+     * @param ?bool $log Whether to log the rebuild process
+     * @param ?array $switches The switches to use for the rebuild process
+     */
+    public function rebuildIndex(?Context $context = null, ?bool $log = false, ?array $switches = []): void
+    {
+        $this->dao->rebuildIndex($context, $log, $switches);
     }
 }

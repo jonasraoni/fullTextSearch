@@ -31,6 +31,7 @@ use JSONMessage;
 use LinkAction;
 use AjaxModal;
 use NotificationManager;
+use Services;
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
@@ -130,11 +131,36 @@ class FullTextSearchPlugin extends GenericPlugin
      */
     private function registerIndexingHooks(): void
     {
+        // Metadata
         HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', [$this, 'articleMetadataChanged']);
-        HookRegistry::register('ArticleSearchIndex::submissionFileChanged', [$this, 'submissionFileChanged']);
-        HookRegistry::register('ArticleSearchIndex::submissionFileDeleted', [$this, 'submissionFileDeleted']);
+        HookRegistry::register('MonographSearchIndex::submissionMetadataChanged', [$this, 'articleMetadataChanged']);
+        HookRegistry::register('MonographSearchIndex::monographMetadataChanged', [$this, 'articleMetadataChanged']);
+        HookRegistry::register('PreprintSearchIndex::preprintMetadataChanged', [$this, 'articleMetadataChanged']);
+        // Files
+        HookRegistry::register('ArticleSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
+        HookRegistry::register('MonographSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
+        HookRegistry::register('PreprintSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
+        // Submission deleted
         HookRegistry::register('ArticleSearchIndex::articleDeleted', [$this, 'articleDeleted']);
+        HookRegistry::register('MonographSearchIndex::submissionDeleted', [$this, 'articleDeleted']);
+        HookRegistry::register('PreprintSearchIndex::preprintDeleted', [$this, 'articleDeleted']);
+        // Remove unpublished submission from index
         HookRegistry::register('Publication::unpublish', [$this, 'publicationUnpublished']);
+        // Rebuild index
+        HookRegistry::register('ArticleSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
+        HookRegistry::register('MonographSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
+        HookRegistry::register('PreprintSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
+    }
+
+    /**
+     * Hook handler for rebuilding the index
+     */
+    public function rebuildIndex(string $hookName, array $args): bool
+    {
+        [$log, $context, $switches] = $args + [false, null, []];
+        $indexer = new Indexer();
+        $indexer->rebuildIndex($context, $log, $switches);
+        return true;
     }
 
     /**
@@ -151,22 +177,29 @@ class FullTextSearchPlugin extends GenericPlugin
     /**
      * Hook handler for submission file changes
      */
-    public function submissionFileChanged(string $hookName, array $args): bool
+    public function submissionFilesChanged(string $hookName, array $args): bool
     {
-        [$submissionId, $type, $submissionFileId] = $args;
+        [$submission] = $args;
+        import('lib.pkp.classes.submission.SubmissionFile'); // Load constant
+        $submissionFilesIterator = Services::get('submissionFile')->getMany([
+            'submissionIds' => [$submission->getId()],
+            'fileStages' => [SUBMISSION_FILE_PROOF],
+        ]);
         $indexer = new Indexer();
-        $indexer->indexSubmissionFile((int) $submissionId, (int) $submissionFileId);
-        return true;
-    }
+        foreach ($submissionFilesIterator as $submissionFile) {
+            $indexer->indexSubmissionFile((int) $submission->getId(), (int) $submissionFile->getId());
+            $dependentFilesIterator = Services::get('submissionFile')->getMany([
+                'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
+                'assocIds' => [$submissionFile->getId()],
+                'submissionIds' => [$submission->getId()],
+                'fileStages' => [SUBMISSION_FILE_DEPENDENT],
+                'includeDependentFiles' => true,
+            ]);
+            foreach ($dependentFilesIterator as $dependentFile) {
+                $indexer->indexSubmissionFile((int) $submission->getId(), (int) $dependentFile->getId());
+            }
+        }
 
-    /**
-     * Hook handler for submission file deletion
-     */
-    public function submissionFileDeleted(string $hookName, array $args): bool
-    {
-        [$submissionId] = $args;
-        $indexer = new Indexer();
-        $indexer->removeFileFromIndex((int) $submissionId);
         return true;
     }
 
