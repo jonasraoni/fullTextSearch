@@ -58,18 +58,6 @@ class Dao
     }
 
     /**
-     * Remove galley text from a submission record in the index
-     * @param int $submissionId The submission ID
-     */
-    public function removeFileFromIndex(int $submissionId): void
-    {
-        Manager::table(static::TABLE_NAME)->where('submission_id', $submissionId)->update([
-            'galley_text' => null,
-            'updated_at' => date('Y-m-d H:i:s'),
-        ]);
-    }
-
-    /**
      * Search the full-text index for submissions matching the given criteria
      * @param ?Context $context The context object or null for all contexts
      * @param array $keywords Array of search keywords keyed by field type

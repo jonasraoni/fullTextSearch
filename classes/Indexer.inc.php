@@ -110,15 +110,6 @@ class Indexer
     }
 
     /**
-     * Remove galley text from a submission in the search index
-     * @param int $submissionId The submission ID
-     */
-    public function removeFileFromIndex(int $submissionId): void
-    {
-        $this->dao->removeFileFromIndex($submissionId);
-    }
-
-    /**
      * Convert localized array data to a single string
      * @param array|null $localized The localized array data
      * @return string The flattened string
