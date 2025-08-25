@@ -44,7 +44,7 @@ class Indexer
         mb_substitute_character($previous);
 
         // Remove punctuation
-        return PKPString::regexp_replace('/[\\p{C}\\p{M}\\p{P}\\p{S}\\p{Z}]+/', ' ', $text);
+        return preg_replace('/[\\p{C}\\p{M}\\p{P}\\p{S}\\p{Z}]+/u', ' ', $text);
     }
 
     /**
