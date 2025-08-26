@@ -57,8 +57,8 @@ class FullTextSearchPlugin extends GenericPlugin
             return true;
         }
 
-        $this->disableStandardIndexing = (bool) $this->getSetting(CONTEXT_SITE, 'disableStandardIndexing');
-        $this->useFullTextSearch = (bool) $this->getSetting(CONTEXT_SITE, 'useFullTextSearch');
+        $this->disableStandardIndexing = (bool) $this->getSetting(Application::CONTEXT_SITE, 'disableStandardIndexing');
+        $this->useFullTextSearch = (bool) $this->getSetting(Application::CONTEXT_SITE, 'useFullTextSearch');
         $this->ensureSchema();
         $this->registerIndexingHooks();
         if ($this->useFullTextSearch) {
