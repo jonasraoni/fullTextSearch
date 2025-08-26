@@ -21,7 +21,6 @@ use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Query\Builder;
 use Services;
-use APP\plugins\generic\fullTextSearch\classes\Indexer;
 
 class Dao
 {

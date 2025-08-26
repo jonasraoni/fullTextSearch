@@ -83,11 +83,11 @@ class Indexer
             $parser->close();
         }
 
-        $galleyText = $this->implodeLocalized($texts);
+        $galleyText = Manager::getPdo()->quote($this->implodeLocalized($texts));
         $this->dao->upsert(
-            $submissionId,
-            (int) Services::get('submission')->get($submissionId)->getData('contextId'),
-            ['galley_text' => $galleyText]
+            $submission->getId(),
+            (int) $submission->getData('contextId'),
+            ['galley_text' => Manager::raw("CONCAT(COALESCE(galley_text, ''), ' ', {$galleyText})")]
         );
     }
 
