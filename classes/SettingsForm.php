@@ -92,7 +92,7 @@ class SettingsForm extends Form
         }
 
         if (!empty($selectedContexts)) {
-            $this->dao->rebuildSearchIndex($selectedContexts);
+            $this->dao->rebuildSearchIndex($selectedContexts, false, ['--skip-standard-index']);
 
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification(

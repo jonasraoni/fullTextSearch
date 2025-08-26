@@ -38,10 +38,8 @@ use PKP\submissionFile\SubmissionFile;
 class FullTextSearchPlugin extends GenericPlugin
 {
     private bool $installed = false;
-    /** @var bool */
-    private $disableStandardIndexing = false;
-    /** @var bool */
-    private $useFullTextSearch = false;
+    public bool $disableStandardIndexing = false;
+    private bool $useFullTextSearch = false;
 
     /**
      * @copydoc Plugin::register

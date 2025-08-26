@@ -196,10 +196,8 @@ class Dao
      */
     public function clearStandardSearchTables(): void
     {
-        $connection = DB::connection();
-        $connection->table('submission_search_object_keywords')->truncate();
-        $connection->table('submission_search_objects')->truncate();
-        $connection->table('submission_search_keyword_list')->truncate();
+        DB::table('submission_search_objects')->delete();
+        DB::table('submission_search_keyword_list')->delete();
     }
 
     /**
@@ -241,7 +239,7 @@ class Dao
     public function rebuildSearchIndex(array $contextIds, ?bool $log = false, ?array $switches = []): void
     {
         set_time_limit(0);
-        $searchIndex = Application::getSubmissionSearchIndex();
+        $disableStandardIndexing = in_array('--skip-standard-index', $switches ?: []);
         foreach ($contextIds as $contextId) {
             $context = Application::getContextDAO()->getById($contextId);
             if (!$context) {
@@ -260,7 +258,7 @@ class Dao
                 ->getMany();
 
             foreach ($submissionsIterator as $submission) {
-                dispatch(new UpdateSubmissionSearchJob($submission->getId()));
+                dispatch(new IndexSubmissionJob($submission->getId(), $disableStandardIndexing));
             }
         }
 
