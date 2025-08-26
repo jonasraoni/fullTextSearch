@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Tam Mətn Axtarış Plagini"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS təqdimatları üçün MySQL və PostgreSQL ilə uyğun verilənlər bazası dəstəyi olan tam mətn indeksi təqdim edir."
+msgstr "OJS/OMP/OPS təqdimatları üçün MySQL və PostgreSQL ilə uyğun verilənlər bazası dəstəyi olan tam mətn indeksi təqdim edir."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Kəsintisiz, rahat inteqrasiya üçün aşağıdakı təlimatları izləyin:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Standart Axtarış Cədvəllərini Təmizlə"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Yenidən qurmadan əvvəl standart OJS axtarış cədvəllərini təmizləmək üçün seçin. Bu, standart axtarış sistemindən bütün mövcud axtarış məlumatlarını siləcək."
+msgstr "Yenidən qurmadan əvvəl standart OJS/OMP/OPS axtarış cədvəllərini təmizləmək üçün seçin. Bu, standart axtarış sistemindən bütün mövcud axtarış məlumatlarını siləcək."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "İndeksi yenidən qurmadan əvvəl standart axtarış cədvəllərini təmizlə"

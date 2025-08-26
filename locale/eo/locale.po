@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plagino por Plena Teksta Serĉo"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Provizas datumbazan plenan tekstan indekson por OJS-enmetoj, kongrua kun MySQL kaj PostgreSQL."
+msgstr "Provizas datumbazan plenan tekstan indekson por OJS/OMP/OPS-enmetoj, kongrua kun MySQL kaj PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Elektu kiujn kuntekstojn devus havi sian serĉan indekson rekonstruita."
@@ -30,7 +30,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Malplenigi Normajn Serĉajn Tabelojn"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Laŭvole malplenigi la normajn OJS serĉajn tabelojn antaŭ rekonstruo. Ĉi tio forigos ĉiujn ekzistantajn serĉajn datumojn de la defaŭlta serĉa sistemo."
+msgstr "Laŭvole malplenigi la normajn OJS/OMP/OPS serĉajn tabelojn antaŭ rekonstruo. Ĉi tio forigos ĉiujn ekzistantajn serĉajn datumojn de la defaŭlta serĉa sistemo."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Malplenigi normajn serĉajn tabelojn antaŭ rekonstruo de indekso"

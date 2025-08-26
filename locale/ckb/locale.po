@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "پڵاگینی گەڕانی پڕۆژەی تەواو"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "پڕۆژەکانی OJS بۆ ئەندێکسی پڕۆژەی تەواو دەدات کە پشت بە داتابەیس دەبەستێت، لەگەڵ MySQL و PostgreSQL دەگونجێت."
+msgstr "پڕۆژەکانی OJS/OMP/OPS بۆ ئەندێکسی پڕۆژەی تەواو دەدات کە پشت بە داتابەیس دەبەستێت، لەگەڵ MySQL و PostgreSQL دەگونجێت."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>بۆ یەکخستنی بێ کێشە، بێ ناوەڕۆک، ئەم ڕێنماییانە جێبەجێ بکە:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "خشتەکانی گەڕانی ستاندارد پاک بکەوە"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "بە پێی ئارەزوومەند خشتەکانی گەڕانی ستانداردی OJS پاک بکەوە پێش دووبارە دروستکردنەوە. ئەمە هەموو داتا هەبووەکانی گەڕان لە سیستەمی گەڕانی بنەڕەتی لابەدەدات."
+msgstr "بە پێی ئارەزوومەند خشتەکانی گەڕانی ستانداردی OJS/OMP/OPS پاک بکەوە پێش دووبارە دروستکردنەوە. ئەمە هەموو داتا هەبووەکانی گەڕان لە سیستەمی گەڕانی بنەڕەتی لابەدەدات."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "خشتەکانی گەڕانی ستاندارد پاک بکەوە پێش دووبارە دروستکردنەوەی ئەندێکس"

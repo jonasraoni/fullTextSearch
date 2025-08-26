@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Додатак за Претраживање Пуна Текста"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Пружа индекс пуна текста темељен на бази података за OJS пријаве, компатибилан с MySQL и PostgreSQL."
+msgstr "Пружа индекс пуна текста темељен на бази података за OJS/OMP/OPS пријаве, компатибилан с MySQL и PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Одаберите које контексте треба поновно изградити индекс претраживања."
@@ -30,7 +30,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Очисти Стандардне Табеле Претраживања"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Опционално очистите стандардне OJS табеле претраживања пре поновне изградње. Ово ће уклонити све постојеће податке претраживања из стандардног система претраживања."
+msgstr "Опционално очистите стандардне OJS/OMP/OPS табеле претраживања пре поновне изградње. Ово ће уклонити све постојеће податке претраживања из стандардног система претраживања."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Очисти стандардне табеле претраживања пре поновне изградње индекса"

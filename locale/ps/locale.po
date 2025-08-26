@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "د بشپړ متن لټون پلگین"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "د OJS سپارنو لپاره د MySQL او PostgreSQL سره مطابقت لرونکی د ډیټابیس ملاتړ شوی بشپړ متن شاخص چمتو کوي."
+msgstr "د OJS/OMP/OPS سپارنو لپاره د MySQL او PostgreSQL سره مطابقت لرونکی د ډیټابیس ملاتړ شوی بشپړ متن شاخص چمتو کوي."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>د بې وقفې یوځای کیدو لپاره، لاندې لارښوونو تعقیب کړئ:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "معیاري لټون جدولونه پاک کړئ"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "د بیا جوړولو دمخه په اختیاري ډول معیاري OJS لټون جدولونه پاک کړئ. دا به د تیرو لټون ډاټا ټول له تیرو لټون سیسټم څخه لرې کړي."
+msgstr "د بیا جوړولو دمخه په اختیاري ډول معیاري OJS/OMP/OPS لټون جدولونه پاک کړئ. دا به د تیرو لټون ډاټا ټول له تیرو لټون سیسټم څخه لرې کړي."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "د شاخص بیا جوړولو دمخه معیاري لټون جدولونه پاک کړئ"

@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Толук текст издөө плагини"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS тапшырмалары үчүн MySQL жана PostgreSQL менен үйлөшкөн маалымат базасына негизделген толук текст индексин камсыз кылат."
+msgstr "OJS/OMP/OPS тапшырмалары үчүн MySQL жана PostgreSQL менен үйлөшкөн маалымат базасына негизделген толук текст индексин камсыз кылат."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Үзүлүксүз интеграция үчүн, тоскоолдуксуз, төмөнкү көрсөтмөлөрдү аткарыңыз:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Стандарттуу издөө таблицаларын тазалау"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Кайра куруудан мурун стандарттуу OJS издөө таблицаларын каалаганда тазалаңыз. Бул ыңгайдуу издөө системасынан бардык бар издөө маалыматтарын жок кылат."
+msgstr "Кайра куруудан мурун стандарттуу OJS/OMP/OPS издөө таблицаларын каалаганда тазалаңыз. Бул ыңгайдуу издөө системасынан бардык бар издөө маалыматтарын жок кылат."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Индексти кайра куруудан мурун стандарттуу издөө таблицаларын тазалаңыз"

@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Тўлиқ Матн Қидирув Плагини"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS тақдимотлари учун маълумотлар базаси асосидаги тўлиқ матн индексини тақдим этади, MySQL ва PostgreSQL билан мос келади."
+msgstr "OJS/OMP/OPS тақдимотлари учун маълумотлар базаси асосидаги тўлиқ матн индексини тақдим этади, MySQL ва PostgreSQL билан мос келади."
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Қайси контекстларнинг ҳидирув индексини қайта қуриш кераклигини танланг."
@@ -30,7 +30,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Стандарт Қидирув Жадвалини Тозалаш"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Ихтиёрий равишда қайта қуришдан олдин стандарт OJS ҳидирув жадвалларини тозаланг. Бу стандарт ҳидирув тизимидан барча мавжуд ҳидирув маълумотларини олиб ташлайди."
+msgstr "Ихтиёрий равишда қайта қуришдан олдин стандарт OJS/OMP/OPS ҳидирув жадвалларини тозаланг. Бу стандарт ҳидирув тизимидан барча мавжуд ҳидирув маълумотларини олиб ташлайди."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Индексни қайта қуришдан олдин стандарт ҳидирув жадвалларини тозалаш"

@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugin për Kërkimin e Tekstit të Plotë"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Ofron një indeks të plotë të tekstit të bazuar në bazën e të dhënave për paraqitjet e OJS, i përputhshëm me MySQL dhe PostgreSQL."
+msgstr "Ofron një indeks të plotë të tekstit të bazuar në bazën e të dhënave për paraqitjet e OJS/OMP/OPS, i përputhshëm me MySQL dhe PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Zgjidhni se cilat kontekste duhet të rindërtohen indeksi i kërkimit të tyre."
@@ -30,7 +30,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Pastro Tabelat e Kërkimit Standard"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Opsionalisht pastro tabelat e kërkimit standard të OJS para rindërtimit. Kjo do të heqë të gjitha të dhënat ekzistuese të kërkimit nga sistemi i kërkimit të paracaktuar."
+msgstr "Opsionalisht pastro tabelat e kërkimit standard të OJS/OMP/OPS para rindërtimit. Kjo do të heqë të gjitha të dhënat ekzistuese të kërkimit nga sistemi i kërkimit të paracaktuar."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Pastro tabelat e kërkimit standard para rindërtimit të indeksit"

@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Pilno teksto paieškos įskiepis"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Suteikia duomenų bazės pagrindu sukurtą pilno teksto indeksą OJS pateikimams, suderinamą su MySQL ir PostgreSQL."
+msgstr "Suteikia duomenų bazės pagrindu sukurtą pilno teksto indeksą OJS/OMP/OPS pateikimams, suderinamą su MySQL ir PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Sklandžiai integracijai be pertraukų, vadovaukitės toliau pateiktais nurodymais:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Išvalyti standartines paieškos lenteles"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Pasirinktinai išvalykite standartines OJS paieškos lenteles prieš iš naujo kurdami. Tai pašalins visus esamus paieškos duomenis iš numatytosios paieškos sistemos."
+msgstr "Pasirinktinai išvalykite standartines OJS/OMP/OPS paieškos lenteles prieš iš naujo kurdami. Tai pašalins visus esamus paieškos duomenis iš numatytosios paieškos sistemos."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Išvalykite standartines paieškos lenteles prieš iš naujo kurdami indeksą"

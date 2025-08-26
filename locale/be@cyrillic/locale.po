@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Плагін поўнатэкставага пошуку"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Забяспечва поўнатэкставы індэкс на аснове базы даных для OJS падаванняў, сумяшчальны з MySQL і PostgreSQL."
+msgstr "Забяспечва поўнатэкставы індэкс на аснове базы даных для OJS/OMP/OPS падаванняў, сумяшчальны з MySQL і PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Для бесперапыннай інтэграцыі без перашкод выканайце наступныя інструкцыі:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Ачысціць стандартныя табліцы пошуку"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Па жаданні ачысціце стандартныя табліцы пошуку OJS перад перабудовай. Гэта выдаліць усе існуючыя даныя пошуку з сістэмы па змаўчанні."
+msgstr "Па жаданні ачысціце стандартныя табліцы пошуку OJS/OMP/OPS перад перабудовай. Гэта выдаліць усе існуючыя даныя пошуку з сістэмы па змаўчанні."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Ачысціць стандартныя табліцы пошуку перад перабудовай індэкса"

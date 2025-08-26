@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Pemalam Carian Teks Penuh"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Menyediakan indeks teks penuh berasaskan pangkalan data untuk penghantaran OJS, serasi dengan MySQL dan PostgreSQL."
+msgstr "Menyediakan indeks teks penuh berasaskan pangkalan data untuk penghantaran OJS/OMP/OPS, serasi dengan MySQL dan PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Untuk integrasi yang lancar tanpa gangguan, ikuti arahan di bawah:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Bersihkan Jadual Carian Standard"
 
 msgid "plugins.generic/fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Secara pilihan, bersihkan jadual carian OJS standard sebelum membina semula. Ini akan membuang semua data carian sedia ada dari sistem carian lalai."
+msgstr "Secara pilihan, bersihkan jadual carian OJS/OMP/OPS standard sebelum membina semula. Ini akan membuang semua data carian sedia ada dari sistem carian lalai."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Bersihkan jadual carian standard sebelum membina semula indeks"

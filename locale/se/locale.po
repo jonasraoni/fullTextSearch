@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Olles Teaksta Oažžut Plugin"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Dá OJS sáddejumiide databeasa vuođđuduvvon olles teaksta indeksa, mii lea MySQL ja PostgreSQL-vuolli."
+msgstr "Dá OJS/OMP/OPS sáddejumiide databeasa vuođđuduvvon olles teaksta indeksa, mii lea MySQL ja PostgreSQL-vuolli."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Čuovvovaš oahpahusaid čuovvut čuovvovaš integrašuvnna várás, man eai leat čuovvovašat:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Čájehit standárda oažžut tabellat"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Válljemeahttun čájehit standárda OJS oažžut tabellat ovdal go ođđasit čájehuvvojit. Dát jávkohit buot leat oažžut datu standárda oažžut siste."
+msgstr "Válljemeahttun čájehit standárda OJS/OMP/OPS oažžut tabellat ovdal go ođđasit čájehuvvojit. Dát jávkohit buot leat oažžut datu standárda oažžut siste."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Čájehit standárda oažžut tabellat ovdal go indeksa ođđasit čájehuvvo"

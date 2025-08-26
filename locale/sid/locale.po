@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Qaraa Qaallii Xaafii"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS qaallii xaafii database-backed full-text index loosiissanno, MySQL i PostgreSQL kaa'la."
+msgstr "OJS/OMP/OPS qaallii xaafii database-backed full-text index loosiissanno, MySQL i PostgreSQL kaa'la."
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Kunni contexts search index rebuild loosiissanno doori."

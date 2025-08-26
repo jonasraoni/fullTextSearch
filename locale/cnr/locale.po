@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugin za pretragu punog teksta"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Pruža indeks punog teksta zasnovan na bazi podataka za OJS predaje, kompatibilan sa MySQL i PostgreSQL."
+msgstr "Pruža indeks punog teksta zasnovan na bazi podataka za OJS/OMP/OPS predaje, kompatibilan sa MySQL i PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Za besprekidnu integraciju bez prekida slijedite upute u nastavku:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Očisti standardne tablice pretrage"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Po želji očistite standardne tablice pretrage OJS prije ponovne izgradnje. Ovo će ukloniti sve postojeće podatke pretrage iz standardnog sustava pretrage."
+msgstr "Po želji očistite standardne tablice pretrage OJS/OMP/OPS prije ponovne izgradnje. Ovo će ukloniti sve postojeće podatke pretrage iz standardnog sustava pretrage."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Očistite standardne tablice pretrage prije ponovne izgradnje indeksa"

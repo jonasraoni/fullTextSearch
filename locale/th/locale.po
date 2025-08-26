@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "ปลั๊กอินค้นหาข้อความเต็ม"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "ให้ดัชนีข้อความเต็มที่ใช้ฐานข้อมูลสำหรับการส่งบทความ OJS ที่เข้ากันได้กับ MySQL และ PostgreSQL"
+msgstr "ให้ดัชนีข้อความเต็มที่ใช้ฐานข้อมูลสำหรับการส่งบทความ OJS/OMP/OPS ที่เข้ากันได้กับ MySQL และ PostgreSQL"
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "เลือกบริบทที่ควรสร้างดัชนีการค้นหาใหม่"
@@ -30,7 +30,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "ล้างตารางการค้นหามาตรฐาน"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "เลือกที่จะล้างตารางการค้นหา OJS มาตรฐานก่อนการสร้างใหม่ ซึ่งจะลบข้อมูลการค้นหาทั้งหมดที่มีอยู่จากระบบการค้นหาเริ่มต้น"
+msgstr "เลือกที่จะล้างตารางการค้นหา OJS/OMP/OPS มาตรฐานก่อนการสร้างใหม่ ซึ่งจะลบข้อมูลการค้นหาทั้งหมดที่มีอยู่จากระบบการค้นหาเริ่มต้น"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "ล้างตารางการค้นหามาตรฐานก่อนการสร้างดัชนีใหม่"

@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugin za pytań pśełnego teksta"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Staja datowa bazowa indeksa pśełnego teksta za OJS pśedawki k dispoziciji, kompatibelny z MySQL a PostgreSQL."
+msgstr "Staja datowa bazowa indeksa pśełnego teksta za OJS/OMP/OPS pśedawki k dispoziciji, kompatibelny z MySQL a PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Za pśerězne integraciju bźez pśetergow slědujśo slědujucym instrukcijam:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Standardne pytańske tabele wuprozniś"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Opcijonalnje wuprozniśo standardne pytańske tabele OJS pśed znowego natwarjenim. To buźo wšykne eksistěrujuce pytańske daty ze standardnego pytańskego systema wótpóraś."
+msgstr "Opcijonalnje wuprozniśo standardne pytańske tabele OJS/OMP/OPS pśed znowego natwarjenim. To buźo wšykne eksistěrujuce pytańske daty ze standardnego pytańskego systema wótpóraś."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Standardne pytańske tabele wuprozniś pśed znowego natwarjenim indeksa"

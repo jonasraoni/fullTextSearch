@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "සම්පූර්ණ පාඨ සොයාගැනීමේ ප්ලගිනය"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS ඉදිරිපත් කිරීම් සඳහා MySQL සහ PostgreSQL සමඟ ගැළපෙන දත්ත ගබඩා-පදනම් කරගත් සම්පූර්ණ පාඨ සොයාගැනීමේ දර්ශකයක් සපයයි."
+msgstr "OJS/OMP/OPS ඉදිරිපත් කිරීම් සඳහා MySQL සහ PostgreSQL සමඟ ගැළපෙන දත්ත ගබඩා-පදනම් කරගත් සම්පූර්ණ පාඨ සොයාගැනීමේ දර්ශකයක් සපයයි."
 
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "ඔවුන්ගේ සොයාගැනීමේ දර්ශකය නැවත ගොඩනගා ගත යුතු සන්දර්භයන් තෝරන්න."
@@ -30,7 +30,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "සම්මත සොයාගැනීමේ වගු මකා දමන්න"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "නැවත ගොඩනගන්නට පෙර සම්මත OJS සොයාගැනීමේ වගු මකා දැමීමට විකල්පයක්. මෙය සම්මත සොයාගැනීමේ පද්ධතියෙන් පවතින සියලුම සොයාගැනීමේ දත්ත ඉවත් කරයි."
+msgstr "නැවත ගොඩනගන්නට පෙර සම්මත OJS/OMP/OPS සොයාගැනීමේ වගු මකා දැමීමට විකල්පයක්. මෙය සම්මත සොයාගැනීමේ පද්ධතියෙන් පවතින සියලුම සොයාගැනීමේ දත්ත ඉවත් කරයි."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "දර්ශකය නැවත ගොඩනගන්නට පෙර සම්මත සොයාගැනීමේ වගු මකා දමන්න"

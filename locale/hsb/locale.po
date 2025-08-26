@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Plugin za pytanje połneho teksta"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Staja datowa bazowa indeksa połneho teksta za OJS předawki k dispoziciji, kompatibelny z MySQL a PostgreSQL."
+msgstr "Staja datowa bazowa indeksa połneho teksta za OJS/OMP/OPS předawki k dispoziciji, kompatibelny z MySQL a PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Za bjez přetorhow integraciju slědujće slědowacym instrukcijam:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Standardne pytanske tabele wuproznić"
 
 msgid "plugins.generic/fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Opcijonalnje wuprozniće standardne pytanske tabele OJS před znowa natwarjenim. To budźe wšě eksistowace pytanske daty ze standardneho pytanskeho systema wotpórać."
+msgstr "Opcijonalnje wuprozniće standardne pytanske tabele OJS/OMP/OPS před znowa natwarjenim. To budźe wšě eksistowace pytanske daty ze standardneho pytanskeho systema wotpórać."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Standardne pytanske tabele wuproznić před znowa natwarjenim indeksa"

@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "Pilna teksta meklēšanas spraudnis"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "Nodrošina datubāzē balstītu pilna teksta indeksu OJS iesniegumiem, kas saderīgs ar MySQL un PostgreSQL."
+msgstr "Nodrošina datubāzē balstītu pilna teksta indeksu OJS/OMP/OPS iesniegumiem, kas saderīgs ar MySQL un PostgreSQL."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Bez pārtraukumiem integrācijai, ievērojiet tālāk norādītās instrukcijas:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "Notīrīt standarta meklēšanas tabulas"
 
 msgid "plugins.generic/fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "Pēc izvēles notīrīt standarta OJS meklēšanas tabulas pirms atjaunošanas. Tas noņems visus esošos meklēšanas datus no noklusētās meklēšanas sistēmas."
+msgstr "Pēc izvēles notīrīt standarta OJS/OMP/OPS meklēšanas tabulas pirms atjaunošanas. Tas noņems visus esošos meklēšanas datus no noklusētās meklēšanas sistēmas."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Notīrīt standarta meklēšanas tabulas pirms indeksa atjaunošanas"

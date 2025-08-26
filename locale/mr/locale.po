@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "पूर्ण मजकूर शोध प्लगिन"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "OJS सबमिशन्ससाठी MySQL आणि PostgreSQL सोबत सुसंगत डेटाबेस-बॅक्ड फुल-टेक्स्ट इंडेक्स प्रदान करतो."
+msgstr "OJS/OMP/OPS सबमिशन्ससाठी MySQL आणि PostgreSQL सोबत सुसंगत डेटाबेस-बॅक्ड फुल-टेक्स्ट इंडेक्स प्रदान करतो."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>अखंड एकात्मतेसाठी, व्यत्ययाशिवाय, खालील सूचनांचे पालन करा:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "मानक शोध सारण्या साफ करा"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "पुन्हा तयार करण्यापूर्वी पर्यायानुसार मानक OJS शोध सारण्या साफ करा. हे मूळ शोध प्रणालीतून सर्व विद्यमान शोध डेटा काढून टाकेल."
+msgstr "पुन्हा तयार करण्यापूर्वी पर्यायानुसार मानक OJS/OMP/OPS शोध सारण्या साफ करा. हे मूळ शोध प्रणालीतून सर्व विद्यमान शोध डेटा काढून टाकेल."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "इंडेक्स पुन्हा तयार करण्यापूर्वी मानक शोध सारण्या साफ करा"

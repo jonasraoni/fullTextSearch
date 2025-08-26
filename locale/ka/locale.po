@@ -15,7 +15,7 @@ msgid "plugins.generic.fullTextSearch.name"
 msgstr "სრული ტექსტის ძიების პლაგინი"
 
 msgid "plugins.generic.fullTextSearch.description"
-msgstr "მოწოდებს მონაცემთა ბაზაზე დაფუძნებულ სრულ ტექსტურ ინდექსს OJS წარდგენებისთვის, თავსებადი MySQL და PostgreSQL-თან."
+msgstr "მოწოდებს მონაცემთა ბაზაზე დაფუძნებულ სრულ ტექსტურ ინდექსს OJS/OMP/OPS წარდგენებისთვის, თავსებადი MySQL და PostgreSQL-თან."
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>უწყვეტი ინტეგრაციისთვის, შეფერხების გარეშე, მიჰყევით ქვემოთ მოყვანილ ინსტრუქციებს:</strong></p>"
@@ -42,7 +42,7 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "გაასუფთაოთ სტანდარტული ძიების ცხრილები"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "სურვილისამებრ გაასუფთაოთ სტანდარტული OJS ძიების ცხრილები ხელახლა შექმნამდე. ეს წაშლის ყველა არსებულ ძიების მონაცემს სტანდარტული ძიების სისტემიდან."
+msgstr "სურვილისამებრ გაასუფთაოთ სტანდარტული OJS/OMP/OPS ძიების ცხრილები ხელახლა შექმნამდე. ეს წაშლის ყველა არსებულ ძიების მონაცემს სტანდარტული ძიების სისტემიდან."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "გაასუფთაოთ სტანდარტული ძიების ცხრილები ინდექსის ხელახლა შექმნამდე"
