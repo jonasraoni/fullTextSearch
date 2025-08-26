@@ -16,7 +16,7 @@
 namespace APP\plugins\generic\fullTextSearch\classes;
 
 use Context;
-use Illuminate\Queue\Capsule\Manager;
+use Illuminate\Database\Capsule\Manager;
 use SearchFileParser;
 use Submission;
 use SubmissionFile;
@@ -63,6 +63,8 @@ class Indexer
             'disciplines' => $this->implodeLocalized($this->flattenLocalizedArray($publication->getData('disciplines'))),
             'coverage' => $this->implodeLocalized((array) $publication->getData('coverage')),
             'type' => $this->implodeLocalized((array) $publication->getData('type')),
+            // The metadata hook is called before the files hook, so even though it sounds risky, it's ok to clear the galley_text here, as this code is unlikely to be changed
+            'galley_text' => '',
         ];
 
         $this->dao->upsert($submissionId, $contextId, $fields);
@@ -83,7 +85,7 @@ class Indexer
             $parser->close();
         }
 
-        $galleyText = Manager::getPdo()->quote($this->implodeLocalized($texts));
+        $galleyText = Manager::connection()->getPdo()->quote($this->implodeLocalized($texts));
         $this->dao->upsert(
             $submission->getId(),
             (int) $submission->getData('contextId'),
