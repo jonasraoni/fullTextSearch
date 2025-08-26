@@ -53,7 +53,7 @@ class FullTextSearchPlugin extends GenericPlugin
             return false;
         }
 
-        if (!$this->getEnabled() || !Config::getVar('general', 'installed')) {
+        if (!$this->getEnabled() || Application::isUnderMaintenance()) {
             return true;
         }
 
@@ -66,6 +66,18 @@ class FullTextSearchPlugin extends GenericPlugin
         }
 
         return true;
+    }
+
+    /**
+     * Register hooks for indexing
+     */
+    private function registerIndexingHooks(): void
+    {
+        $this->registerMetadataHooks();
+        $this->registerFileHooks();
+        $this->registerDeletionHooks();
+        $this->registerUnpublishHook();
+        $this->registerRebuildHooks();
     }
 
     /**
@@ -113,110 +125,107 @@ class FullTextSearchPlugin extends GenericPlugin
     }
 
     /**
-     * Register hooks for indexing
+     * Register hooks for metadata changes
      */
-    private function registerIndexingHooks(): void
+    private function registerMetadataHooks(): void
     {
-        // Metadata
-        Hook::add('ArticleSearchIndex::articleMetadataChanged', [$this, 'articleMetadataChanged']);
-        Hook::add('MonographSearchIndex::submissionMetadataChanged', [$this, 'articleMetadataChanged']);
-        Hook::add('MonographSearchIndex::monographMetadataChanged', [$this, 'articleMetadataChanged']);
-        Hook::add('PreprintSearchIndex::preprintMetadataChanged', [$this, 'articleMetadataChanged']);
-        // Files
-        Hook::add('ArticleSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
-        Hook::add('MonographSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
-        Hook::add('PreprintSearchIndex::submissionFilesChanged', [$this, 'submissionFilesChanged']);
-        // Submission deleted
-        Hook::add('ArticleSearchIndex::articleDeleted', [$this, 'articleDeleted']);
-        Hook::add('MonographSearchIndex::submissionDeleted', [$this, 'articleDeleted']);
-        Hook::add('PreprintSearchIndex::preprintDeleted', [$this, 'articleDeleted']);
-        // Remove unpublished submission from index
-        Hook::add('Publication::unpublish', [$this, 'publicationUnpublished']);
-        // Rebuild index
-        Hook::add('ArticleSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
-        Hook::add('MonographSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
-        Hook::add('PreprintSearchIndex::rebuildIndex', [$this, 'rebuildIndex']);
-    }
-
-    /**
-     * Hook handler for rebuilding the index
-     */
-    public function rebuildIndex(string $hookName, array $args): bool
-    {
-        [$log, $context, $switches] = $args + [false, null, []];
-        $indexer = new Indexer();
-        $this->disableStandardIndexing = in_array('--skip-standard-index', $switches);
-        if (!$this->disableStandardIndexing) {
-            // As we're overriding the rebuildSearchIndex tool, we need to clear the standard index manually to mimic its behavior
-            (new Dao())->clearStandardSearchTables();
+        $handler = function (string $hookName, array $args): bool {
+            [$submission] = $args;
+            $indexer = new Indexer();
+            $indexer->indexSubmission($submission);
+            return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
+        };
+        foreach (['ArticleSearchIndex::articleMetadataChanged', 'MonographSearchIndex::submissionMetadataChanged', 'MonographSearchIndex::monographMetadataChanged', 'PreprintSearchIndex::preprintMetadataChanged'] as $hookName) {
+            Hook::add($hookName, $handler);
         }
-
-        $indexer->rebuildIndex($context, $log, $switches);
-        return Hook::ABORT;
     }
 
     /**
-     * Hook handler for article metadata changes
+     * Register hooks for submission file changes
      */
-    public function articleMetadataChanged(string $hookName, array $args): bool
+    private function registerFileHooks(): void
     {
-        [$submission] = $args;
-        $indexer = new Indexer();
-        $indexer->indexSubmission($submission);
-        return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
-    }
-
-    /**
-     * Hook handler for submission file changes
-     */
-    public function submissionFilesChanged(string $hookName, array $args): bool
-    {
-        [$submission] = $args;
-        $submissionFilesIterator = Repo::submissionFile()
-            ->getCollector()
-            ->filterBySubmissionIds([$submission->getId()])
-            ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF])
-            ->getMany();
-        $indexer = new Indexer();
-        foreach ($submissionFilesIterator as $submissionFile) {
-            $indexer->indexSubmissionFile($submission, $submissionFile);
-            $dependentFilesIterator = Repo::submissionFile()->getCollector()
-                ->filterByAssoc(
-                    Application::ASSOC_TYPE_SUBMISSION_FILE,
-                    [$submissionFile->getId()]
-                )
+        $handler = function (string $hookName, array $args): bool {
+            [$submission] = $args;
+            $submissionFilesIterator = Repo::submissionFile()
+                ->getCollector()
                 ->filterBySubmissionIds([$submission->getId()])
-                ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
-                ->includeDependentFiles()
+                ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF])
                 ->getMany();
-            foreach ($dependentFilesIterator as $dependentFile) {
-                $indexer->indexSubmissionFile($submission, $dependentFile);
+            $indexer = new Indexer();
+            foreach ($submissionFilesIterator as $submissionFile) {
+                $indexer->indexSubmissionFile($submission, $submissionFile);
+                $dependentFilesIterator = Repo::submissionFile()->getCollector()
+                    ->filterByAssoc(
+                        Application::ASSOC_TYPE_SUBMISSION_FILE,
+                        [$submissionFile->getId()]
+                    )
+                    ->filterBySubmissionIds([$submission->getId()])
+                    ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
+                    ->includeDependentFiles()
+                    ->getMany();
+                foreach ($dependentFilesIterator as $dependentFile) {
+                    $indexer->indexSubmissionFile($submission, $dependentFile);
+                }
             }
+
+            return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
+        };
+        foreach (['ArticleSearchIndex::submissionFilesChanged', 'MonographSearchIndex::submissionFilesChanged', 'PreprintSearchIndex::submissionFilesChanged'] as $hookName) {
+            Hook::add($hookName, $handler);
         }
-
-        return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
     }
 
     /**
-     * Hook handler for article deletion
+     * Register hooks for article deletion
      */
-    public function articleDeleted(string $hookName, array $args): bool
+    private function registerDeletionHooks(): void
     {
-        [$submissionId] = $args;
-        $indexer = new Indexer();
-        $indexer->deleteSubmission((int) $submissionId);
-        return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
+        $handler = function (string $hookName, array $args): bool {
+            [$submissionId] = $args;
+            $indexer = new Indexer();
+            $indexer->deleteSubmission((int) $submissionId);
+            return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
+        };
+        foreach (['ArticleSearchIndex::articleDeleted', 'MonographSearchIndex::submissionDeleted', 'PreprintSearchIndex::preprintDeleted'] as $hookName) {
+            Hook::add($hookName, $handler);
+        }
     }
 
     /**
-     * Hook handler for publication unpublishing
+     * Register hook for publication unpublishing
      */
-    public function publicationUnpublished(string $hookName, array $args): bool
+    private function registerUnpublishHook(): void
     {
-        [$newPublication, $publication, $submission] = $args;
-        $indexer = new Indexer();
-        $indexer->deleteSubmission($submission->getId());
-        return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
+        $handler = function (string $hookName, array $args): bool {
+            [$newPublication, $publication, $submission] = $args;
+            $indexer = new Indexer();
+            $indexer->deleteSubmission($submission->getId());
+            return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
+        };
+        Hook::add('Publication::unpublish', $handler);
+    }
+
+    /**
+     * Register hooks for index rebuild
+     */
+    private function registerRebuildHooks(): void
+    {
+        $handler = function (string $hookName, array $args): bool {
+            [$log, $context, $switches] = $args + [false, null, []];
+            $indexer = new Indexer();
+            $this->disableStandardIndexing = in_array('--skip-standard-index', $switches);
+            if (!$this->disableStandardIndexing) {
+                // As we're overriding the rebuildSearchIndex tool, we need to clear the standard index manually to mimic its behavior
+                (new Dao())->clearStandardSearchTables();
+            }
+
+            $indexer->rebuildIndex($context, $log, $switches);
+            return Hook::ABORT;
+        };
+        foreach (['ArticleSearchIndex::rebuildIndex', 'MonographSearchIndex::rebuildIndex', 'PreprintSearchIndex::rebuildIndex'] as $hookName) {
+            Hook::add($hookName, $handler);
+        }
     }
 
     /**
