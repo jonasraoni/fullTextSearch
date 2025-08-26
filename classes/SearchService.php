@@ -32,6 +32,7 @@ class SearchService
 
     /**
      * Perform a search using the full-text index
+     *
      * @param ?Context $context The context object or null for all contexts
      * @param array $keywords Array of search keywords keyed by field type
      * @param string $orderBy The field to order by

@@ -16,7 +16,8 @@
 
 namespace APP\plugins\generic\fullTextSearch\classes;
 
-use APP\facades\Repo;
+use APP\submission\Submission;
+use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
 use PKP\search\SearchFileParser;
 use PKP\submissionFile\SubmissionFile;
@@ -134,6 +135,7 @@ class Indexer
 
     /**
      * Rebuild the index
+     *
      * @param ?Context $context The context
      * @param ?bool $log Whether to log the rebuild process
      * @param ?array $switches The switches to use for the rebuild process

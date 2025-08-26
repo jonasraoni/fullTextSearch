@@ -274,6 +274,7 @@ class Dao
 
     /**
      * Rebuild the search index
+     *
      * @param ?Context $context The context
      * @param ?bool $log Whether to log the rebuild process
      * @param ?array $switches The switches to use for the rebuild process
