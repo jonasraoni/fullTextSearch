@@ -16,10 +16,10 @@
 namespace APP\plugins\generic\fullTextSearch\classes;
 
 use Context;
-use DAORegistry;
+use Illuminate\Queue\Capsule\Manager;
 use SearchFileParser;
-use Services;
-use SubmissionFileDAO;
+use Submission;
+use SubmissionFile;
 
 class Indexer
 {
@@ -70,19 +70,10 @@ class Indexer
 
     /**
      * Index a submission file by extracting text content and updating the search index
-     * @param int $submissionId The submission ID
-     * @param int $submissionFileId The submission file ID
      */
-    public function indexSubmissionFile(int $submissionId, int $submissionFileId): void
+    public function indexSubmissionFile(Submission $submission, SubmissionFile $submissionFile): void
     {
         set_time_limit(0);
-        /** @var SubmissionFileDAO $submissionFileDao */
-        $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-        $submissionFile = $submissionFileDao->getById($submissionFileId);
-        if (!$submissionFile) {
-            return;
-        }
-
         $parser = SearchFileParser::fromFile($submissionFile);
         $texts = [];
         if ($parser && $parser->open()) {

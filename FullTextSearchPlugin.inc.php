@@ -202,7 +202,7 @@ class FullTextSearchPlugin extends GenericPlugin
         ]);
         $indexer = new Indexer();
         foreach ($submissionFilesIterator as $submissionFile) {
-            $indexer->indexSubmissionFile((int) $submission->getId(), (int) $submissionFile->getId());
+            $indexer->indexSubmissionFile($submission, $submissionFile);
             $dependentFilesIterator = Services::get('submissionFile')->getMany([
                 'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
                 'assocIds' => [$submissionFile->getId()],
@@ -211,7 +211,7 @@ class FullTextSearchPlugin extends GenericPlugin
                 'includeDependentFiles' => true,
             ]);
             foreach ($dependentFilesIterator as $dependentFile) {
-                $indexer->indexSubmissionFile((int) $submission->getId(), (int) $dependentFile->getId());
+                $indexer->indexSubmissionFile($submission, $dependentFile);
             }
         }
 
