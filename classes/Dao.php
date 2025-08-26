@@ -23,6 +23,7 @@ use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
+use PKP\jobs\submissions\UpdateSubmissionSearchJob;
 use PKP\search\SubmissionSearch;
 
 class Dao
@@ -259,8 +260,7 @@ class Dao
                 ->getMany();
 
             foreach ($submissionsIterator as $submission) {
-                $searchIndex->submissionMetadataChanged($submission);
-                $searchIndex->submissionFilesChanged($submission);
+                dispatch(new UpdateSubmissionSearchJob($submission->getId()));
             }
         }
 
