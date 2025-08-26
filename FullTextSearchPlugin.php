@@ -152,7 +152,7 @@ class FullTextSearchPlugin extends GenericPlugin
         }
 
         $indexer->rebuildIndex($context, $log, $switches);
-        return true;
+        return Hook::ABORT;
     }
 
     /**
@@ -163,7 +163,7 @@ class FullTextSearchPlugin extends GenericPlugin
         [$submission] = $args;
         $indexer = new Indexer();
         $indexer->indexSubmission($submission);
-        return $this->disableStandardIndexing;
+        return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
     }
 
     /**
@@ -194,7 +194,7 @@ class FullTextSearchPlugin extends GenericPlugin
             }
         }
 
-        return $this->disableStandardIndexing;
+        return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
     }
 
     /**
@@ -205,7 +205,7 @@ class FullTextSearchPlugin extends GenericPlugin
         [$submissionId] = $args;
         $indexer = new Indexer();
         $indexer->deleteSubmission((int) $submissionId);
-        return $this->disableStandardIndexing;
+        return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
     }
 
     /**
@@ -216,7 +216,7 @@ class FullTextSearchPlugin extends GenericPlugin
         [$newPublication, $publication, $submission] = $args;
         $indexer = new Indexer();
         $indexer->deleteSubmission($submission->getId());
-        return $this->disableStandardIndexing;
+        return $this->disableStandardIndexing ? Hook::ABORT : Hook::CONTINUE;
     }
 
     /**
@@ -235,7 +235,7 @@ class FullTextSearchPlugin extends GenericPlugin
                 $error = __('plugins.generic.fullTextSearch.search.error');
                 $results = [];
             }
-            return true;
+            return Hook::ABORT;
         });
     }
 
