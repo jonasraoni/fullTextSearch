@@ -44,5 +44,8 @@ msgstr "Optionnellement effacer les tables de recherche standard d'OJS/OMP/OPS a
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Effacer les tables de recherche standard avant de reconstruire l'index"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Soumissions en attente d'indexation (progrès de reconstruction)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Une erreur inattendue s'est produite lors de la recherche"

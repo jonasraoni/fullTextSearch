@@ -47,5 +47,8 @@ msgstr "Pasirinktinai išvalykite standartines OJS/OMP/OPS paieškos lenteles pr
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Išvalykite standartines paieškos lenteles prieš iš naujo kurdami indeksą"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Pateikimai laukia indeksavimo (iš naujo kūrimo progresas)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Paieškos metu įvyko netikėta klaida"

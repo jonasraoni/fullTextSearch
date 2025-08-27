@@ -47,5 +47,8 @@ msgstr "Кайра куруудан мурун стандарттуу OJS/OMP/OP
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Индексти кайра куруудан мурун стандарттуу издөө таблицаларын тазалаңыз"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Индекстеөнү күткөн тапшырмалар (кайра куруу прогресси)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Издөө учурунда күтүлбөгөн ката болду"

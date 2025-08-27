@@ -44,5 +44,8 @@ msgstr "Valfritt rensa standard OJS/OMP/OPS-söktabeller innan ombyggnad. Detta 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Rensa standardsöktabeller innan ombyggnad av index"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Inlämningar väntar på indexering (ombyggnadsframsteg)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Ett oväntat fel uppstod under sökningen"

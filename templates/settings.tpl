@@ -30,9 +30,9 @@
 		{fbvElement type="checkbox" id="disableStandardIndexing" checked=$disableStandardIndexing label="plugins.generic.fullTextSearch.settings.disableStandardIndexing" translate="true"}
 	{/fbvFormSection}
 
-	{fbvFormSection title="plugins.generic.fullTextSearch.settings.rebuildButton" list="true"}
-		<p>{translate key="plugins.generic.fullTextSearch.settings.selectContextsDescription"}</p>
-
+	{fbvFormSection title="plugins.generic.fullTextSearch.settings.rebuildButton" list="false"}
+		<li>{translate key="plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"}: {$activeIndexingJobs}</li>
+		<li>{translate key="plugins.generic.fullTextSearch.settings.selectContextsDescription"}</li>
 		{fbvElement type="checkbox" id="selectAllContexts" name="selectAllContexts" label="common.selectAll"}
 		{fbvElement type="checkboxgroup" name="selectedContexts" id="selectedContexts" from=$contexts selected=[] translate=false}
 	{/fbvFormSection}

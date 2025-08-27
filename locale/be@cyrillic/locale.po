@@ -47,5 +47,8 @@ msgstr "Па жаданні ачысціце стандартныя табліц
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Ачысціць стандартныя табліцы пошуку перад перабудовай індэкса"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Падаванні чакаюць індэксацыі (прагрэс перабудовы)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Падчас пошуку адбылася нечаканая памылка"

@@ -47,5 +47,8 @@ msgstr "पुन्हा तयार करण्यापूर्वी प
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "इंडेक्स पुन्हा तयार करण्यापूर्वी मानक शोध सारण्या साफ करा"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "अनुक्रमणिकेची प्रतीक्षा करणारी सबमिशन्स (पुन्हा तयार करण्याची प्रगती)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "शोध दरम्यान अनपेक्षित त्रुटी आली"

@@ -44,5 +44,8 @@ msgstr "Опционално исчистете ги стандардните OJ
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Исчисти стандардни табели за пребарување пред преизградба на индексот"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Поднесоци чекаат индексирање (напредок на преизградбата)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Се појави неочекувана грешка за време на пребарувањето"

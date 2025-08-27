@@ -44,5 +44,8 @@ msgstr "Opsional bersihkan tabel pencarian standar OJS/OMP/OPS sebelum membangun
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Bersihkan tabel pencarian standar sebelum membangun ulang indeks"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Pengajuan menunggu indeksasi (kemajuan pembangunan ulang)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Terjadi kesalahan tak terduga saat melakukan pencarian"

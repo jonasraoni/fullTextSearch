@@ -47,5 +47,8 @@ msgstr "Válljemeahttun čájehit standárda OJS/OMP/OPS oažžut tabellat ovdal
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Čájehit standárda oažžut tabellat ovdal go indeksa ođđasit čájehuvvo"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Sáddejumit čájehit indekseren (ođđasit čájehuvvot oažžut)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Čuovvovaš mearkkašupmi šattai oažžut áigge"

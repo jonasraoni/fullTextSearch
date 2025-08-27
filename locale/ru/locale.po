@@ -44,5 +44,8 @@ msgstr "Опционально очистить стандартные табл�
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Очистить стандартные таблицы поиска перед перестройкой индекса"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Отправления ожидают индексации (прогресс перестройки)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Произошла неожиданная ошибка во время поиска"

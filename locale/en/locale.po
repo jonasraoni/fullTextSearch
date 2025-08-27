@@ -47,5 +47,11 @@ msgstr "Optionally clear the standard search tables before rebuilding. This will
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Clear standard search tables before rebuilding index"
 
+msgid "plugins.generic.fullTextSearch.settings.queueStatus"
+msgstr "Queue Status"
+
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Submissions waiting to be indexed (rebuild progress)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "An unexpected error happened while searching"

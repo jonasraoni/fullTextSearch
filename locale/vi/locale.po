@@ -44,5 +44,8 @@ msgstr "Tùy chọn xóa các bảng tìm kiếm tiêu chuẩn OJS/OMP/OPS trư�
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Xóa bảng tìm kiếm tiêu chuẩn trước khi xây dựng lại chỉ mục"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Bài nộp đang chờ lập chỉ mục (tiến trình xây dựng lại)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Đã xảy ra lỗi không mong muốn trong quá trình tìm kiếm"

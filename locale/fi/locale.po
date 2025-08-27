@@ -44,5 +44,8 @@ msgstr "Valinnainen: tyhjennä vakio OJS/OMP/OPS-hakutaulukot ennen uudelleenrak
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Tyhjennä vakiohakutaulukot ennen indeksin uudelleenrakennusta"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Indeksointia odottavat ehdotukset (uudelleenrakennuksen edistyminen)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Hakuvaiheessa tapahtui odottamaton virhe"

@@ -44,5 +44,8 @@ msgstr "Valgfritt tøm standard OJS/OMP/OPS-søketabeller før gjenoppbygging. D
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Tøm standard søketabeller før gjenoppbygging av indeks"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Innsendinger venter på indeksering (gjenoppbygningsfremgang)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "En uventet feil oppstod under søket"

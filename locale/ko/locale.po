@@ -44,5 +44,8 @@ msgstr "선택적으로 재구성 전에 표준 OJS/OMP/OPS 검색 테이블을 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "인덱스 재구성 전에 표준 검색 테이블 정리"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "인덱싱을 기다리는 제출물 (재구성 진행 상황)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "검색 중 예기치 않은 오류가 발생했습니다"

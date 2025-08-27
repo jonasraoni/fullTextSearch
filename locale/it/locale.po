@@ -44,5 +44,8 @@ msgstr "Opzionalmente cancella le tabelle di ricerca standard di OJS/OMP/OPS pri
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Cancella tabelle di ricerca standard prima di ricostruire l'indice"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Submission in attesa di indicizzazione (progresso ricostruzione)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Si è verificato un errore imprevisto durante la ricerca"

@@ -44,5 +44,8 @@ msgstr "Valgfrit ryd standard OJS/OMP/OPS søgetabeller før genopbygning. Dette
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Ryd standard søgetabeller før genopbygning af indeks"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Indsendelser venter på indeksering (genopbygningsfremgang)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Der opstod en uventet fejl under søgningen"

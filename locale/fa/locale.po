@@ -44,5 +44,8 @@ msgstr "اختیاری: جداول جستجوی استاندارد OJS/OMP/OPS �
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "پاک کردن جداول جستجوی استاندارد قبل از بازسازی فهرست"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "ارسال‌هایی که منتظر فهرست‌بندی هستند (پیشرفت بازسازی)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "خطای غیرمنتظره‌ای در حین جستجو رخ داد"

@@ -44,6 +44,9 @@ msgstr "Optional die Standard-OJS/OMP/OPS-Suchtabellen vor dem Neuaufbau lösche
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Standard-Suchtabellen vor dem Neuaufbau des Index löschen"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Einreichungen warten auf Indexierung (Fortschritt des Neuaufbaus)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Bei der Suche ist ein unerwarteter Fehler aufgetreten"
 

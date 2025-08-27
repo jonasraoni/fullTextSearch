@@ -44,5 +44,8 @@ msgstr "Opțional șterge tabelele de căutare standard OJS/OMP/OPS înainte de 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Șterge tabelele de căutare standard înainte de reconstruirea indexului"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Înregistrări în așteptarea indexării (progresul reconstruirii)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "A apărut o eroare neașteptată în timpul căutării"

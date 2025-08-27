@@ -44,5 +44,8 @@ msgstr "Ихтиёрий равишда қайта қуришдан олдин �
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Индексни қайта қуришдан олдин стандарт ҳидирув жадвалларини тозалаш"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Индексалашни кутиб турган тақдимотлар (қайта қуриш прогресси)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Қидирув пайтида кutilmagan xatolik юз берди"

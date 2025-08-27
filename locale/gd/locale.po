@@ -44,5 +44,8 @@ msgstr "Roghainneil glan tàrlaichean lorg stannardach OJS/OMP/OPS mus ath-thoga
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Glan tàrlaichean lorg stannardach mus ath-thogail thu an clàr-amais"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Cur a-steach a' feitheamh clàr-amais (adhartas ath-thogail)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Thachair mearachd neo-riaghlach rè an lorg"

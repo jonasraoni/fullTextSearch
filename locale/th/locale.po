@@ -35,6 +35,9 @@ msgstr "เลือกที่จะล้างตารางการค้
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "ล้างตารางการค้นหามาตรฐานก่อนการสร้างดัชนีใหม่"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "บทความที่รอการสร้างดัชนี (ความคืบหน้าการสร้างใหม่)"
+
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "For a seamless integration, without interruptions, follow the instructions below: After enabling the plugin, rebuild the search index for all journals, or run php tools/rebuildSearchIndex.php --skip-standard-index (the flag ensures that only the data for the plugin will be rebuilt), to fill the plugin's search index with data from old publications. New and updated publications will be indexed automatically. Once the indexation is over, enable the full text search below and check if the search user interface is working fine (you can test it by searching for a keyword in the search box). If everything is working properly, you can disable the standard indexing below and also clear the standard search tables to save disk space and improve upgrade speed."

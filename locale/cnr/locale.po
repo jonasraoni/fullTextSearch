@@ -47,5 +47,8 @@ msgstr "Po želji očistite standardne tablice pretrage OJS/OMP/OPS prije ponovn
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Očistite standardne tablice pretrage prije ponovne izgradnje indeksa"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Predaje čekaju indeksiranje (napredak ponovne izgradnje)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Došlo je do neočekivane greške tijekom pretrage"

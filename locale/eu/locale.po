@@ -44,5 +44,8 @@ msgstr "Aukeran OJS/OMP/OPS estandar bilaketa taulak garbitu berreraiki aurretik
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Garbitu estandar bilaketa taulak indizea berreraiki aurretik"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Indexazioa zain dauden aurkezpenak (berreraikitze aurrerapena)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Ustekabeko errorea gertatu da bilaketan"

@@ -47,5 +47,8 @@ msgstr "بە پێی ئارەزوومەند خشتەکانی گەڕانی ستا�
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "خشتەکانی گەڕانی ستاندارد پاک بکەوە پێش دووبارە دروستکردنەوەی ئەندێکس"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "پڕۆژەکان چاوەڕوانی ئەندێکسکردنن (پێشکەوتنی دووبارە دروستکردنەوە)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "هەڵەیەکی چاوەڕوان نەکراو ڕوویدا لە کاتی گەڕان"

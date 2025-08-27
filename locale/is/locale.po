@@ -44,5 +44,8 @@ msgstr "Valfrjálst hreinsa staðlaðar OJS/OMP/OPS leitarfærslur fyrir endurby
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Hreinsa staðlaðar leitarfærslur fyrir endurbygginguna á vísitölunni"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Framlög bíða vísitölu (framvinda endurbyggingar)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Óvænt villa kom upp við leitina"

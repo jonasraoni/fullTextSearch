@@ -230,6 +230,18 @@ class Dao
     }
 
     /**
+     * Count active IndexSubmissionJob jobs in the queue
+     *
+     * @return int Number of active jobs
+     */
+    public function countActiveIndexingJobs(): int
+    {
+        return DB::table('jobs')
+            ->where('payload', 'like', '%IndexSubmissionJob%')
+            ->count();
+    }
+
+    /**
      * Rebuild the search index for selected contexts
      *
      * @param array $contextIds Array of context IDs to rebuild

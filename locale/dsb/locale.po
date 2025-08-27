@@ -47,5 +47,8 @@ msgstr "Opcijonalnje wuprozniśo standardne pytańske tabele OJS/OMP/OPS pśed z
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Standardne pytańske tabele wuprozniś pśed znowego natwarjenim indeksa"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Pśedawki cakaju na indeksěrowanje (póstup znowego natwarjenja)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Njewócakowana zmólka jo nastała pśi pytańu"

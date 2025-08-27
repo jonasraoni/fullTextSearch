@@ -44,5 +44,8 @@ msgstr "Optioneel de standaard OJS/OMP/OPS zoektabellen wissen voordat u herbouw
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Standaard zoektabellen wissen voordat u de index herbouwt"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Inzendingen wachten op indexering (voortgang herbouw)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Er is een onverwachte fout opgetreden tijdens het zoeken"

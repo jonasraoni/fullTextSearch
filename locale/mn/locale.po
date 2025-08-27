@@ -44,5 +44,8 @@ msgstr "Сонгох боломжтой: дахин бүтээхээс өмнө 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Индексийг дахин бүтээхээс өмнө стандарт хайлтын хүснэгтүүдийг цэвэрлэх"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Индексжүүлэлтийг хүлээж буй илгээмжүүд (дахин бүтээлтийн явц)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Хайлтын үед гэнэтийн алдаа гарлаа"

@@ -44,5 +44,8 @@ msgstr "Opcionalment netegeu les taules de cerca estàndard d'OJS/OMP/OPS abans 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Netejar taules de cerca estàndard abans de reconstruir l'índex"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Enviaments esperant ser indexats (progrés de reconstrucció)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "S'ha produït un error inesperat durant la cerca"

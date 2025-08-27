@@ -32,6 +32,9 @@ msgstr "Standardne indeksowanje deaktiwować. Hdyž zmóžnjene, aplikacija bud�
 msgid "plugins.generic.fullTextSearch.settings.selectContextsDescription"
 msgstr "Wubjerće, kotre konteksty maja swój pytanski indeks znowa natwarjeny."
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Předawki, kotrež čakaja na indeksowanje (postup znowa natwarjenja)"
+
 msgid "plugins.generic.fullTextSearch.settings.rebuildButton"
 msgstr "Pytanski indeks znowa natwarić"
 

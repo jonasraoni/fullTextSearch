@@ -44,5 +44,8 @@ msgstr "İsteğe bağlı olarak yeniden oluşturmadan önce standart OJS/OMP/OPS
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "İndeksi yeniden oluşturmadan önce standart arama tablolarını temizle"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "İndekslemeyi bekleyen gönderiler (yeniden oluşturma ilerlemesi)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Arama sırasında beklenmeyen bir hata oluştu"

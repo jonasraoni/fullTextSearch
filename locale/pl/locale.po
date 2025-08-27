@@ -44,5 +44,8 @@ msgstr "Opcjonalnie wyczyść standardowe tabele wyszukiwania OJS/OMP/OPS przed 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Wyczyść standardowe tabele wyszukiwania przed przebudową indeksu"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Zgłoszenia oczekujące na indeksowanie (postęp przebudowy)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Wystąpił nieoczekiwany błąd podczas wyszukiwania"

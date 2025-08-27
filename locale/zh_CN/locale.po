@@ -44,5 +44,8 @@ msgstr "可選地在重建之前清除標準OJS/OMP/OPS搜尋表。這將從預�
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "重建索引前清除標準搜尋表"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "等待索引的投稿（重建進度）"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "搜尋時發生意外錯誤"

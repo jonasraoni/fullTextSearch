@@ -44,5 +44,8 @@ msgstr "Опционално очистите стандардне OJS/OMP/OPS �
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Очисти стандардне табеле претраживања пре поновне изградње индекса"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Пријаве чекају индексирање (напредок поновне изградње)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Дошло је до неочекиване грешке током претраживања"

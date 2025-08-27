@@ -47,5 +47,8 @@ msgstr "Pēc izvēles notīrīt standarta OJS/OMP/OPS meklēšanas tabulas pirms
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Notīrīt standarta meklēšanas tabulas pirms indeksa atjaunošanas"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Iesniegumi gaida indeksēšanu (atjaunošanas progress)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Meklēšanas laikā notika negaidīta kļūda"

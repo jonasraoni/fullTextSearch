@@ -42,10 +42,13 @@ msgid "plugins.generic.fullTextSearch.settings.clearStandardSearch"
 msgstr "გაასუფთაოთ სტანდარტული ძიების ცხრილები"
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchDescription"
-msgstr "სურვილისამებრ გაასუფთაოთ სტანდარტული OJS/OMP/OPS ძიების ცხრილები ხელახლა შექმნამდე. ეს წაშლის ყველა არსებულ ძიების მონაცემს სტანდარტული ძიების სისტემიდან."
+msgstr "სურვილისამებრ გაასუფთაოთ სტანდარტულ OJS/OMP/OPS ძიების ცხრილები ხელახლა შექმნამდე. ეს წაშლის ყველა არსებულ ძიების მონაცემს სტანდარტული ძიების სისტემიდან."
 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "გაასუფთაოთ სტანდარტული ძიების ცხრილები ინდექსის ხელახლა შექმნამდე"
+
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "წარდგენები ელოდება ინდექსირებას (ხელახლა შექმნის პროგრესი)"
 
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "მოულოდნელი შეცდომა მოხდა ძიებისას"

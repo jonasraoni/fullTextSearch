@@ -44,5 +44,8 @@ msgstr "اختيارياً مسح جداول البحث القياسية لـ OJ
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "مسح جداول البحث القياسية قبل إعادة بناء الفهرس"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "المقالات في انتظار الفهرسة (تقدم إعادة البناء)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "حدث خطأ غير متوقع أثناء البحث"

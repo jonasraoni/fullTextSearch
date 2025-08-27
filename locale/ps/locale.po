@@ -47,5 +47,8 @@ msgstr "د بیا جوړولو دمخه په اختیاري ډول معیاري 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "د شاخص بیا جوړولو دمخه معیاري لټون جدولونه پاک کړئ"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "د شاخص کولو په تمه سپارنې (د بیا جوړولو پرمختګ)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "د لټون په وخت کې یو ناڅاپه تیروتنه رامنځته شوه"

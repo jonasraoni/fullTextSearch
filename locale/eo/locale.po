@@ -35,6 +35,9 @@ msgstr "Laŭvole malplenigi la normajn OJS/OMP/OPS serĉajn tabelojn antaŭ reko
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Malplenigi normajn serĉajn tabelojn antaŭ rekonstruo de indekso"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Enmetoj atendante indeksadon (rekonstrua progreso)"
+
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "<p><strong>Por seninterrompan integriĝon sekvu la instrukciojn sube:</strong></p>"

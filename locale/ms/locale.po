@@ -47,5 +47,8 @@ msgstr "Secara pilihan, bersihkan jadual carian OJS/OMP/OPS standard sebelum mem
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Bersihkan jadual carian standard sebelum membina semula indeks"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Penghantaran menunggu pengindeksan (kemajuan pembinaan semula)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Ralat tidak dijangka berlaku semasa mencari"

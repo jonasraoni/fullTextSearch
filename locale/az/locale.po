@@ -47,5 +47,8 @@ msgstr "Yenidən qurmadan əvvəl standart OJS/OMP/OPS axtarış cədvəllərini
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "İndeksi yenidən qurmadan əvvəl standart axtarış cədvəllərini təmizlə"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "İndekslənməyi gözləyən təqdimatlar (yenidən qurma tərəqqisi)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Axtarış zamanı gözlənilməz xəta baş verdi"

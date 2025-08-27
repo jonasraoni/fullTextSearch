@@ -44,5 +44,8 @@ msgstr "Opcionálisan törölje a szabványos OJS/OMP/OPS keresési táblákat a
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Szabványos keresési táblák törlése az index újraépítése előtt"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Indexelésre váró beadványok (újraépítési folyamat)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Váratlan hiba történt a keresés során"

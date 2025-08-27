@@ -44,5 +44,8 @@ msgstr "オプションで、再構築前に標準OJS/OMP/OPS検索テーブル�
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "インデックス再構築前に標準検索テーブルをクリア"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "インデックス化を待っている投稿（再構築の進行状況）"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "検索中に予期しないエラーが発生しました"

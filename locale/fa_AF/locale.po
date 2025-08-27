@@ -47,5 +47,8 @@ msgstr "د بیا جوړولو دمخه په اختیاري ډول معیاري 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "د انډیکس بیا جوړولو دمخه معیاري لټون جدولونه پاک کړئ"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "د انډیکس کولو په تمه سپارنې (د بیا جوړولو پرمختګ)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "د لټون په جریان کې یو ناڅاپي تیروتنه رامنځته شوه"

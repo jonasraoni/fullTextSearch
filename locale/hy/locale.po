@@ -44,5 +44,8 @@ msgstr "Ըստ ցանկության մաքրեք ստանդարտ OJS/OMP/OPS ո
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Մաքրել ստանդարտ որոնման աղյուսակները ինդեքսի վերակառուցումից առաջ"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Ներկայացումները սպասում են ինդեքսավորմանը (վերակառուցման առաջընթաց)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Որոնման ընթացքում տեղի ունեցավ անսպասելի սխալ"

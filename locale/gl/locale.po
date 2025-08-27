@@ -44,5 +44,8 @@ msgstr "Opcionalmente limpar as táboas de busca estándar de OJS/OMP/OPS antes 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Limpar táboas de busca estándar antes de reconstruír o índice"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Envíos agardando indexación (progreso da reconstrución)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Ocorreu un erro inesperado durante a busca"

@@ -44,5 +44,8 @@ msgstr "אופציונלית נקה את טבלאות החיפוש הסטנדר�
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "נקה טבלאות חיפוש סטנדרטיות לפני בנייה מחדש של האינדקס"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "הגשות ממתינות לאינדוקס (התקדמות בנייה מחדש)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "אירעה שגיאה בלתי צפויה במהלך החיפוש"

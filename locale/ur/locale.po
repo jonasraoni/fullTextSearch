@@ -44,5 +44,8 @@ msgstr "اختیاری طور پر دوبارہ تعمیر سے پہلے معی�
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "انڈیکس دوبارہ تعمیر کرنے سے پہلے معیاری تلاش ٹیبلز صاف کریں"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "انڈیکسنگ کا انتظار کرنے والی جمع کرائیاں (دوبارہ تعمیر کی پیش رفت)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "تلاش کے دوران ایک غیر متوقع خرابی پیش آئی"

@@ -44,5 +44,8 @@ msgstr "वैकल्पिक रूप से पुनर्निर्म
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "सूचकांक पुनर्निर्माण से पहले मानक खोज तालिकाएं साफ़ करें"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "अनुक्रमणिका की प्रतीक्षा में प्रस्तुतियां (पुनर्निर्माण प्रगति)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "खोज के दौरान एक अप्रत्याशित त्रुटि हुई"

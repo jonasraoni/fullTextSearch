@@ -44,5 +44,8 @@ msgstr "Volitelně vymazat standardní OJS/OMP/OPS vyhledávací tabulky před p
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Vymazat standardní vyhledávací tabulky před přestavbou indexu"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Příspěvky čekající na indexování (průběh přestavby)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Při vyhledávání došlo k neočekávané chybě"

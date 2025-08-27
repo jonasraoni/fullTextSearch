@@ -35,6 +35,9 @@ msgstr "Opsionalisht pastro tabelat e kërkimit standard të OJS/OMP/OPS para ri
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Pastro tabelat e kërkimit standard para rindërtimit të indeksit"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Paraqitjet në pritje të indeksimit (progresi i rindërtimit)"
+
 
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "Për një integrim të qetë, pa ndërprerje, ndiqni udhëzimet më poshtë: Pasi të aktivizoni plugin-in, rindërtoni indeksin e kërkimit për të gjitha revistat, ose ekzekutoni php tools/rebuildSearchIndex.php --skip-standard-index (flamuri siguron që vetëm të dhënat për plugin-in do të rindërtohen), për të mbushur indeksin e kërkimit të plugin-it me të dhëna nga botimet e vjetra. Botimet e reja dhe të përditësuara do të indeksohen automatikisht. Pasi indeksimi të përfundojë, aktivizoni kërkimin e tekstit të plotë më poshtë dhe kontrolloni nëse ndërfaqja e përdoruesit të kërkimit po funksionon mirë (mund ta testoni duke kërkuar për një fjalë kyçe në kutinë e kërkimit). Nëse gjithçka po funksionon siç duhet, mund të çaktivizoni indeksimin standard më poshtë dhe gjithashtu të pastroni tabelat e kërkimit standard për të kursyer hapësirën në disk dhe për të përmirësuar shpejtësinë e përmirësimit."

@@ -44,5 +44,8 @@ msgstr "Opcionalno počistite standardne OJS/OMP/OPS tabele iskanja pred obnovo.
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Počisti standardne tabele iskanja pred obnovo indeksa"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Prispevki čakajo na indeksiranje (napredek obnove)"
+
 msgid "plugins.generic.fullTextSearch.search.error"
 msgstr "Med iskanjem je prišlo do nepričakovane napake"

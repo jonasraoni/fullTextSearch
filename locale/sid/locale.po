@@ -35,6 +35,9 @@ msgstr "Standard search tables rebuild kaa'la clear loosiissanno. Kunni default 
 msgid "plugins.generic.fullTextSearch.settings.clearStandardSearchLabel"
 msgstr "Standard search tables index rebuild kaa'la clear"
 
+msgid "plugins.generic.fullTextSearch.settings.submissionsWaitingToBeIndexed"
+msgstr "Indexing kaa'la submissions waiting (rebuild progress)"
+
 msgid "plugins.generic.fullTextSearch.settings.description"
 msgstr "Seamless integration kaa'la, interruptions kaa'la, kunni instructions kaa'la follow: Plugin enable kaa'la, rebuild search index journals kaa'la, yaa php tools/rebuildSearchIndex.php --skip-standard-index (flag plugin data rebuild loosiissanno), plugin search index old publications data kaa'la fill. New updated publications automatically indexed. Indexation xaafii, full text search enable search user interface working fine check (search box kaa'la keyword search kaa'la test). Everything working properly, standard indexing disable standard search tables clear disk space save upgrade speed improve."
 

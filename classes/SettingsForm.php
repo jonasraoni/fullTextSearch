@@ -48,6 +48,7 @@ class SettingsForm extends Form
         $this->setData('contexts', $this->dao->getAllContexts());
         $this->setData('useFullTextSearch', $this->plugin->getSetting(Application::CONTEXT_SITE, 'useFullTextSearch'));
         $this->setData('disableStandardIndexing', $this->plugin->getSetting(Application::CONTEXT_SITE, 'disableStandardIndexing'));
+        $this->setData('activeIndexingJobs', $this->dao->countActiveIndexingJobs());
         parent::initData();
     }
 
