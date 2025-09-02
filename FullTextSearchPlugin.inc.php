@@ -32,6 +32,8 @@ use LinkAction;
 use AjaxModal;
 use NotificationManager;
 use Services;
+use Submission;
+use SubmissionFile;
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
@@ -183,9 +185,15 @@ class FullTextSearchPlugin extends GenericPlugin
      */
     public function articleMetadataChanged(string $hookName, array $args): bool
     {
+        /** @var Submission $submission */
         [$submission] = $args;
         $indexer = new Indexer();
-        $indexer->indexSubmission($submission);
+        try {
+            $indexer->indexSubmission($submission);
+        } catch(Exception $e) {
+            error_log("Failed to index submission {$submission->getId()}\n{$e}");
+        }
+
         return $this->disableStandardIndexing;
     }
 
@@ -201,8 +209,13 @@ class FullTextSearchPlugin extends GenericPlugin
             'fileStages' => [SUBMISSION_FILE_PROOF],
         ]);
         $indexer = new Indexer();
+        /** @var SubmissionFile $submissionFile */
         foreach ($submissionFilesIterator as $submissionFile) {
-            $indexer->indexSubmissionFile($submission, $submissionFile);
+            try {
+                $indexer->indexSubmissionFile($submission, $submissionFile);
+            } catch(Exception $e) {
+                error_log("Failed to index submission file {$submissionFile->getId()}\n{$e}");
+            }
             $dependentFilesIterator = Services::get('submissionFile')->getMany([
                 'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
                 'assocIds' => [$submissionFile->getId()],
@@ -211,7 +224,11 @@ class FullTextSearchPlugin extends GenericPlugin
                 'includeDependentFiles' => true,
             ]);
             foreach ($dependentFilesIterator as $dependentFile) {
-                $indexer->indexSubmissionFile($submission, $dependentFile);
+                try {
+                    $indexer->indexSubmissionFile($submission, $dependentFile);
+                } catch(Exception $e) {
+                    error_log("Failed to index submission file {$dependentFile->getId()}\n{$e}");
+                }
             }
         }
 
