@@ -19,6 +19,7 @@ namespace APP\plugins\generic\fullTextSearch\classes;
 use APP\submission\Submission;
 use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
+use PKP\core\PKPString;
 use PKP\search\SearchFileParser;
 use PKP\submissionFile\SubmissionFile;
 
@@ -32,6 +33,18 @@ class Indexer
     public function __construct()
     {
         $this->dao = new Dao();
+    }
+
+    public function sanitize(?string $text): string
+    {
+        // Attempts to fix bad UTF-8 characters
+        $previous = mb_substitute_character();
+        mb_substitute_character('none');
+        $text = mb_convert_encoding($text ?? '', 'UTF-8', 'UTF-8');
+        mb_substitute_character($previous);
+
+        // Remove punctuation
+        return PKPString::regexp_replace('/[\\p{C}\\p{M}\\p{P}\\p{S}\\p{Z}]+/', ' ', $text);
     }
 
     /**
@@ -57,14 +70,14 @@ class Indexer
         }
 
         $fields = [
-            'title' => $this->implodeLocalized($publication->getFullTitles()),
-            'abstract' => $this->implodeLocalized($publication->getData('abstract')),
-            'authors' => $this->implodeLocalized($authors),
-            'keywords' => $this->implodeLocalized($this->flattenLocalizedArray($publication->getData('keywords'))),
-            'subjects' => $this->implodeLocalized($this->flattenLocalizedArray($publication->getData('subjects'))),
-            'disciplines' => $this->implodeLocalized($this->flattenLocalizedArray($publication->getData('disciplines'))),
-            'coverage' => $this->implodeLocalized((array) $publication->getData('coverage')),
-            'type' => $this->implodeLocalized((array) $publication->getData('type')),
+            'title' => $this->sanitize($this->implodeLocalized($publication->getFullTitles())),
+            'abstract' => $this->sanitize($this->implodeLocalized($publication->getData('abstract'))),
+            'authors' => $this->sanitize($this->implodeLocalized($authors)),
+            'keywords' => $this->sanitize($this->implodeLocalized($this->flattenLocalizedArray($publication->getData('keywords')))),
+            'subjects' => $this->sanitize($this->implodeLocalized($this->flattenLocalizedArray($publication->getData('subjects')))),
+            'disciplines' => $this->sanitize($this->implodeLocalized($this->flattenLocalizedArray($publication->getData('disciplines')))),
+            'coverage' => $this->sanitize($this->implodeLocalized((array) $publication->getData('coverage'))),
+            'type' => $this->sanitize($this->implodeLocalized((array) $publication->getData('type'))),
             // The metadata hook is called before the files hook, so even though it sounds risky, it's ok to clear the galley_text here, as this code is unlikely to be changed
             'galley_text' => '',
         ];
@@ -87,7 +100,7 @@ class Indexer
             $parser->close();
         }
 
-        $galleyText = DB::connection()->getPdo()->quote($this->implodeLocalized($texts));
+        $galleyText = DB::connection()->getPdo()->quote($this->sanitize($this->implodeLocalized($texts)));
         $this->dao->upsert(
             $submission->getId(),
             (int) $submission->getData('contextId'),
