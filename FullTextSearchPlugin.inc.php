@@ -15,8 +15,8 @@
 
 namespace APP\plugins\generic\fullTextSearch;
 
-use APP\plugins\generic\fullTextSearch\classes\Dao;
 use APP\plugins\generic\fullTextSearch\classes\Indexer;
+use APP\plugins\generic\fullTextSearch\classes\Migration;
 use APP\plugins\generic\fullTextSearch\classes\SearchService;
 use APP\plugins\generic\fullTextSearch\classes\SettingsForm;
 use Application;
@@ -24,9 +24,6 @@ use Config;
 use Exception;
 use GenericPlugin;
 use HookRegistry;
-use Illuminate\Database\Capsule\Manager;
-use Illuminate\Database\PostgresConnection;
-use Illuminate\Database\Schema\Blueprint;
 use JSONMessage;
 use LinkAction;
 use AjaxModal;
@@ -40,7 +37,7 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 class FullTextSearchPlugin extends GenericPlugin
 {
     /** @var bool */
-    private $installed = false;
+    private $autoLoaderRegistered = false;
     /** @var bool */
     private $disableStandardIndexing = false;
     /** @var bool */
@@ -63,7 +60,6 @@ class FullTextSearchPlugin extends GenericPlugin
         $this->disableStandardIndexing = (bool) $this->getSetting(CONTEXT_SITE, 'disableStandardIndexing');
         $this->useFullTextSearch = (bool) $this->getSetting(CONTEXT_SITE, 'useFullTextSearch');
         $this->useAutoLoader();
-        $this->ensureSchema();
         $this->registerIndexingHooks();
         if ($this->useFullTextSearch) {
             $this->registerSearchHook();
@@ -77,6 +73,11 @@ class FullTextSearchPlugin extends GenericPlugin
      */
     private function useAutoLoader(): void
     {
+        if ($this->autoLoaderRegistered) {
+            return;
+        }
+        $this->autoLoaderRegistered = true;
+
         spl_autoload_register(function ($className) {
             $path = explode(__NAMESPACE__ . '\\', $className, 2);
             if (reset($path)) {
@@ -94,47 +95,12 @@ class FullTextSearchPlugin extends GenericPlugin
     }
 
     /**
-     * Create the index entity if missing
+     * @copydoc Plugin::getInstallMigration()
      */
-    private function ensureSchema(): void
+    public function getInstallMigration()
     {
-        try {
-            $table = Dao::TABLE_NAME;
-            if (Manager::schema()->hasTable($table)) {
-                $this->installed = true;
-                return;
-            }
-
-            Manager::schema()->create($table, function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table->bigInteger('context_id');
-                $table->bigInteger('submission_id')->unique();
-                $table->text('title')->nullable();
-                $table->text('abstract')->nullable();
-                $table->text('authors')->nullable();
-                $table->text('keywords')->nullable();
-                $table->text('subjects')->nullable();
-                $table->text('disciplines')->nullable();
-                $table->text('coverage')->nullable();
-                $table->longText('galley_text')->nullable();
-                $table->text('type')->nullable();
-                $table->timestamp('created_at')->nullable();
-                $table->timestamp('updated_at')->nullable();
-            });
-
-            $indexFormat = Manager::connection() instanceof PostgresConnection
-                ? "CREATE INDEX {$table}_%s ON {$table} USING GIN (to_tsvector('simple', coalesce(%s,'')))"
-                : "ALTER TABLE {$table} ADD FULLTEXT {$table}_%s (%s)";
-
-            // Add full-text indexes for individual fields
-            foreach (['title', 'abstract', 'authors', 'keywords', 'subjects', 'disciplines', 'coverage', 'galley_text', 'type'] as $field) {
-                Manager::statement(sprintf($indexFormat, $field, $field));
-            }
-
-            $this->installed = true;
-        } catch (Exception $e) {
-            error_log("Failed to create the database entities\n{$e}");
-        }
+        $this->useAutoLoader();
+        return new Migration($this);
     }
 
     /**
