@@ -30,7 +30,7 @@ class Migration extends BaseMigration
 	/**
 	 * Schema version.
 	 */
-	private const SCHEMA_VERSION = 1;
+	private const SCHEMA_VERSION = 2;
 
 	/** @var FullTextSearchPlugin */
 	private $plugin;
@@ -55,6 +55,8 @@ class Migration extends BaseMigration
 		} else {
 			$this->ensureRelationalKeys($table);
 		}
+
+		$this->ensureChunks($table);
 
 		$this->plugin->updateSetting(CONTEXT_SITE, 'schemaVersion', self::SCHEMA_VERSION, 'int');
 	}
@@ -92,8 +94,103 @@ class Migration extends BaseMigration
 		$indexFormat = Manager::connection() instanceof PostgresConnection
 			? "CREATE INDEX {$table}_%s ON {$table} USING GIN (to_tsvector('simple', coalesce(%s,'')))"
 			: "ALTER TABLE {$table} ADD FULLTEXT {$table}_%s (%s)";
-		foreach (['title', 'abstract', 'authors', 'keywords', 'subjects', 'disciplines', 'coverage', 'galley_text', 'type'] as $field) {
+		foreach (['title', 'abstract', 'authors', 'keywords', 'subjects', 'disciplines', 'coverage', 'type'] as $field) {
 			Manager::statement(sprintf($indexFormat, $field, $field));
+		}
+	}
+
+	/**
+	 * Store galley text in bounded chunks. Existing galley_text values are moved across, then that full-text index is dropped.
+	 */
+	private function ensureChunks(string $table): void
+	{
+		$chunks = Dao::CHUNKS_TABLE;
+		if (!Manager::schema()->hasTable($chunks)) {
+			Manager::schema()->create($chunks, function (Blueprint $blueprint) use ($table) {
+				$blueprint->bigIncrements('id');
+				$blueprint->bigInteger('submission_id');
+				$blueprint->unsignedInteger('seq');
+				$blueprint->text('body')->nullable();
+				$blueprint->unique(['submission_id', 'seq']);
+				$blueprint->foreign('submission_id')
+					->references('submission_id')
+					->on($table)
+					->onDelete('cascade');
+			});
+		}
+
+		$index = "{$chunks}_body";
+		if (!$this->hasNamedIndex($chunks, $index)) {
+			$statement = Manager::connection() instanceof PostgresConnection
+				? "CREATE INDEX {$index} ON {$chunks} USING GIN (to_tsvector('simple', coalesce(body,'')))"
+				: "ALTER TABLE {$chunks} ADD FULLTEXT {$index} (body)";
+			Manager::statement($statement);
+		}
+
+		$this->backfillChunks($table, $chunks);
+		$this->dropNamedIndex($table, "{$table}_galley_text");
+	}
+
+	/**
+	 * Move galley_text into the chunk table without loading the column into PHP.
+	 */
+	private function backfillChunks(string $table, string $chunks): void
+	{
+		$size = Dao::CHUNK_CHARACTERS;
+		$rows = Manager::table($table)
+			->whereNotNull('galley_text')
+			->where('galley_text', '!=', '')
+			->select('submission_id')
+			->selectRaw('CHAR_LENGTH(galley_text) AS galley_length')
+			->get();
+
+		foreach ($rows as $row) {
+			$submissionId = (int) $row->submission_id;
+			$length = (int) $row->galley_length;
+			Manager::table($chunks)->where('submission_id', $submissionId)->delete();
+			$seq = 0;
+			for ($offset = 1; $offset <= $length; $offset += $size) {
+				Manager::statement(
+					"INSERT INTO {$chunks} (submission_id, seq, body) SELECT ?, ?, SUBSTRING(galley_text FROM ? FOR ?) FROM {$table} WHERE submission_id = ?",
+					[$submissionId, $seq, $offset, $size, $submissionId]
+				);
+				$seq++;
+			}
+			Manager::table($table)->where('submission_id', $submissionId)->update(['galley_text' => '']);
+		}
+	}
+
+	/**
+	 * Whether an index with this name is already present.
+	 */
+	private function hasNamedIndex(string $table, string $index): bool
+	{
+		if (Manager::connection() instanceof PostgresConnection) {
+			$found = Manager::select(
+				'SELECT 1 FROM pg_indexes WHERE schemaname = current_schema() AND tablename = ? AND indexname = ?',
+				[$table, $index]
+			);
+		} else {
+			$found = Manager::select(
+				'SELECT 1 FROM information_schema.statistics WHERE table_schema = DATABASE() AND table_name = ? AND index_name = ?',
+				[$table, $index]
+			);
+		}
+		return !empty($found);
+	}
+
+	/**
+	 * Drop a full-text index created by an earlier schema version.
+	 */
+	private function dropNamedIndex(string $table, string $index): void
+	{
+		if (!$this->hasNamedIndex($table, $index)) {
+			return;
+		}
+		if (Manager::connection() instanceof PostgresConnection) {
+			Manager::statement("DROP INDEX {$index}");
+		} else {
+			Manager::statement("ALTER TABLE {$table} DROP INDEX {$index}");
 		}
 	}
 

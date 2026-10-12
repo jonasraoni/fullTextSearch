@@ -16,7 +16,6 @@
 namespace APP\plugins\generic\fullTextSearch\classes;
 
 use Context;
-use Illuminate\Database\Capsule\Manager;
 use PKPString;
 use SearchFileParser;
 use Submission;
@@ -24,7 +23,18 @@ use SubmissionFile;
 
 class Indexer
 {
+    /**
+     * Postgres lexemes longer than this are rejected. Cut them before they reach the index.
+     */
+    private const MAX_TOKEN_BYTES = 2000;
+
     private Dao $dao;
+
+    /** @var int Original byte length of galley tokens cut during the current file */
+    private int $truncatedFrom = 0;
+
+    /** @var int Stored byte length of galley tokens cut during the current file */
+    private int $truncatedTo = 0;
 
     /**
      * Constructor
@@ -68,18 +78,19 @@ class Indexer
         }
 
         $fields = [
-            'title' => $this->sanitize($this->implodeLocalized($publication->getFullTitles())),
-            'abstract' => $this->sanitize($this->implodeLocalized($publication->getData('abstract'))),
-            'authors' => $this->sanitize($this->implodeLocalized($authors)),
-            'keywords' => $this->sanitize($this->implodeLocalized($this->flattenLocalizedArray($publication->getData('keywords')))),
-            'subjects' => $this->sanitize($this->implodeLocalized($this->flattenLocalizedArray($publication->getData('subjects')))),
-            'disciplines' => $this->sanitize($this->implodeLocalized($this->flattenLocalizedArray($publication->getData('disciplines')))),
-            'coverage' => $this->sanitize($this->implodeLocalized((array) $publication->getData('coverage'))),
-            'type' => $this->sanitize($this->implodeLocalized((array) $publication->getData('type'))),
-            // The metadata hook is called before the files hook, so even though it sounds risky, it's ok to clear the galley_text here, as this code is unlikely to be changed
+            'title' => $this->fit($this->sanitize($this->implodeLocalized($publication->getFullTitles())), 'title', $submissionId),
+            'abstract' => $this->fit($this->sanitize($this->implodeLocalized($publication->getData('abstract'))), 'abstract', $submissionId),
+            'authors' => $this->fit($this->sanitize($this->implodeLocalized($authors)), 'authors', $submissionId),
+            'keywords' => $this->fit($this->sanitize($this->implodeLocalized($this->flattenLocalizedArray($publication->getData('keywords')))), 'keywords', $submissionId),
+            'subjects' => $this->fit($this->sanitize($this->implodeLocalized($this->flattenLocalizedArray($publication->getData('subjects')))), 'subjects', $submissionId),
+            'disciplines' => $this->fit($this->sanitize($this->implodeLocalized($this->flattenLocalizedArray($publication->getData('disciplines')))), 'disciplines', $submissionId),
+            'coverage' => $this->fit($this->sanitize($this->implodeLocalized((array) $publication->getData('coverage'))), 'coverage', $submissionId),
+            'type' => $this->fit($this->sanitize($this->implodeLocalized((array) $publication->getData('type'))), 'type', $submissionId),
+            // The metadata hook is called before the files hook, so even though it sounds risky, it's ok to clear the galley text here, as this code is unlikely to be changed
             'galley_text' => '',
         ];
 
+        $this->dao->deleteChunks($submissionId);
         $this->dao->upsert($submissionId, $contextId, $fields);
     }
 
@@ -90,20 +101,113 @@ class Indexer
     {
         set_time_limit(0);
         $parser = SearchFileParser::fromFile($submissionFile);
-        $texts = [];
-        if ($parser && $parser->open()) {
-            while(($text = $parser->read()) !== false) {
-                $texts[] = $text;
-            }
-            $parser->close();
+        if (!$parser || !$parser->open()) {
+            return;
         }
 
-        $galleyText = Manager::connection()->getPdo()->quote($this->sanitize($this->implodeLocalized($texts)));
-        $this->dao->upsert(
-            $submission->getId(),
-            (int) $submission->getData('contextId'),
-            ['galley_text' => Manager::raw("CONCAT(COALESCE(galley_text, ''), ' ', {$galleyText})")]
-        );
+        $submissionId = (int) $submission->getId();
+        $this->truncatedFrom = 0;
+        $this->truncatedTo = 0;
+        $this->dao->ensureSubmission($submissionId, (int) $submission->getData('contextId'));
+
+        $buffer = '';
+        while (($text = $parser->read()) !== false) {
+            $buffer = $this->queueGalleyText($submissionId, $buffer, $this->sanitize((string) $text));
+        }
+        $parser->close();
+        $this->flushGalleyChunk($submissionId, $buffer);
+
+        if ($this->truncatedFrom > $this->truncatedTo) {
+            error_log(sprintf(
+                'fullTextSearch: submission %d field galley_text truncated from %d to %d bytes',
+                $submissionId,
+                $this->truncatedFrom,
+                $this->truncatedTo
+            ));
+        }
+    }
+
+    /**
+     * Keep a metadata field inside the chunk limit and warn when it is cut.
+     */
+    private function fit(string $text, string $field, int $submissionId): string
+    {
+        $originalBytes = strlen($text);
+        $text = $this->cutLongTokens($text, false);
+        if (mb_strlen($text) > Dao::CHUNK_CHARACTERS) {
+            $text = mb_substr($text, 0, Dao::CHUNK_CHARACTERS);
+        }
+        $storedBytes = strlen($text);
+        if ($storedBytes < $originalBytes) {
+            error_log(sprintf(
+                'fullTextSearch: submission %d field %s truncated from %d to %d bytes',
+                $submissionId,
+                $field,
+                $originalBytes,
+                $storedBytes
+            ));
+        }
+        return $text;
+    }
+
+    /**
+     * Sanitize is already applied. Flush a chunk once the buffer reaches the limit.
+     */
+    private function queueGalleyText(int $submissionId, string $buffer, string $piece): string
+    {
+        $piece = trim($this->cutLongTokens($piece, true));
+        if ($piece === '') {
+            return $buffer;
+        }
+
+        $pending = $buffer === '' ? $piece : $buffer . ' ' . $piece;
+        $limit = Dao::CHUNK_CHARACTERS;
+        while (mb_strlen($pending) >= $limit) {
+            $window = mb_substr($pending, 0, $limit);
+            $breakAt = mb_strrpos($window, ' ');
+            if ($breakAt === false || $breakAt < 1) {
+                $chunk = $window;
+                $pending = ltrim(mb_substr($pending, $limit));
+            } else {
+                $chunk = mb_substr($window, 0, $breakAt);
+                $pending = ltrim(mb_substr($pending, $breakAt + 1));
+            }
+            $this->flushGalleyChunk($submissionId, $chunk);
+        }
+        return $pending;
+    }
+
+    /**
+     * Persist one non-empty galley chunk.
+     */
+    private function flushGalleyChunk(int $submissionId, string $buffer): void
+    {
+        $buffer = trim($buffer);
+        if ($buffer === '') {
+            return;
+        }
+        $this->dao->insertChunk($submissionId, $buffer);
+    }
+
+    /**
+     * Cut tokens that Postgres would reject as lexemes.
+     */
+    private function cutLongTokens(string $text, bool $track): string
+    {
+        $cut = preg_replace_callback('/\S+/u', function (array $matches) use ($track): string {
+            $token = $matches[0];
+            if (strlen($token) <= self::MAX_TOKEN_BYTES) {
+                return $token;
+            }
+            $short = mb_strcut($token, 0, self::MAX_TOKEN_BYTES, 'UTF-8');
+            if ($track) {
+                $this->truncatedFrom += strlen($token);
+                $this->truncatedTo += strlen($short);
+            }
+            return $short;
+        }, $text);
+
+        return $cut === null ? $text : $cut;
     }
 
     /**
