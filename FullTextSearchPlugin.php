@@ -21,13 +21,10 @@ use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\plugins\generic\fullTextSearch\classes\Dao;
 use APP\plugins\generic\fullTextSearch\classes\Indexer;
+use APP\plugins\generic\fullTextSearch\classes\Migration;
 use APP\plugins\generic\fullTextSearch\classes\SearchService;
 use APP\plugins\generic\fullTextSearch\classes\SettingsForm;
 use Exception;
-use Illuminate\Database\PostgresConnection;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Schema;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
@@ -37,7 +34,6 @@ use PKP\submissionFile\SubmissionFile;
 
 class FullTextSearchPlugin extends GenericPlugin
 {
-    private bool $installed = false;
     public bool $disableStandardIndexing = false;
     private bool $useFullTextSearch = false;
 
@@ -58,7 +54,6 @@ class FullTextSearchPlugin extends GenericPlugin
 
         $this->disableStandardIndexing = (bool) $this->getSetting(Application::CONTEXT_SITE, 'disableStandardIndexing');
         $this->useFullTextSearch = (bool) $this->getSetting(Application::CONTEXT_SITE, 'useFullTextSearch');
-        $this->ensureSchema();
         $this->registerIndexingHooks();
         if ($this->useFullTextSearch) {
             $this->registerSearchHook();
@@ -80,47 +75,11 @@ class FullTextSearchPlugin extends GenericPlugin
     }
 
     /**
-     * Create the index entity if missing
+     * @copydoc Plugin::getInstallMigration()
      */
-    private function ensureSchema(): void
+    public function getInstallMigration()
     {
-        try {
-            $table = Dao::TABLE_NAME;
-            if (Schema::hasTable($table)) {
-                $this->installed = true;
-                return;
-            }
-
-            Schema::create($table, function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table->bigInteger('context_id');
-                $table->bigInteger('submission_id')->unique();
-                $table->text('title')->nullable();
-                $table->text('abstract')->nullable();
-                $table->text('authors')->nullable();
-                $table->text('keywords')->nullable();
-                $table->text('subjects')->nullable();
-                $table->text('disciplines')->nullable();
-                $table->text('coverage')->nullable();
-                $table->longText('galley_text')->nullable();
-                $table->text('type')->nullable();
-                $table->timestamp('created_at')->nullable();
-                $table->timestamp('updated_at')->nullable();
-            });
-
-            $indexFormat = DB::connection() instanceof PostgresConnection
-                ? "CREATE INDEX {$table}_%s ON {$table} USING GIN (to_tsvector('simple', coalesce(%s,'')))"
-                : "ALTER TABLE {$table} ADD FULLTEXT {$table}_%s (%s)";
-
-            // Add full-text indexes for individual fields
-            foreach (['title', 'abstract', 'authors', 'keywords', 'subjects', 'disciplines', 'coverage', 'galley_text', 'type'] as $field) {
-                DB::statement(sprintf($indexFormat, $field, $field));
-            }
-
-            $this->installed = true;
-        } catch (Exception $e) {
-            error_log("Failed to create the database entities\n{$e}");
-        }
+        return new Migration($this);
     }
 
     /**
