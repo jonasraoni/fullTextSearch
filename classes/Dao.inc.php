@@ -25,6 +25,12 @@ use Services;
 class Dao
 {
     public const TABLE_NAME = 'full_text_search_plugin_index';
+    public const CHUNKS_TABLE = 'full_text_search_plugin_index_chunks';
+
+    /**
+     * Characters stored in one galley chunk. Stays under MySQL TEXT, the Postgres tsvector cap, and the 16383 position cap.
+     */
+    public const CHUNK_CHARACTERS = 15000;
 
     /**
      * Insert or update a submission record in the full-text search index
@@ -54,6 +60,45 @@ class Dao
     public function deleteBySubmission(int $submissionId): void
     {
         Manager::table(static::TABLE_NAME)->where('submission_id', $submissionId)->delete();
+    }
+
+    /**
+     * Insert a parent row when a galley is indexed before its metadata.
+     */
+    public function ensureSubmission(int $submissionId, int $contextId): void
+    {
+        if (Manager::table(static::TABLE_NAME)->where('submission_id', $submissionId)->exists()) {
+            return;
+        }
+        $now = date('Y-m-d H:i:s');
+        Manager::table(static::TABLE_NAME)->insert([
+            'submission_id' => $submissionId,
+            'context_id' => $contextId,
+            'galley_text' => '',
+            'created_at' => $now,
+            'updated_at' => $now,
+        ]);
+    }
+
+    /**
+     * Remove galley chunks for a submission. The parent row is rewritten by the metadata hook.
+     */
+    public function deleteChunks(int $submissionId): void
+    {
+        Manager::table(static::CHUNKS_TABLE)->where('submission_id', $submissionId)->delete();
+    }
+
+    /**
+     * Append one galley chunk. Sequence continues across files for the same submission.
+     */
+    public function insertChunk(int $submissionId, string $body): void
+    {
+        $max = Manager::table(static::CHUNKS_TABLE)->where('submission_id', $submissionId)->max('seq');
+        Manager::table(static::CHUNKS_TABLE)->insert([
+            'submission_id' => $submissionId,
+            'seq' => $max === null ? 0 : ((int) $max) + 1,
+            'body' => $body,
+        ]);
     }
 
     /**
@@ -112,18 +157,7 @@ class Dao
             $hasSearchCriteria = true;
             $q->where(function (Builder $q) use ($fields, $query, &$scores, &$scoreParams) {
                 foreach ($fields as $field) {
-                    if (Manager::connection() instanceof PostgresConnection) {
-                        $tsVector = "to_tsvector('simple', coalesce({$field}, ''))";
-                        $tsQuery = "plainto_tsquery('simple', ?)";
-                        $q->orWhereRaw("{$tsVector} @@ {$tsQuery}", [$query]);
-                        $scores[] = "ts_rank({$tsVector}, {$tsQuery})";
-                        $scoreParams[] = $query;
-                    } else {
-                        $match = "MATCH({$field}) AGAINST (? IN NATURAL LANGUAGE MODE)";
-                        $q->orWhereRaw($match, [$query]);
-                        $scores[] = $match;
-                        $scoreParams[] = $query;
-                    }
+                    $this->applyFieldMatch($q, $field, $query, $scores, $scoreParams);
                 }
             });
         }
@@ -162,6 +196,61 @@ class Dao
         $q->offset($offset)->limit($perPage);
         $ids = $q->pluck('submission_id')->all();
         return [$ids, (int) $total];
+    }
+
+    /**
+     * Match one indexed field and add its rank to the score.
+     * @param string[] $scores
+     * @param array $scoreParams
+     */
+    private function applyFieldMatch(Builder $q, string $field, string $query, array &$scores, array &$scoreParams): void
+    {
+        if ($field === 'fts.galley_text') {
+            $this->applyGalleyMatch($q, $query, $scores, $scoreParams);
+            return;
+        }
+
+        if (Manager::connection() instanceof PostgresConnection) {
+            $tsVector = "to_tsvector('simple', coalesce({$field}, ''))";
+            $tsQuery = "plainto_tsquery('simple', ?)";
+            $q->orWhereRaw("{$tsVector} @@ {$tsQuery}", [$query]);
+            $scores[] = "ts_rank({$tsVector}, {$tsQuery})";
+            $scoreParams[] = $query;
+            return;
+        }
+
+        $match = "MATCH({$field}) AGAINST (? IN NATURAL LANGUAGE MODE)";
+        $q->orWhereRaw($match, [$query]);
+        $scores[] = $match;
+        $scoreParams[] = $query;
+    }
+
+    /**
+     * Match galley chunks without joining them onto the submission row.
+     * @param string[] $scores
+     * @param array $scoreParams
+     */
+    private function applyGalleyMatch(Builder $q, string $query, array &$scores, array &$scoreParams): void
+    {
+        $chunks = static::CHUNKS_TABLE;
+        if (Manager::connection() instanceof PostgresConnection) {
+            $vector = "to_tsvector('simple', coalesce(body, ''))";
+            $tsQuery = "plainto_tsquery('simple', ?)";
+            $match = "{$vector} @@ {$tsQuery}";
+            $rank = "ts_rank({$vector}, {$tsQuery})";
+        } else {
+            $match = 'MATCH(body) AGAINST (? IN NATURAL LANGUAGE MODE)';
+            $rank = $match;
+        }
+
+        $q->orWhereExists(function (Builder $sub) use ($chunks, $match, $query) {
+            $sub->selectRaw('1')
+                ->from($chunks)
+                ->whereColumn("{$chunks}.submission_id", 'fts.submission_id')
+                ->whereRaw($match, [$query]);
+        });
+        $scores[] = "(SELECT COALESCE(SUM({$rank}), 0) FROM {$chunks} WHERE {$chunks}.submission_id = fts.submission_id)";
+        $scoreParams[] = $query;
     }
 
     /**
