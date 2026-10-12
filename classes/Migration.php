@@ -18,7 +18,6 @@ namespace APP\plugins\generic\fullTextSearch\classes;
 
 use APP\core\Application;
 use APP\plugins\generic\fullTextSearch\FullTextSearchPlugin;
-use Doctrine\DBAL\Schema\Index;
 use Exception;
 use Illuminate\Database\Migrations\Migration as BaseMigration;
 use Illuminate\Database\PostgresConnection;
@@ -165,12 +164,10 @@ class Migration extends BaseMigration
      */
     private function hasColumnIndex(string $table, string $column): bool
     {
-        $expected = new Index($column, [$column]);
-        foreach (DB::connection()->getDoctrineSchemaManager()->listTableIndexes($table) as $index) {
-            $fulfilled = method_exists($expected, 'isFulfilledBy')
-                ? $expected->isFulfilledBy($index)
-                : $expected->isFullfilledBy($index);
-            if ($fulfilled) {
+        $column = strtolower($column);
+        foreach (Schema::getIndexes($table) as $index) {
+            $columns = array_map('strtolower', $index['columns']);
+            if ($columns === [$column]) {
                 return true;
             }
         }
@@ -182,12 +179,12 @@ class Migration extends BaseMigration
      */
     private function hasForeignKey(string $table, string $column, string $referencedTable, string $referencedColumn): bool
     {
-        foreach (DB::connection()->getDoctrineSchemaManager()->listTableForeignKeys($table) as $foreignKey) {
-            $local = array_map('strtolower', $foreignKey->getUnquotedLocalColumns());
-            $foreign = array_map('strtolower', $foreignKey->getUnquotedForeignColumns());
+        foreach (Schema::getForeignKeys($table) as $foreignKey) {
+            $local = array_map('strtolower', $foreignKey['columns']);
+            $foreign = array_map('strtolower', $foreignKey['foreign_columns']);
             if ($local === [strtolower($column)]
                 && $foreign === [strtolower($referencedColumn)]
-                && strtolower($foreignKey->getUnqualifiedForeignTableName()) === strtolower($referencedTable)
+                && strtolower($foreignKey['foreign_table']) === strtolower($referencedTable)
             ) {
                 return true;
             }
