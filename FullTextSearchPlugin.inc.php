@@ -136,7 +136,7 @@ class FullTextSearchPlugin extends GenericPlugin
     {
         [$log, $context, $switches] = $args + [false, null, []];
         $indexer = new Indexer();
-        $this->disableStandardIndexing = in_array('--skip-standard-index', $switches);
+        $this->disableStandardIndexing = $this->disableStandardIndexing || in_array('--skip-standard-index', $switches);
         if (!$this->disableStandardIndexing) {
             // As we're overriding the rebuildSearchIndex tool, we need to clear the standard index manually to mimic its behavior
             (new Dao())->clearStandardSearchTables();
